@@ -1,6 +1,6 @@
 # WP-001 — Phase 0 Independent Verification
 
-**Status:** ready  
+**Status:** verified-complete  
 **Owner role:** verifier  
 **Decision authority:** verifier issues PASS / FAIL / NOT VERIFIED; no repair authority  
 **Branch:** verifier should work from a fresh branch based on current `phase0/development-os` PR head or add review artefact through a dedicated verification branch/PR  
@@ -60,7 +60,17 @@ Read in this order:
 
 This WP is itself the independent verification activity. Its own procedural completion can later be checked by the integrator against this specification and the review artefact.
 
+## Completion state
+
+**Verified-complete as a verification activity; target result: FAIL.**
+
+The integrator checked the completed verifier outputs in PR #2 against this WP. The verifier evaluated all eleven WP-000 criteria, bound the result to exact PR #1 head `1d2dd033ca3068484d841bcebf90e81ea84c7f71`, performed the required cold-start/single-source checks, and made no repair changes. The canonical verification artefact is `development/06_reviews/VERIFICATION-WP-000-2026-08-25.md`; the verifier handoff is `development/07_sessions/SESSION-0003-PHASE0-VERIFIER.md`.
+
+PR #2 was merged into `phase0/development-os` as merge commit `cbc1ab1fd8d675be9a7c4cd6f26feae75b957457`. This status records completion of WP-001's verification responsibility only. It does **not** mark WP-000 or Phase 0 verified or accepted.
+
 ## Handoff
 
 - PASS → separate adversarial-review session before Phase 0 acceptance.
 - FAIL / NOT VERIFIED → fresh builder repair session, then a new verifier pass against the changed commit.
+
+The actual WP-001 result is **FAIL**. Canonical next work is therefore the explicit Phase 0 repair package activated by the integrator; the historical verifier result must not be reused to certify any changed commit.
