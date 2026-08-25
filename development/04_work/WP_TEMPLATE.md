@@ -24,7 +24,9 @@ What is explicitly excluded so that completion cannot expand indefinitely.
 
 ## Required reading
 
-Exact authoritative files and evidence required for cold-start.
+Exact authoritative files and evidence required after the standard bootstrap in `development/03_plan/COLD_START.md`.
+
+If an order is required for independence or evidence handling, specify the order **within COLD_START Step 3 only**. Do not redefine or reorder COLD_START Steps 1–2 here.
 
 ## Inputs and dependencies
 
