@@ -1,1 +1,0 @@
-This temporary marker must be deleted together with STATE_SNAPSHOT.md and the earlier state-transition defect markers after STATE.md is updated. It exists only because the builder session mistakenly created temporary state files while attempting to perform the update.
