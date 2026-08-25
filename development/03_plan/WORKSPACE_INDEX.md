@@ -17,10 +17,18 @@
 ## Planning
 - `ROADMAP.md`
 - `STATE.md`
+- `COLD_START.md`
+- `PHASE_GATE.md`
 - `PR_GATE.md`
+- `NEXT_SESSION.md`
+- `BUILDER_STOP.md`
 
 ## Current work
-- `../04_work/WP-000-DEVELOPMENT-OS.md`
+- Active: `../04_work/WP-001-PHASE0-VERIFICATION.md`
+- Parent package under verification: `../04_work/WP-000-DEVELOPMENT-OS.md`
+
+## Decisions
+- `../02_architecture/decisions/ADR-0000-DEVELOPMENT-GOVERNANCE-BOOTSTRAP.md` — proposed
 
 ## Templates
 - ADR: `../01_governance/ADR_TEMPLATE.md`
@@ -30,7 +38,8 @@
 - Adversarial review: `../06_reviews/ADVERSARIAL_REVIEW_TEMPLATE.md`
 - Session handoff: `../07_sessions/SESSION_TEMPLATE.md`
 
-## Current handoff
-- `../07_sessions/SESSION-0001-PHASE0-BUILDER.md`
+## Handoff
+- Completed builder record: `../07_sessions/SESSION-0001-PHASE0-BUILDER.md`
+- Fresh-verifier launch brief: `../07_sessions/SESSION-0002-NEXT-VERIFIER-BRIEF.md`
 
-This index is navigational only. It does not override the authority hierarchy defined in `SOURCE_OF_TRUTH.md`.
+This index is navigational only. It does not override the authority hierarchy defined in `SOURCE_OF_TRUTH.md`. Current project truth remains in `STATE.md`.
