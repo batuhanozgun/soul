@@ -4,7 +4,7 @@
 **Owner role:** designer/builder  
 **Decision authority:** foundation changes require human-owner approval; governance design requires independent verification  
 **Branch:** `phase0/development-os`  
-**PR:** pending creation
+**PR:** #1 — draft
 
 ## Objective
 
