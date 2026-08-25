@@ -1,1 +1,0 @@
-Do not use this file. It is temporary and must be removed before verification.
