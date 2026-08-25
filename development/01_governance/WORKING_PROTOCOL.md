@@ -23,13 +23,9 @@ A WP may span multiple sessions. A session should have one primary responsibilit
 
 A new session does not assume the previous chat is available or correct.
 
-Before substantive work it must read, in order:
+The **single sequencing authority** for fresh-session bootstrap is `development/03_plan/COLD_START.md`. This protocol does not define a second ordered reading procedure.
 
-1. this repository's foundation and source-of-truth rules,
-2. `03_plan/STATE.md`,
-3. the active WP,
-4. the WP's `Required reading` references,
-5. only the additional evidence or architecture material needed for its assigned responsibility.
+A WP's `Required reading` section is loaded at the point assigned by `COLD_START.md`. A WP may prescribe an internal order among those Step 3 readings when needed for independence or evidence handling, but it may not silently reorder the earlier bootstrap steps. Historical launch briefs and handoffs may point to `COLD_START.md`; they are not competing sequencing authorities.
 
 If repository state is insufficient or internally contradictory, that is a finding. The session must not repair the gap by silently inventing prior intent.
 
@@ -55,13 +51,13 @@ The same session should not produce a material design and then act as its only i
 
 ## Session close
 
-A substantial session is not complete until repository state is updated. The close must leave:
+A substantial session is not complete until repository state is updated as required by the role and current transition. The close must leave:
 
 1. produced or changed artefacts,
 2. evidence references,
 3. any decision record created or required,
 4. WP status update,
-5. `STATE.md` update when the project state changed,
+5. `STATE.md` update when the project state changed and the session has authority to perform that transition,
 6. a session handoff record in `07_sessions/`.
 
 The handoff record contains:
@@ -79,6 +75,12 @@ The handoff record contains:
 - relevant commit or PR reference when available.
 
 A new session should be able to continue from these artefacts without reading the old chat.
+
+### Verifier close and canonical transition
+
+A verifier records the result and verifier handoff but does **not** use verifier authority to integrate its own result into canonical project state or to repair findings. After the verifier closes, a separate integrator performs the result-dependent canonical-state transition defined in `VERIFICATION_POLICY.md`.
+
+This separation prevents a verification result from being silently converted into acceptance, repair, or a new active-work decision by the verifier that issued it.
 
 ## Branch and PR discipline
 
