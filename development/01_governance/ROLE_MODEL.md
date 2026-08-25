@@ -40,7 +40,8 @@ Rules:
 - inspect evidence directly where possible,
 - distinguish verified, false, and not-verifiable,
 - prefer deterministic checks over another model's opinion when deterministic checks are possible,
-- report gaps without fixing them inside the same verification act unless the WP explicitly assigns a separate repair responsibility.
+- report gaps without fixing them inside the same verification act unless the WP explicitly assigns a separate repair responsibility,
+- leave canonical result integration and result-dependent state routing to a separate integrator under `VERIFICATION_POLICY.md`.
 
 ## 4. Adversarial Reviewer
 
@@ -64,15 +65,21 @@ The reviewer is not rewarded for finding a fixed number of issues. No finding is
 
 ## 5. Integrator
 
-Purpose: reconcile verified work into accepted repository state without smuggling unresolved decisions into `main`.
+Purpose: reconcile verified work and completed independent-review results into repository state without smuggling unresolved decisions into `main`.
 
 May:
 - assemble accepted artefacts,
 - resolve mechanical integration conflicts,
-- ensure indexes and state references are coherent.
+- ensure indexes and state references are coherent,
+- inspect and integrate dedicated verifier/reviewer evidence,
+- perform the explicit result-dependent canonical-state transition authorised by `VERIFICATION_POLICY.md`, including mechanical WP/status/state routing that does not alter the verifier's result or the parent acceptance criteria.
 
 May not:
-- decide unresolved architecture disputes merely to make a merge easy.
+- decide unresolved architecture disputes merely to make a merge easy,
+- reinterpret PASS / FAIL / NOT VERIFIED,
+- perform substantive repair while claiming to execute a transition-only integration,
+- use evidence integration as acceptance of the reviewed target,
+- waive owner, ADR, adversarial-review, or fresh-verification gates.
 
 ## 6. Human Owner
 
@@ -89,4 +96,4 @@ The owner is not expected to act as:
 
 ## Separation rule
 
-For material architecture work, design and independent verification must occur in separate sessions or clearly isolated executions with fresh context. Adversarial review is separate from both when the WP requires it.
+For material architecture work, design and independent verification must occur in separate sessions or clearly isolated executions with fresh context. Adversarial review is separate from both when the WP requires it. Verification-result integration is likewise a separate integrator responsibility when canonical state must change after a verifier closes.
