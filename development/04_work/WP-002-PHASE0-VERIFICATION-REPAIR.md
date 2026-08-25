@@ -1,6 +1,6 @@
 # WP-002 — Phase 0 Verification Repair
 
-**Status:** active  
+**Status:** verification  
 **Owner role:** designer/builder  
 **Decision authority:** builder may repair the verified Phase 0 defects within this WP; WP-000 acceptance criteria, foundation authority, owner gates, and verifier independence may not be weakened or redefined  
 **Branch:** `phase0/development-os`  
@@ -12,9 +12,9 @@ Repair the exact defects exposed by the completed WP-001 verification so that th
 
 ## Problem
 
-Independent verification of draft PR #1 head `1d2dd033ca3068484d841bcebf90e81ea84c7f71` produced an overall **FAIL**. WP-000 criteria 1 and 2 failed because the repository contains incompatible mandatory cold-start/read-order procedures and a stale duplicated current-work pointer. The subsequent integrator review also identified a separate process defect: the operating system lacks an explicit verifier-result → canonical-state transition mechanism.
+Independent verification of draft PR #1 head `1d2dd033ca3068484d841bcebf90e81ea84c7f71` produced an overall **FAIL**. WP-000 criteria 1 and 2 failed because the repository contained incompatible mandatory cold-start/read-order procedures and a stale duplicated current-work pointer. The subsequent integrator review also identified a separate process defect: the operating system lacked an explicit verifier-result → canonical-state transition mechanism.
 
-These defects block Phase 0 acceptance. They must be repaired by a fresh builder session and then independently re-verified against the changed exact PR #1 head.
+These defects blocked Phase 0 acceptance. WP-002 has now produced a builder repair and must receive fresh independent verification against the changed exact PR #1 head.
 
 ## Scope
 
@@ -54,7 +54,7 @@ The builder must use repository state, not prior-chat memory. Start from `develo
 - `development/01_governance/VERIFICATION_POLICY.md`
 - `development/03_plan/PR_GATE.md`
 
-**F1 cold-start note:** the existing repository contains contradictory order instructions; that contradiction is the repair target. The builder must not hide the inconsistency by claiming that all pre-repair orders were simultaneously satisfied, and must not invent an unrecorded precedence rule as the repair.
+**F1 cold-start note:** the pre-repair repository contained contradictory order instructions; that contradiction was the repair target. The builder did not treat the old orders as simultaneously satisfiable. The repair design assigns fresh-session sequencing to one explicit authority and makes WP reading order subordinate to that sequence.
 
 ## Inputs and dependencies
 
@@ -68,18 +68,39 @@ The builder must use repository state, not prior-chat memory. Start from `develo
 
 ## Unknowns and assumptions
 
-- The repair design is intentionally not prescribed here; the builder must choose the smallest coherent control structure that satisfies the existing acceptance criteria.
-- Historical session records are evidence and should normally remain immutable; operational pointers and governance controls may be changed where required.
-- Any material repair changes PR #1's head and makes the 2026-08-25 FAIL result historical evidence rather than current verification of the new commit.
+- The historical verification remains exact evidence for the old target only.
+- Historical session/verifier records remain evidence and were not rewritten to erase the original failure.
+- The new verifier must decide whether the implemented precedence and transition mechanisms actually satisfy WP-000; builder rationale is not proof.
+- A branch commit cannot safely embed its own final commit SHA inside a tracked handoff file without changing that SHA. Therefore the exact final PR #1 head is authoritative in GitHub PR metadata and is independently captured by the verifier at start; the builder close additionally records the observed final SHA in a PR comment after repository-changing close commits, so recording the SHA does not itself move the target.
 
 ## Outputs
 
-- repository changes that resolve F1;
-- repository changes that resolve F2;
-- an explicit reusable mechanism that resolves PD-001;
-- any mechanically required state/index updates caused by those repairs;
-- updated WP-002 status and builder handoff at session close;
-- a clearly activated fresh verifier responsibility for the changed exact PR #1 head after builder repair is complete.
+### F1 — cold-start/read-order repair
+
+- `development/03_plan/COLD_START.md` — single authoritative bootstrap sequencing procedure; WP/local reading orders are constrained to Step 3.
+- `development/01_governance/WORKING_PROTOCOL.md` — delegates bootstrap sequence to COLD_START instead of defining a competing ordered procedure.
+- `development/01_governance/SOURCE_OF_TRUTH.md` — separates semantic authority from bootstrap sequencing and makes current-state home explicit.
+- `development/04_work/WP_TEMPLATE.md` — prevents future WPs from redefining COLD_START Steps 1–2.
+
+### F2 — single current-work home
+
+- `development/03_plan/NEXT_SESSION.md` — converted to a derived launch view that stores no current phase/WP/role/target/next-responsibility value.
+- `development/01_governance/SOURCE_OF_TRUTH.md` — states that current phase/active WP/next responsibility live in `STATE.md` + active WP and that derived views are subordinate.
+- `development/03_plan/WORKSPACE_INDEX.md` — updated as a subordinate navigational view at builder close.
+
+### PD-001 — verifier-result → canonical-state transition
+
+- `development/01_governance/VERIFICATION_POLICY.md` — explicit Integrator-owned trigger, sequence, PASS/FAIL/NOT VERIFIED routing, transition-only/material freshness distinction, and no-false-completion controls.
+- `development/01_governance/ROLE_MODEL.md` — explicit Integrator transition authority and prohibitions; verifier remains unable to integrate/repair its own result.
+- `development/01_governance/WORKING_PROTOCOL.md` — verifier close hands canonical transition to a separate Integrator.
+- `development/03_plan/PR_GATE.md` — distinguishes verification/review evidence PR integration from target acceptance.
+- `development/02_architecture/decisions/ADR-0000-DEVELOPMENT-GOVERNANCE-BOOTSTRAP.md` — records the proposed governance change without accepting the ADR or bypassing its owner gate.
+- `development/06_reviews/PROCESS-DEFECT-PD-001-VERIFIER-STATE-TRANSITION.md` — records implemented repair as pending independent verification.
+
+### Fresh verification preparation
+
+- `development/04_work/WP-003-PHASE0-REVERIFICATION.md` — fresh verifier responsibility for the changed exact PR #1 head, with all eleven WP-000 criteria plus F1/F2/PD-001 regression checks.
+- builder close state/index/handoff updates under `development/03_plan/` and `development/07_sessions/`.
 
 ## Acceptance criteria
 
@@ -94,12 +115,12 @@ The builder must use repository state, not prior-chat memory. Start from `develo
 
 ## Required verification
 
-- a **fresh verifier session** after builder repair;
+- a **fresh verifier session** under `development/04_work/WP-003-PHASE0-REVERIFICATION.md`;
 - re-derive expected results from unchanged WP-000 before relying on builder rationale;
 - verify all eleven WP-000 acceptance criteria, not only F1/F2/PD-001;
 - bind the new result to the exact changed draft PR #1 head commit;
 - explicitly test F1, F2, and the new PD-001 transition mechanism;
-- treat the prior 2026-08-25 verification as stale for any changed target;
+- treat the prior 2026-08-25 verification as stale for the changed target;
 - no builder self-verification;
 - after a future all-PASS verification, separate adversarial review is still required before Phase 0 acceptance.
 
@@ -109,7 +130,7 @@ The builder handoff must identify:
 
 - each changed artefact and which of F1, F2, or PD-001 it addresses;
 - why the repair does not weaken WP-000 acceptance criteria or authority controls;
-- the exact resulting PR #1 head commit to be independently verified;
+- the exact resulting PR #1 head commit to be independently verified, recorded without moving the target;
 - any unresolved issue that prevents a clean verifier handoff.
 
 ## Risks
@@ -119,14 +140,17 @@ The builder handoff must identify:
 - repairing PD-001 with another status document that itself becomes a duplicate source of truth;
 - editing historical verifier evidence instead of repairing current controls;
 - broadening the repair into Phase 1 design;
-- treating the previous FAIL as current evidence after the target changes.
+- treating the previous FAIL as current evidence after the target changes;
+- allowing transition-only integration to hide substantive repair/design changes.
 
 ## Completion state
 
-Current: **active**. The WP is not complete merely because a builder has edited the affected files. It must reach a clean builder handoff and then receive fresh independent verification against the changed exact PR #1 head.
+Builder responsibility: **complete; independent verification pending**.
+
+WP-002 is now in `verification`, not `verified-complete`. The builder has implemented the scoped repairs and prepared a fresh verifier package, but none of F1, F2, PD-001, WP-000, ADR-0000, Phase 0, or PR #1 is accepted merely because these edits exist.
 
 ## Handoff
 
-Current next responsibility: **fresh designer/builder repair session**.
+Current next responsibility: **fresh verifier session under WP-003 — Phase 0 Fresh Re-verification**.
 
-When the builder responsibility is complete, the builder must update repository state and hand off to a **new fresh verifier session**. The builder must not perform that verification in the same session.
+The verifier must independently capture the exact current PR #1 head, follow `COLD_START.md`, verify all eleven unchanged WP-000 criteria plus F1/F2/PD-001 regressions, write only verification evidence/handoff, and stop. Canonical result integration belongs to a later separate Integrator session under `VERIFICATION_POLICY.md`.
