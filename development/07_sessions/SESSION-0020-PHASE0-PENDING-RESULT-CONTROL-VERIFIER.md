@@ -10,7 +10,7 @@
 **Material target PR:** #16
 **Provisional activation commit:** `7c625107c09788d6066249c67d66cbf7c0c4b576`
 **Canonical state inspected through:** `44a3963e8978fece9c8ed5e8f8719dde5c3581ca`
-**Verifier evidence PR:** pending publication
+**Verifier evidence PR:** #17 — `WP-012: exact-target pending-result control verification PASS`
 
 ## Required inputs read
 
@@ -57,13 +57,15 @@ No repair, candidate resolution, attempt advancement, canonical transition, adve
 - executed the producer model only as corroboration; 13/13 declared cases passed;
 - ran exact-target `git diff --check`; passed;
 - assessed all twelve WP-000 and eighteen WP-012 criteria individually;
-- produced the exact-target verification artefact and this handoff only.
+- produced the exact-target verification artefact and this handoff only;
+- published dedicated evidence PR #17 with initial head `db9e445f7a4782c91b996c81a16fcb291b598d1b` and exact two-file scope;
+- immediately re-ran generic WP-012 discovery after publication, directly validated both key-bound records/scope, and confirmed canonical STATE remained WP-012 so the bridge now routes to Integrator.
 
 ## Outputs produced
 
 - `development/06_reviews/VERIFICATION-WP-000-adf067e4-2026-08-26.md` — **PASS**;
 - this SESSION-0020 handoff;
-- dedicated verifier evidence PR targeting `phase0/development-os` — pending publication.
+- dedicated verifier evidence PR #17 targeting `phase0/development-os` with exactly those two files.
 
 ## Decisions
 
@@ -96,7 +98,6 @@ PASS remains bound only to those exact inputs. It does not accept ADR-0000/0001/
 
 ## Unresolved items
 
-- evidence PR must be published with exactly the two authorised files and complete key in locator metadata;
 - a separate Integrator must validate and integrate the result without reinterpretation;
 - PASS must route to a fresh separate adversarial re-review using an equivalent WP-local activation bridge while general governance remains unmerged;
 - ADR and human/PR/Phase gates remain outstanding;

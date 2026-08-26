@@ -8,7 +8,7 @@
 **Canonical activation commit:** `7c625107c09788d6066249c67d66cbf7c0c4b576`
 **Canonical state inspected through:** `44a3963e8978fece9c8ed5e8f8719dde5c3581ca`
 **Verifier branch:** `codex/wp012-pending-result-control-verification`
-**Verifier evidence PR:** pending publication
+**Verifier evidence PR:** #17 — `WP-012: exact-target pending-result control verification PASS`
 **Specification:** `development/04_work/WP-012-PHASE0-PENDING-RESULT-CONTROL-VERIFICATION.md`; `development/04_work/WP-000-DEVELOPMENT-OS.md`; immutable F-AR-001–F-AR-004 review records
 **Date:** 2026-08-26
 
@@ -133,7 +133,16 @@ The following are preserved limitations rather than hidden PASS claims:
 
 ## Publication and close evidence
 
-This section will be updated with the dedicated evidence PR locator before final publication. After the evidence PR exists, canonical `STATE.md` must remain WP-012. A live generic-candidate query must then locate this exact key-bound result and route it to a separate Integrator rather than duplicate verification.
+Dedicated evidence PR #17 was opened against `phase0/development-os` from `codex/wp012-pending-result-control-verification`. Its initial published head was `db9e445f7a4782c91b996c81a16fcb291b598d1b`; the only later change is this locator/close-evidence update within the same two authorised records.
+
+Immediately after PR creation, live generic WP-012 candidate discovery found PR #17. Direct inspection confirmed:
+
+- both result records carry the complete expected key;
+- the verification artefact contains completed result **PASS**;
+- the changed-file scope is exactly this artefact plus SESSION-0020;
+- canonical `phase0/development-os` remains at WP-012 with the same target/key/activation.
+
+Therefore the provisional activation close condition is directly reproduced: a generic fresh session now encounters one current WP-012 result and routes to a separate Integrator rather than repeating verification. This verifier does not change `STATE.md` or integrate the result.
 
 ## Required next responsibility
 
