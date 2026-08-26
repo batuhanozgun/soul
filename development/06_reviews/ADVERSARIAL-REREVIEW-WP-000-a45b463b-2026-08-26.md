@@ -4,6 +4,7 @@
 **Reviewed commit/artefact:** `a45b463b083604d3f59d75bdca5ba97d5bc170e6`  
 **Authoritative specification:** `development/04_work/WP-000-DEVELOPMENT-OS.md`; `development/04_work/WP-010-PHASE0-F-AR-001-REPAIR-ADVERSARIAL-REREVIEW.md`  
 **Reviewer output branch:** `review/wp010-f-ar-001-repair-adversarial-rereview-2026-08-26-1247`  
+**Reviewer evidence PR:** #15 — `WP-010: F-AR-001 repair adversarial re-review — Requires repair`  
 **Date:** 2026-08-26
 
 ## Pre-evidence attack model
@@ -14,7 +15,7 @@ The pre-evidence hypotheses covered guard discovery shape, metadata/content spoo
 
 ## Exact target and transition inspection
 
-### PR #13 freshness at review start
+### PR #13 freshness at review start and close
 
 Direct PR #13 inspection at review start showed:
 
@@ -25,7 +26,7 @@ Direct PR #13 inspection at review start showed:
 - exact head SHA: `a45b463b083604d3f59d75bdca5ba97d5bc170e6`;
 - exactly six changed files, matching the WP-008 declared repair scope.
 
-The material target therefore matched WP-010's fixed target at review start.
+Immediately before reviewer close, PR #13 was re-read and remained open/draft with the same exact head `a45b463b083604d3f59d75bdca5ba97d5bc170e6`. The material target therefore did not move during this review.
 
 ### Exact repaired control surface inspected
 
@@ -52,16 +53,29 @@ The development-line transition from PR #14 base `b226e62f19e75510bf955b637fe3c3
 
 This classification does not cure the findings below.
 
+### Reviewer-close live lifecycle reproduction
+
+After this review result and SESSION-0017 handoff were published in dedicated reviewer evidence PR #15, the reviewer immediately re-read canonical `phase0/development-os` rather than assuming the handoff state.
+
+Observed simultaneously after publication:
+
+- PR #15 was open, targeted `phase0/development-os`, and contained the published WP-010 **Requires repair** result;
+- canonical `development/03_plan/STATE.md` still named WP-010 and the fresh adversarial-reviewer responsibility, as required before separate Integrator transition;
+- canonical `development/03_plan/COLD_START.md` still had the pre-repair Steps 1–5 sequence and no Step 1A pending independent-result guard;
+- PR #13 remained unmerged/open/draft at exact target `a45b463...`.
+
+Therefore the post-result/pre-Integrator lifecycle that F-AR-002 describes is directly present at reviewer close, not merely inferred from the earlier WP-009 verifier interval.
+
 ## Findings
 
 ### F-AR-002 — The repair has no safe activation path for its own verifier/reviewer result intervals
 
 - **Claim:** the pending-result guard being reviewed exists only on unmerged PR #13. Canonical `phase0/development-os`, which `COLD_START.md` requires fresh sessions to enter through, still contains the pre-repair cold-start without Step 1A. Therefore the WP-009 verifier-close interval and the current WP-010 reviewer-close interval are not actually protected by the repair. A generic fresh `Başlat` after evidence publication but before the separate Integrator can still repeat the just-completed independent role — the exact F-AR-001 lifecycle.
-- **Evidence:** PR #13 is still open/draft and unmerged at exact head `a45b463...`. The exact target `COLD_START.md` contains Step 1A pending-result discovery; current canonical `phase0/development-os/development/03_plan/COLD_START.md` does not. WP-009 verifier PR #14 was published while canonical state still assigned WP-009 until SESSION-0016 Integrator transitioned it. WP-010 explicitly requires this reviewer to publish evidence while leaving canonical state unchanged until another Integrator acts. No transition-only commit cherry-picks or otherwise activates Step 1A on the canonical development line before PR #13 acceptance.
+- **Evidence:** PR #13 is still open/draft and unmerged at exact head `a45b463...`. The exact target `COLD_START.md` contains Step 1A pending-result discovery; current canonical `phase0/development-os/development/03_plan/COLD_START.md` does not. WP-009 verifier PR #14 was published while canonical state still assigned WP-009 until SESSION-0016 Integrator transitioned it. At this reviewer close, PR #15 is now published while canonical `STATE.md` still assigns WP-010 reviewer work and canonical `COLD_START.md` still lacks Step 1A. No transition-only commit cherry-picks or otherwise activates Step 1A on the canonical development line before PR #13 acceptance.
 - **Failure path:** reviewer/verifier completes → publishes dedicated evidence PR → canonical `STATE.md` still assigns the same independent WP/role → generic fresh `Başlat` reads canonical pre-repair `COLD_START.md` → no pending-result scan occurs → the same verifier/reviewer role is declared and may begin again before the evidence PR is discovered through non-canonical context → duplicate or conflicting independent work is created.
 - **Impact:** the repair is not self-hosting during the very lifecycle required to verify and adversarially review it. WP-000 cold-start/session-continuity controls remain unreliable during the repair's own mandatory gates, and the project still depends on a specially selected Integrator session or human awareness during that interval — the mechanism F-AR-001 rejected as insufficient. Canonical corruption is still mitigated by later Integrator checks, so the current evidence supports material rather than catastrophic severity.
 - **Severity:** **medium — material**.
-- **Disproof attempt:** checked whether Step 1A was already present on canonical `phase0/development-os` — it is not. Checked whether PR #14 integration or WP-009→WP-010 routing activated the repaired cold-start as a transition-only change — they did not. Checked whether derived Project/index/handoff surfaces may substitute — repository governance explicitly makes them subordinate and they cannot replace `COLD_START.md`. Checked whether the successful SESSION-0016 Integrator disproves the defect — it shows an explicitly selected Integrator can recover, not that generic cold-start can discover the pending result.
+- **Disproof attempt:** checked whether Step 1A was already present on canonical `phase0/development-os` — it is not. Checked whether PR #14 integration or WP-009→WP-010 routing activated the repaired cold-start as a transition-only change — they did not. Checked whether derived Project/index/handoff surfaces may substitute — repository governance explicitly makes them subordinate and they cannot replace `COLD_START.md`. Checked whether the successful SESSION-0016 Integrator disproves the defect — it shows an explicitly selected Integrator can recover, not that generic cold-start can discover the pending result. Finally published PR #15 and re-read canonical state/cold-start; the same vulnerable interval was directly reproduced.
 - **Result:** **stands**.
 
 ### F-AR-003 — Same-WP stale/ambiguous evidence can create a persistent cold-start livelock
@@ -112,4 +126,4 @@ No repair is performed in this reviewer session.
 
 The exact repair target `a45b463b083604d3f59d75bdca5ba97d5bc170e6` should not proceed directly to ADR/PR/Phase acceptance. F-AR-002 and F-AR-003 are surviving medium/material findings; F-AR-004 is a surviving low timing-dependent weakness.
 
-This reviewer evidence must be published in a dedicated evidence PR and then handled by a **separate Integrator**. The Integrator must preserve the findings and judgement without reinterpretation, integrate only authorised review/session evidence, and route the smallest bounded repair/resolution responsibility. Any material repair requires a new exact target and fresh verification/re-review as required by current governance.
+This reviewer evidence is published in dedicated evidence PR #15 and must now be handled by a **separate Integrator**. The Integrator must preserve the findings and judgement without reinterpretation, integrate only authorised review/session evidence, and route the smallest bounded repair/resolution responsibility. Any material repair requires a new exact target and fresh verification/re-review as required by current governance.
