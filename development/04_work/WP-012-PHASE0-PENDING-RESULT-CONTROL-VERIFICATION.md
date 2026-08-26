@@ -10,7 +10,7 @@
 **Parent:** `WP-000-DEVELOPMENT-OS.md`
 **Repair package:** `WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md`
 **Result-control key:** `WP-012 / verifier / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`
-**Provisional activation commit:** pending exact binding in the immediate follow-up commit; fail closed until recorded
+**Provisional activation commit:** `7c625107c09788d6066249c67d66cbf7c0c4b576`
 
 ## Objective
 

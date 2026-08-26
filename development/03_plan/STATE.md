@@ -7,7 +7,7 @@
 **Current exact material target:** `adf067e4289e4c0b51cf40c1940193e8252b22e0`
 **Material base:** `8dcdc750600b336a2e97fde3433926b6a2217f26`
 **Superseded material PR:** #13 — closed unmerged at `a45b463b083604d3f59d75bdca5ba97d5bc170e6`
-**Provisional activation commit:** pending exact binding in the immediate follow-up commit; fail closed until recorded
+**Provisional activation commit:** `7c625107c09788d6066249c67d66cbf7c0c4b576`
 **State:** WP-011 builder published a bounded changed target on PR #16; fresh separate exact-target verification is active under WP-012; no verification, re-review, ADR acceptance, material merge, Phase acceptance, or Phase 1 claim has occurred
 **Authoritative product branch:** `main`
 
@@ -153,7 +153,7 @@ The repair architecture adds a complete result-control key, initial and immediat
 
 Result-control key: `WP-012 / verifier / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`.
 
-The WP-local activation bridge is a provisional material rollout control, not a transition-only change and not acceptance of PR #16 governance. Its exact activation commit is pending binding in the immediate follow-up commit; until recorded, independent execution fails closed. The verifier must execute the bridge after COLD_START Steps 1–2 and again immediately before Step 4 responsibility commitment.
+The WP-local activation bridge is a provisional material rollout control, not a transition-only change and not acceptance of PR #16 governance. Its exact activation commit is `7c625107c09788d6066249c67d66cbf7c0c4b576`. The verifier must execute the bridge after COLD_START Steps 1–2 and again immediately before Step 4 responsibility commitment.
 
 ## Material architecture status
 

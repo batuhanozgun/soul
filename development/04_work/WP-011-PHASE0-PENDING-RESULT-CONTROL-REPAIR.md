@@ -9,7 +9,7 @@
 **Repair PR:** #16 — `WP-011: repair pending independent-result control lifecycle`
 **Exact new material target:** `adf067e4289e4c0b51cf40c1940193e8252b22e0`
 **Material base:** `8dcdc750600b336a2e97fde3433926b6a2217f26`
-**Provisional activation commit:** pending exact binding in the immediate follow-up commit; fail closed until recorded
+**Provisional activation commit:** `7c625107c09788d6066249c67d66cbf7c0c4b576`
 **Parent:** `WP-000-DEVELOPMENT-OS.md`  
 **Prior repair package:** `WP-008-PHASE0-F-AR-001-REPAIR.md`  
 **Verification activity:** WP-009 — **PASS** for exact target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`  
