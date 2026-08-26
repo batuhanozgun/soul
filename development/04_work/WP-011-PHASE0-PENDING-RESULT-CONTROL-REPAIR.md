@@ -1,6 +1,6 @@
 # WP-011 — Phase 0 Pending Independent-Result Control Repair
 
-**Status:** builder repair published — fresh separate verification required
+**Status:** builder repair published — WP-012 verification PASS; fresh separate adversarial re-review required
 **Owner role:** designer/builder  
 **Decision authority:** bounded repair of F-AR-002, F-AR-003 and F-AR-004 within existing foundation/governance and unchanged WP-000 acceptance criteria; architecture-level choices must follow `DECISION_POLICY.md`; no independent verification, adversarial-review self-approval, canonical result integration, ADR acceptance, PR #13 merge, PR #1 merge, Phase acceptance, or Phase 1 authority  
 **Development branch:** `phase0/development-os`  
@@ -172,10 +172,10 @@ The builder must preserve a claim-to-trace chain for each finding, including the
 
 ## Completion state
 
-Current: **builder repair published — fresh separate verification required.**
+Current: **builder repair published — WP-012 verification PASS; fresh separate adversarial re-review required.**
 
-The prior target `a45b463...` remains historically verified PASS under WP-009 but unsuitable because WP-010 issued **Requires repair**. The changed target `adf067e...` has no independent verification or adversarial re-review result.
+The prior target `a45b463...` remains historically verified PASS under WP-009 but unsuitable because WP-010 issued **Requires repair**. The changed target `adf067e...` has WP-012 **PASS**, permanently bound only to that exact target and activation `7c625107...`; it has no fresh adversarial re-review result and remains unaccepted/unmerged.
 
 ## Handoff
 
-Exact next responsibility: **fresh separate verifier under WP-012** for exact target `adf067e4289e4c0b51cf40c1940193e8252b22e0`, result-control attempt 1. The builder stops without self-verification, self-review, result integration, acceptance, or merge.
+Exact next responsibility: **fresh separate adversarial reviewer under WP-013** for exact target `adf067e4289e4c0b51cf40c1940193e8252b22e0`, result-control attempt 1, including an equivalent exact-key WP-local activation bridge while PR #16 governance remains unmerged. The builder performed no self-verification, self-review, result integration, acceptance, or merge.

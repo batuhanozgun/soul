@@ -1,6 +1,6 @@
 # WP-012 — Phase 0 Pending-Result Control Verification
 
-**Status:** active — fresh separate verifier required
+**Status:** complete — verification activity issued **PASS**; evidence integrated by separate Integrator
 **Owner role:** verifier
 **Decision authority:** independently issue PASS / FAIL / NOT VERIFIED for the complete WP-011 repair target and its exact provisional activation; no repair, candidate resolution, attempt advancement, canonical result integration, adversarial re-review, ADR acceptance, PR #16/#1 merge, Phase acceptance, or Phase 1 authority
 **Development branch:** `phase0/development-os`
@@ -166,8 +166,20 @@ After publication, a separate Integrator validates/integrates the evidence and t
 
 ## Completion state
 
-Active — fresh separate verifier required. No verification result exists yet for `adf067e...`.
+Complete as a verification activity — result: **PASS** for exact material target `adf067e4289e4c0b51cf40c1940193e8252b22e0` and exact provisional activation `7c625107c09788d6066249c67d66cbf7c0c4b576` under result-control attempt 1.
+
+Canonical verifier artefact:
+
+`development/06_reviews/VERIFICATION-WP-000-adf067e4-2026-08-26.md`
+
+Verifier handoff:
+
+`development/07_sessions/SESSION-0020-PHASE0-PENDING-RESULT-CONTROL-VERIFIER.md`
+
+Dedicated evidence PR #17 contained exactly those two files at head `1caf39a3fcf62c18a8d017f71f26f9c834951e70`. A separate Integrator validated that exact key/result/scope and merged it evidence-only as `2d7329508fbecf7a05cf7f26cd16e2330985a076`.
+
+The evidence merge and activity close do not accept PR #16, ADR-0000/0001/0002, WP-000 or Phase 0. The exact target remains unmerged and requires fresh separate adversarial re-review.
 
 ## Handoff
 
-Exact next responsibility: fresh separate verifier under this WP and result-control key attempt 1. Stop after publishing verification artefact + handoff PR; do not integrate the result or continue into adversarial re-review.
+Exact next responsibility: fresh separate adversarial reviewer under `development/04_work/WP-013-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEW.md`, bound to the same exact material target and its own result-control attempt 1. The reviewer must publish only review evidence + handoff and stop for another separate Integrator.

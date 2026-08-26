@@ -25,8 +25,9 @@
 - `CHATGPT_PROJECT_ENTRY.md` — derived minimal Project Instructions convenience; no governance copy
 
 ## Current work
-- Active: `../04_work/WP-012-PHASE0-PENDING-RESULT-CONTROL-VERIFICATION.md` — fresh separate verifier for PR #16 exact target `adf067e...`, result-control attempt 1, including provisional WP-local activation bridge
-- Builder-complete repair: `../04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md` — PR #16 exact target `adf067e...` from base `8dcdc750...`; producer-only, independently unverified
+- Active: `../04_work/WP-013-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEW.md` — fresh separate adversarial reviewer for PR #16 exact target `adf067e...`, result-control attempt 1, including provisional WP-local activation bridge
+- Completed verification activity: `../04_work/WP-012-PHASE0-PENDING-RESULT-CONTROL-VERIFICATION.md` — **PASS** for PR #16 exact target `adf067e...` and activation `7c625107...`; evidence PR #17 integrated evidence-only as `2d732950...`
+- Builder-complete repair: `../04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md` — PR #16 exact target `adf067e...` from base `8dcdc750...`; WP-012 PASS, fresh adversarial re-review outstanding
 - Completed adversarial re-review: `../04_work/WP-010-PHASE0-F-AR-001-REPAIR-ADVERSARIAL-REREVIEW.md` — **Requires repair** for exact target `a45b463...`; reviewer evidence PR #15 integrated evidence-only as `c8fc17bc...`
 - Completed verification activity: `../04_work/WP-009-PHASE0-F-AR-001-REPAIR-VERIFICATION.md` — **PASS** for exact target `a45b463...`; verifier evidence PR #14 integrated evidence-only as `37f4bceb...`
 - Builder-complete prior repair: `../04_work/WP-008-PHASE0-F-AR-001-REPAIR.md` — exact target `a45b463...`; WP-009 verified PASS, but WP-010 adversarial re-review issued **Requires repair**
@@ -40,6 +41,7 @@
 - Historical repair package: `../04_work/WP-002-PHASE0-VERIFICATION-REPAIR.md`
 
 ## Verification, reviews, defects and evidence
+- `../06_reviews/VERIFICATION-WP-000-adf067e4-2026-08-26.md` — WP-012 issued **PASS** for exact PR #16 target `adf067e...` and activation `7c625107...`; PR #17 integrated evidence-only as `2d732950...`
 - `../05_evidence/F-AR-001-TO-004-PENDING-RESULT-CONTROL-REGRESSION-2026-08-26.md` — WP-011 producer regression record on PR #16 target; 13 declared cases, not independent proof
 - `../05_evidence/PENDING-RESULT-RESOLUTION-TEMPLATE.md` — proposed exact-bound canonical Integrator resolution record template on PR #16 target
 - `../05_evidence/pending_result_control_regression.py` — executable producer decision-table regression model on PR #16 target
@@ -57,7 +59,7 @@
 ## Decisions
 - `../02_architecture/decisions/ADR-0000-DEVELOPMENT-GOVERNANCE-BOOTSTRAP.md` — proposed; still requires its declared owner path
 - `../02_architecture/decisions/ADR-0001-DEVELOPMENT-REASONING-POLICY.md` — proposed; owner direction approved, acceptance path still pending
-- `../02_architecture/decisions/ADR-0002-PENDING-INDEPENDENT-RESULT-DISCOVERY.md` — revised/proposed on exact WP-011 repair target `adf067e...`; no acceptance or current independent verification
+- `../02_architecture/decisions/ADR-0002-PENDING-INDEPENDENT-RESULT-DISCOVERY.md` — revised/proposed on exact WP-011 repair target `adf067e...`; WP-012 verification PASS, fresh adversarial re-review and acceptance path still outstanding
 
 ## Templates
 - ADR: `../01_governance/ADR_TEMPLATE.md`
@@ -88,5 +90,6 @@
 - `../07_sessions/SESSION-0017-PHASE0-F-AR-001-REPAIR-ADVERSARIAL-REREVIEWER.md` — WP-010 **Requires repair** handoff; F-AR-002/F-AR-003/F-AR-004 stand; reviewer evidence PR #15
 - `../07_sessions/SESSION-0018-PHASE0-WP010-INTEGRATOR.md` — PR #15 evidence integration and canonical **Requires repair** routing to WP-011; no repair/acceptance
 - `../07_sessions/SESSION-0019-PHASE0-PENDING-RESULT-CONTROL-BUILDER.md` — WP-011 builder close; PR #16 exact target `adf067e...`; provisional activation `7c625107...`; WP-012 verifier next
+- `../07_sessions/SESSION-0020-PHASE0-PENDING-RESULT-CONTROL-VERIFIER.md` — WP-012 **PASS** for exact target `adf067e...`; verifier evidence PR #17 integrated evidence-only as `2d732950...`
 
 This index is **navigational and derived only**. It does not override the authority hierarchy defined in `SOURCE_OF_TRUTH.md`, the bootstrap sequence in `COLD_START.md`, or current project truth in `STATE.md`. If any current-work value here ever disagrees with `STATE.md`, `STATE.md` wins and this index is stale until updated.
