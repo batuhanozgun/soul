@@ -1,6 +1,6 @@
 # WP-007 — Phase 0 Adversarial Review
 
-**Status:** active  
+**Status:** complete — review issued **Requires repair**; F-AR-001 stands  
 **Owner role:** adversarial-reviewer  
 **Decision authority:** adversarial reviewer may issue evidence-backed findings and an overall suitability judgement; no repair, canonical integration, ADR acceptance, target merge, Phase acceptance, or Phase 1 authority  
 **Branch:** fresh adversarial-review branch/execution based on the current Phase 0 development line  
@@ -11,15 +11,15 @@
 
 Independently attack the Phase 0 Development Operating System after WP-006 PASS and determine whether a material failure remains that normal verification did not expose.
 
-The review must remain bound to material target `c690f858e7682f5bdf0511c0f10b0e932d868b0e`. Post-target commits may be treated as non-retargeting only if they are demonstrably transition-only under `VERIFICATION_POLICY.md`.
+The review remained bound to material target `c690f858e7682f5bdf0511c0f10b0e932d868b0e`. Post-target commits were treated as non-retargeting only after they were inspected as transition-only under `VERIFICATION_POLICY.md`.
 
 ## Problem
 
-WP-006 established specification conformance, but Phase 0 still requires a separate adversarial review before acceptance. The adversarial role must actively seek failure paths rather than repeat the verifier's checklist or producer rationale.
+WP-006 established specification conformance, but Phase 0 still required a separate adversarial review before acceptance. The adversarial role had to actively seek failure paths rather than repeat the verifier's checklist or producer rationale.
 
 ## Scope
 
-Attack surfaces include, without imposing a finding quota:
+Attack surfaces included, without imposing a finding quota:
 
 - hidden assumptions and specification loopholes;
 - authority leaks, owner-decision transfer, or role-confusion paths;
@@ -43,7 +43,7 @@ Attack surfaces include, without imposing a finding quota:
 
 ## Required reading
 
-Enter through `development/03_plan/COLD_START.md` and complete Steps 1–2 first. The sequence below applies only within COLD_START Step 3.
+The reviewer entered through `development/03_plan/COLD_START.md` and completed Steps 1–2 first. The sequence below applied only within COLD_START Step 3.
 
 ### A. Establish attack model before reading verifier conclusions
 
@@ -63,7 +63,7 @@ Enter through `development/03_plan/COLD_START.md` and complete Steps 1–2 first
 14. `development/03_plan/PHASE_GATE.md`
 15. `development/06_reviews/ADVERSARIAL_REVIEW_TEMPLATE.md`
 
-At this point record the attack surfaces/hypotheses to test before relying on verifier, builder, or Integrator conclusions.
+The reviewer recorded the attack surfaces/hypotheses before relying on verifier, builder, or Integrator conclusions.
 
 ### B. Then inspect changed architecture and prior evidence
 
@@ -74,38 +74,45 @@ At this point record the attack surfaces/hypotheses to test before relying on ve
 20. `development/06_reviews/PROCESS-DEFECT-PD-002-WP-ACTIVATION-ORDER.md`
 21. `development/06_reviews/VERIFICATION-WP-000-c690f858-2026-08-26.md`
 22. `development/07_sessions/SESSION-0010-PHASE0-REASONING-REVERIFIER.md`
-23. `development/07_sessions/SESSION-0011-PHASE0-WP006-INTEGRATOR.md` — includes an observed transition-discoverability event; treat the root-cause interpretation as a hypothesis to attack, not as an accepted finding.
+23. `development/07_sessions/SESSION-0011-PHASE0-WP006-INTEGRATOR.md`
 
-PR/repository metadata may be inspected to confirm that all commits after `c690f858e7682f5bdf0511c0f10b0e932d868b0e` are transition-only. If any material post-target change is found, stop: current verification/review freshness must be reconsidered before Phase 0 can proceed.
+## Acceptance criteria result
 
-## Acceptance criteria
+The reviewer completed the required independent review activity, bound the review to the exact target, persisted its attack model before relying on prior conclusions, checked the post-target transition chain, attempted to disprove candidate findings, performed no repair/canonical transition/acceptance work, and issued an overall judgement.
 
-1. A fresh adversarial-review session operates separately from the builder, verifier, and Integrator roles.
-2. Review target and post-target transition-only chain are identified exactly; no material change is silently covered by stale verification.
-3. The reviewer records an attack model before reading verifier conclusions.
-4. The review attempts to falsify Phase 0 across the scoped attack surfaces, including the specific reasoning-policy risks required by WP-005/ADR-0001 and the observed verifier-result transition-discoverability path.
-5. Every surviving finding includes claim, exact evidence, failure path, impact, severity, disproof attempt, and result.
-6. Findings are not quota-driven; if none survive disproof, the reviewer explicitly records a no-finding statement.
-7. The reviewer performs no repair, canonical state transition, ADR acceptance, PR #1 merge, or Phase 1 work.
-8. The review leaves an overall judgement on whether the material target is suitable to proceed to the remaining integration/decision gates.
+One material finding survived disproof:
 
-## Verification / review method
+### F-AR-001 — Generic cold-start cannot reliably discover a completed but unintegrated independent result
 
-Prefer deterministic repository/authority/path checks where possible, then direct artefact/source inspection, then semantic attack analysis for failure paths that cannot be mechanically decided. The reviewer must try to disprove candidate findings rather than preserve them for appearance.
+**Result:** stands.  
+**Severity:** medium — material.  
+**Overall judgement:** **Requires repair.**
 
-## Outputs
+Canonical review evidence:
 
-- a new adversarial-review artefact under `development/06_reviews/`, uniquely named and bound to material target `c690f858...`;
-- a fresh adversarial-review session handoff under `development/07_sessions/`;
-- no repair or canonical transition changes.
+`development/06_reviews/ADVERSARIAL-REVIEW-WP-000-c690f858-2026-08-26.md`
+
+Reviewer handoff:
+
+`development/07_sessions/SESSION-0012-PHASE0-ADVERSARIAL-REVIEWER.md`
+
+## Integration record
+
+Reviewer evidence PR #12 contained only the adversarial-review artefact and SESSION-0012 handoff. A separate Integrator inspected that evidence-only scope and merged PR #12 into `phase0/development-os` as merge commit `9de8a011aa2d14fb985181ba3f180f729342901d`.
+
+The integration preserves F-AR-001 and the **Requires repair** judgement exactly. Evidence integration is not acceptance of the reviewed target and does not repair the finding.
+
+The bounded repair responsibility is routed separately under `development/04_work/WP-008-PHASE0-F-AR-001-REPAIR.md`.
 
 ## Completion state
 
-Current: **active — fresh separate adversarial reviewer required**.
+**Complete as an adversarial-review activity — result: Requires repair.**
 
-Completion of this review does not by itself accept Phase 0 or ADR-0000/ADR-0001. A separate Integrator must integrate the review evidence and route any surviving findings or remaining decision/owner gates without reinterpretation.
+WP-000/Phase 0 is not accepted. The exact reviewed material target is not suitable to proceed directly to the remaining ADR/human-owner/PR acceptance gates until F-AR-001 is repaired or otherwise resolved through authorised governance.
 
 ## Handoff
 
-- surviving material finding(s) → separate Integrator records the review result and routes bounded repair/decision work under existing governance; any material repair requires fresh verification and appropriate re-review;
-- no surviving material findings / suitable-to-proceed judgement → separate Integrator records the review completion and routes the remaining ADR/human-owner/PR acceptance gates; no Phase 1 work begins before Phase 0 is accepted into `main`.
+- surviving material finding F-AR-001 → active `WP-008-PHASE0-F-AR-001-REPAIR.md` assigns a fresh separate designer/builder the bounded repair responsibility;
+- the Integrator did not choose or implement the repair mechanism;
+- any material repair requires fresh exact-target independent verification and appropriate fresh adversarial re-review;
+- ADR-0000/ADR-0001, PR #1 merge, Phase acceptance, and Phase 1 remain outside this completed review activity.
