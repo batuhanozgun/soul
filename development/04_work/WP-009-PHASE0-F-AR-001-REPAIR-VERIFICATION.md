@@ -1,6 +1,6 @@
 # WP-009 — Phase 0 F-AR-001 Repair Verification
 
-**Status:** active  
+**Status:** complete — verification activity issued **PASS** for exact target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`; evidence integrated by separate Integrator  
 **Owner role:** verifier  
 **Decision authority:** independently issue PASS / FAIL / NOT VERIFIED for the exact WP-008 repair target; no repair, canonical result integration, adversarial re-review, ADR acceptance, PR #13 merge, PR #1 merge, Phase acceptance, or Phase 1 authority  
 **Development branch:** `phase0/development-os`  
@@ -170,8 +170,16 @@ After verifier publication/close, a **separate Integrator** validates and integr
 
 The verifier must not perform this transition itself.
 
+## Integration record
+
+Verifier evidence PR #14 contained exactly two authorised files: `development/06_reviews/VERIFICATION-WP-000-a45b463b-2026-08-26.md` and `development/07_sessions/SESSION-0015-PHASE0-F-AR-001-REPAIR-VERIFIER.md`.
+
+A separate Integrator inspected the exact PR scope and both files, confirmed the immutable result **PASS** was bound only to exact material target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`, confirmed PR #13 still had that exact head, and merged PR #14 evidence-only into `phase0/development-os` as merge commit `37f4bceb8f7ad4e0552f52af3ce878db03eb694f`.
+
+No repair, ADR acceptance, PR #13/PR #1 merge, Phase acceptance or Phase 1 work was performed by that evidence merge or by the canonical transition. The PASS is routed mechanically to fresh separate adversarial re-review under `WP-010-PHASE0-F-AR-001-REPAIR-ADVERSARIAL-REREVIEW.md`.
+
 ## Completion state
 
-Current: **active — fresh separate verifier required for exact WP-008 repair target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`.**
+**Complete as a verification activity — result: PASS for exact target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`.**
 
-WP-000/Phase 0 remains unaccepted. PR #13 and PR #1 remain unmerged/draft. ADR-0002 remains proposed. Phase 1 remains blocked.
+This status does not accept the WP-008 repair, ADR-0000/0001/0002, PR #13, PR #1 or Phase 0. The required fresh separate adversarial re-review is active under WP-010. Any material change to the exact repair target reopens fresh verification for the changed target.
