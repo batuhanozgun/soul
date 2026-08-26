@@ -25,6 +25,8 @@ A new session does not assume the previous chat is available or correct.
 
 The **single sequencing authority** for fresh-session bootstrap is `development/03_plan/COLD_START.md`. This protocol does not define a second ordered reading procedure.
 
+`COLD_START.md` loads `REASONING_POLICY.md` as common governance for every role before substantive work. The reasoning policy governs how material premises, evidence, framing, alternatives, failure causes and completion claims are examined; it does not redefine the active WP or widen role authority.
+
 A WP's `Required reading` section is loaded at the point assigned by `COLD_START.md`. A WP may prescribe an internal order among those Step 3 readings when needed for independence or evidence handling, but it may not silently reorder the earlier bootstrap steps. Historical launch briefs and handoffs may point to `COLD_START.md`; they are not competing sequencing authorities.
 
 If repository state is insufficient or internally contradictory, that is a finding. The session must not repair the gap by silently inventing prior intent.
@@ -43,6 +45,7 @@ The same session should not produce a material design and then act as its only i
 
 ## During work
 
+- Apply `REASONING_POLICY.md` proportionally: baseline epistemic rules always apply; deeper checks are triggered by material risk/uncertainty/novelty rather than every atomic edit.
 - New assumptions are written down when they materially affect the result.
 - New architecture choices are not buried in implementation prose; they enter the decision process.
 - Research results are stored as evidence, not silently promoted into decisions.
