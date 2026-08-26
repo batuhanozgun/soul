@@ -24,6 +24,7 @@ Attack surfaces include, without imposing a finding quota:
 - hidden assumptions and specification loopholes;
 - authority leaks, owner-decision transfer, or role-confusion paths;
 - duplicate bootstrap/current-state authority and stale-context failure paths;
+- verifier-result transition discoverability, including the observed pre-integration interval where canonical `STATE.md` can still say “verifier required” while completed verifier evidence exists only in a verification branch/PR, and whether a generic cold-start can incorrectly duplicate verifier work;
 - circular verification, self-approval, false completion, or freshness laundering;
 - change-safety, self-modification, recovery and evidence/provenance gaps;
 - development/product boundary failures;
@@ -62,7 +63,7 @@ Enter through `development/03_plan/COLD_START.md` and complete Steps 1–2 first
 14. `development/03_plan/PHASE_GATE.md`
 15. `development/06_reviews/ADVERSARIAL_REVIEW_TEMPLATE.md`
 
-At this point record the attack surfaces/hypotheses to test before relying on verifier or builder conclusions.
+At this point record the attack surfaces/hypotheses to test before relying on verifier, builder, or Integrator conclusions.
 
 ### B. Then inspect changed architecture and prior evidence
 
@@ -73,6 +74,7 @@ At this point record the attack surfaces/hypotheses to test before relying on ve
 20. `development/06_reviews/PROCESS-DEFECT-PD-002-WP-ACTIVATION-ORDER.md`
 21. `development/06_reviews/VERIFICATION-WP-000-c690f858-2026-08-26.md`
 22. `development/07_sessions/SESSION-0010-PHASE0-REASONING-REVERIFIER.md`
+23. `development/07_sessions/SESSION-0011-PHASE0-WP006-INTEGRATOR.md` — includes an observed transition-discoverability event; treat the root-cause interpretation as a hypothesis to attack, not as an accepted finding.
 
 PR/repository metadata may be inspected to confirm that all commits after `c690f858e7682f5bdf0511c0f10b0e932d868b0e` are transition-only. If any material post-target change is found, stop: current verification/review freshness must be reconsidered before Phase 0 can proceed.
 
@@ -81,7 +83,7 @@ PR/repository metadata may be inspected to confirm that all commits after `c690f
 1. A fresh adversarial-review session operates separately from the builder, verifier, and Integrator roles.
 2. Review target and post-target transition-only chain are identified exactly; no material change is silently covered by stale verification.
 3. The reviewer records an attack model before reading verifier conclusions.
-4. The review attempts to falsify Phase 0 across the scoped attack surfaces, including the specific reasoning-policy risks required by WP-005/ADR-0001.
+4. The review attempts to falsify Phase 0 across the scoped attack surfaces, including the specific reasoning-policy risks required by WP-005/ADR-0001 and the observed verifier-result transition-discoverability path.
 5. Every surviving finding includes claim, exact evidence, failure path, impact, severity, disproof attempt, and result.
 6. Findings are not quota-driven; if none survive disproof, the reviewer explicitly records a no-finding statement.
 7. The reviewer performs no repair, canonical state transition, ADR acceptance, PR #1 merge, or Phase 1 work.
