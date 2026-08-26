@@ -1,11 +1,11 @@
 # PENDING RESULT RESOLUTION — [WP / PR / HEAD]
 
-**Status:** proposed Integrator resolution / canonically integrated  
-**Integrator session:**  
-**Canonical development branch:**  
-**Canonical integration commit:**  
-**Candidate repository:**  
-**Candidate PR:**  
+**Status:** proposed Integrator resolution / canonically integrated
+**Integrator session:**
+**Canonical development branch:**
+**Canonical integration commit:**
+**Candidate repository:**
+**Candidate PR:**
 **Immutable candidate head SHA:**
 
 ## Expected result-control key

@@ -1,9 +1,9 @@
 # ADR-0002 — Pending Independent Result Control and Bounded Recovery
 
-**Status:** proposed — pending fresh independent verification, fresh adversarial re-review, and Phase 0 decision gates  
-**Decision class:** Architecture decision  
-**Date:** 2026-08-26  
-**Supersedes:** none  
+**Status:** proposed — pending fresh independent verification, fresh adversarial re-review, and Phase 0 decision gates
+**Decision class:** Architecture decision
+**Date:** 2026-08-26
+**Supersedes:** none
 **Superseded by:** none
 
 ## Problem
