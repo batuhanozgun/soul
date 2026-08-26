@@ -1,10 +1,11 @@
 # WP-006 — Phase 0 Fresh Verification after F2-R1 + Reasoning Policy
 
-**Status:** active  
+**Status:** complete — verification activity issued **PASS**  
 **Owner role:** verifier  
 **Decision authority:** verifier issues PASS / FAIL / NOT VERIFIED; no repair, canonical integration, ADR acceptance, adversarial-review acceptance, target merge, or Phase-acceptance authority  
-**Branch:** fresh verification branch/execution based on the exact current draft PR #1 head captured at verification start  
-**Target:** draft PR #1 exact head commit captured independently at verification start
+**Verifier output branch:** `verification/wp006-phase0-reasoning-reverification`  
+**Verified target:** draft PR #1 exact head `c690f858e7682f5bdf0511c0f10b0e932d868b0e`  
+**Verifier evidence PR:** #10 — integrated evidence-only by separate Integrator
 
 ## Objective
 
@@ -15,6 +16,25 @@ Freshly and independently verify the complete materially changed Phase 0 Develop
 3. correction and explicit recording of PD-002 work-package activation-order defect.
 
 The result must be bound to the new exact PR #1 head. No historical PASS fragment may be reused as current certification.
+
+## Result
+
+The verification activity completed on 2026-08-26 and issued **PASS** against exact target `c690f858e7682f5bdf0511c0f10b0e932d868b0e`.
+
+- all twelve current WP-000 acceptance criteria: **PASS**;
+- F2-R1 regression: **PASS**;
+- single-bootstrap authority: **PASS**;
+- reasoning-policy scope/proportionality and private-chain-of-thought boundary: **PASS**;
+- self-verification separation: **PASS**;
+- source-synthesis evidence integrity: **PASS**;
+- ADR-0001 proposed-status/acceptance path: **PASS**;
+- PD-002 final activation/current-work discipline: **PASS**;
+- historical freshness and verifier-scope controls: **PASS**.
+
+Canonical verifier artefact: `development/06_reviews/VERIFICATION-WP-000-c690f858-2026-08-26.md`.  
+Verifier handoff: `development/07_sessions/SESSION-0010-PHASE0-REASONING-REVERIFIER.md`.
+
+The PASS remains permanently bound to `c690f858e7682f5bdf0511c0f10b0e932d868b0e`. Evidence integration and result-routing commits after that target are not certified target commits; they remain valid only while they are transition-only under `VERIFICATION_POLICY.md`.
 
 ## Scope
 
@@ -118,6 +138,12 @@ Do not treat builder acceptance tables as proof.
 
 ## Completion state
 
-Current: **active — fresh independent verifier required**.
+This WP is **complete as a verification activity**. Its acceptance criteria were executed and it issued PASS for the exact target above.
 
-When the verifier closes, a separate Integrator must execute `VERIFICATION_POLICY.md` result-to-state transition. PASS routes to the still-required separate adversarial review; FAIL/NOT VERIFIED route to bounded repair/investigation and fresh verification as defined by policy.
+This does **not** make WP-000/Phase 0 accepted, does not accept ADR-0000 or ADR-0001, does not satisfy the separate adversarial-review requirement, and does not certify any later material target change.
+
+## Handoff
+
+A separate Integrator inspected and merged verifier evidence PR #10 without reinterpretation and routed PASS to `WP-007-PHASE0-ADVERSARIAL-REVIEW.md`.
+
+The next required responsibility is a fresh **adversarial reviewer** under WP-007. Any material change after the verified target requires freshness re-evaluation and, where applicable, fresh independent verification.
