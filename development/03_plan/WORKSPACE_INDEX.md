@@ -41,7 +41,7 @@
 - `../06_reviews/PROCESS-DEFECT-PD-001-VERIFIER-STATE-TRANSITION.md`
 - `../06_reviews/PROCESS-DEFECT-PD-002-WP-ACTIVATION-ORDER.md` — defect preserved; final current-work discipline passed WP-006 verification at `c690f858...`
 - `../05_evidence/REASONING-POLICY-SYNTHESIS-2026-08-26.md` — source-to-SOUL synthesis evidence for WP-005
-- Adversarial review for WP-007: **not yet produced**
+- Adversarial review for WP-007: **not yet produced**; active scope includes the SESSION-0011 observed verifier-result transition-discoverability path
 
 ## Decisions
 - `../02_architecture/decisions/ADR-0000-DEVELOPMENT-GOVERNANCE-BOOTSTRAP.md` — proposed; still requires its declared owner path
@@ -66,5 +66,6 @@
 - `../07_sessions/SESSION-0008-PHASE0-F2R1-REPAIR-BUILDER.md`
 - `../07_sessions/SESSION-0009-PHASE0-REASONING-POLICY-BUILDER.md`
 - `../07_sessions/SESSION-0010-PHASE0-REASONING-REVERIFIER.md` — current exact-target PASS handoff; verifier evidence PR #10
+- `../07_sessions/SESSION-0011-PHASE0-WP006-INTEGRATOR.md` — PASS integration, WP-007 activation, transition-only freshness check, and observed transition-discoverability hypothesis
 
 This index is **navigational and derived only**. It does not override the authority hierarchy defined in `SOURCE_OF_TRUTH.md`, the bootstrap sequence in `COLD_START.md`, or current project truth in `STATE.md`. If any current-work value here ever disagrees with `STATE.md`, `STATE.md` wins and this index is stale until updated.
