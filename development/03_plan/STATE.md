@@ -1,24 +1,22 @@
 # SOUL PROJECT STATE
 
 **Current phase:** Phase 0 — Development Operating System  
-**Current work package:** WP-010 — Phase 0 F-AR-001 Repair Adversarial Re-review  
+**Current work package:** WP-011 — Phase 0 Pending Independent-Result Control Repair  
 **Current branch:** `phase0/development-os`  
 **Current PR:** #1 — draft  
-**Current material review target:** WP-008 repair PR #13 exact commit `a45b463b083604d3f59d75bdca5ba97d5bc170e6`  
-**State:** WP-009 fresh independent verification issued **PASS** for exact target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`; verifier evidence PR #14 is integrated evidence-only; fresh separate adversarial re-review is now required under WP-010  
+**Current rejected material target:** WP-008 repair PR #13 exact commit `a45b463b083604d3f59d75bdca5ba97d5bc170e6`  
+**State:** WP-010 adversarial re-review issued **Requires repair** for exact target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`; F-AR-002/F-AR-003/F-AR-004 stand; reviewer evidence PR #15 is integrated evidence-only; fresh separate bounded repair is now required under WP-011  
 **Authoritative product branch:** `main`
 
 ## Current objective
 
-Freshly and separately adversarially re-review exact WP-008 material repair target:
+Freshly and separately repair the three surviving WP-010 findings under:
 
-`a45b463b083604d3f59d75bdca5ba97d5bc170e6`
+`development/04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md`.
 
-under `development/04_work/WP-010-PHASE0-F-AR-001-REPAIR-ADVERSARIAL-REREVIEW.md`.
+The builder must derive the smallest coherent repair for safe activation during the control's own verifier/reviewer result intervals (F-AR-002), durable bounded recovery from resolved stale/ambiguous same-WP evidence (F-AR-003), and the one-shot discovery check-then-act race (F-AR-004), while preserving F-AR-001, canonical-state authority, role separation, fail-closed behaviour and unchanged WP-000 acceptance criteria.
 
-The reviewer must actively attack the repaired F-AR-001 result-discovery/control path, including bypass/spoof, stale/conflict/ambiguity, discovery/inspection failure, authority leakage, false-completion and transition-only abuse paths, rather than repeat the WP-009 verifier checklist.
-
-The reviewer must not repair the target, canonically integrate its own result, accept ADR-0000/0001/0002, merge PR #13/PR #1, accept Phase 0, or begin Phase 1.
+No new material target exists yet. The builder must publish and freeze one exact target, record its relation to PR #13, add regression evidence, and route it to a fresh separate verifier. The builder must not self-verify/re-review, accept an ADR, merge PR #13/PR #1, accept Phase 0, or begin Phase 1.
 
 ## Canonical current-work rule
 
@@ -124,26 +122,25 @@ The PASS remains permanently bound only to exact target `a45b463b083604d3f59d75b
 
 It records the repair architecture choice to preserve canonical state separation while adding a discoverable evidence-PR publication boundary, a pre-role pending-result guard, exact WP/role/target/scope validation, and fail-closed stale/conflict/ambiguity/uninspectable handling.
 
-Neither WP-009 verification nor this Integrator transition accepts ADR-0002. Required adversarial/Phase/owner decision gates remain.
+Neither WP-009 verification, WP-010 adversarial review, nor this Integrator transition accepts ADR-0002. Repair/verification/re-review/Phase/owner decision gates remain.
 
-## Active adversarial re-review routing — WP-010
+## Completed adversarial re-review — WP-010
 
-`development/04_work/WP-010-PHASE0-F-AR-001-REPAIR-ADVERSARIAL-REREVIEW.md` is active.
+`development/04_work/WP-010-PHASE0-F-AR-001-REPAIR-ADVERSARIAL-REREVIEW.md` is complete as a review activity.
 
-The fresh separate reviewer must:
+The exact-target reviewer issued **Requires repair** and preserved three findings:
 
-- enter through canonical `COLD_START.md`;
-- bind review to exact repair target `a45b463b083604d3f59d75bdca5ba97d5bc170e6` and independently confirm PR #13 freshness at start/close;
-- persist an adversarial attack model before relying on WP-008 builder rationale or WP-009 verifier conclusions;
-- attack the repaired post-result/pre-Integrator lifecycle for both verifier and reviewer cases;
-- attempt bypass/spoof, stale/target-mismatch, conflict/ambiguity/incomplete-evidence and discovery/inspection-unavailable failures;
-- test evidence/canonical-state separation, role authority containment, freshness and false-completion controls;
-- inspect PR #14 evidence integration and WP-009 → WP-010 routing as post-target transition-only changes rather than silently assuming they are non-material;
-- leave ADR-0002 proposed;
-- publish a review artefact + reviewer handoff in a dedicated evidence PR targeting `phase0/development-os`;
-- perform no repair or canonical result integration.
+- F-AR-002 — no safe activation path for the repair's own verifier/reviewer result intervals — medium/material, stands;
+- F-AR-003 — same-WP stale/ambiguous evidence can create persistent cold-start livelock — medium/material, stands;
+- F-AR-004 — one-shot pending-result discovery has a check-then-act race — low/timing-dependent, stands.
 
-After reviewer publication/close, a separate Integrator must validate/integrate that review result and route it without reinterpretation.
+Reviewer evidence PR #15 contained exactly the review artefact and SESSION-0017 handoff and was integrated evidence-only as merge commit `c8fc17bc50ca04893cc6a87e492408c078c79311`. The result remains bound only to `a45b463...`; evidence integration is not repair or acceptance.
+
+## Active bounded repair routing — WP-011
+
+`development/04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md` is active.
+
+It assigns a fresh separate designer/builder to preserve and coherently repair F-AR-002/F-AR-003/F-AR-004, establish one exact new material target and regression evidence, and route that changed target to fresh verification and re-review without pre-selecting the substantive repair mechanism in this Integrator transition.
 
 ## Material architecture status
 
@@ -173,21 +170,20 @@ WP-007 did not establish PD-002 recurrence as a separate material finding. WP-00
 
 ## Required next responsibility
 
-**Fresh separate adversarial reviewer under `development/04_work/WP-010-PHASE0-F-AR-001-REPAIR-ADVERSARIAL-REREVIEW.md`.**
+**Fresh separate designer/builder under `development/04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md`.**
 
-Exact target:
+No new exact material target exists yet. The rejected prior target remains `a45b463...` until the builder publishes a changed target.
 
-`a45b463b083604d3f59d75bdca5ba97d5bc170e6`
-
-This Integrator session must stop after the canonical routing/handoff and must not continue into the adversarial re-review.
+This Integrator session must stop after canonical routing/handoff and must not continue into repair.
 
 ## Remaining Phase 0 gates
 
 Remaining gates include:
 
-- WP-010 fresh separate adversarial re-review of exact PR #13 target `a45b463...`;
-- separate Integrator result transition after reviewer close;
-- repair/resolution or authorised acceptance of any surviving material findings;
+- WP-011 bounded repair of F-AR-002/F-AR-003/F-AR-004 and publication of one exact new material target;
+- fresh separate verification of that changed target, followed by separate result integration;
+- fresh separate adversarial re-review of the exact verified repair target, followed by separate result integration;
+- repair/resolution or authorised acceptance of any later surviving material findings;
 - ADR-0000, ADR-0001, and ADR-0002 reaching the status required by their declared decision paths;
 - PR #13 material repair integration only after its required gates permit it;
 - human-owner/PR acceptance gates where required;
@@ -195,16 +191,15 @@ Remaining gates include:
 
 ## Authority boundaries remain unchanged
 
-No current adversarial-review session may:
+No current WP-011 builder session may:
 
-- edit historical verifier/reviewer evidence or reinterpret WP-009 PASS, F-AR-001, or the historical WP-007 **Requires repair** judgement;
+- edit historical verifier/reviewer evidence or reinterpret WP-009 PASS, WP-010 **Requires repair**, or F-AR-001 through F-AR-004;
 - weaken WP-000 acceptance criteria;
-- repair the WP-008 target while reviewing it;
-- canonically integrate its own result;
+- claim independent verification/re-review or canonically integrate a future independent result;
 - accept ADR-0000, ADR-0001, or ADR-0002;
 - merge PR #13 or PR #1;
 - accept Phase 0 or begin Phase 1.
 
 ## Phase 1 gate
 
-Phase 1 does not begin until the WP-008 repair target has current independent verification and required adversarial re-review, all surviving material findings and decision gates are resolved through authorised paths, PR #13 material repair is properly integrated, human/PR acceptance gates are satisfied, and the Phase 0 PR is accepted into `main`.
+Phase 1 does not begin until a changed repair target resolving the current findings has current independent verification and required adversarial re-review, all surviving material findings and decision gates are resolved through authorised paths, the authorised material repair is properly integrated, human/PR acceptance gates are satisfied, and the Phase 0 PR is accepted into `main`.

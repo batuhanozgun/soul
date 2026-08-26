@@ -1,6 +1,6 @@
 # WP-010 — Phase 0 F-AR-001 Repair Adversarial Re-review
 
-**Status:** active  
+**Status:** complete — review issued **Requires repair**; F-AR-002, F-AR-003 and F-AR-004 stand; evidence integrated by separate Integrator  
 **Owner role:** adversarial-reviewer  
 **Decision authority:** independently attack the exact WP-008 repair target and issue evidence-backed findings / an overall suitability judgement; no repair, canonical result integration, ADR acceptance, PR #13 merge, PR #1 merge, Phase acceptance, or Phase 1 authority  
 **Development branch:** `phase0/development-os`  
@@ -135,8 +135,40 @@ After reviewer publication/close, a **separate Integrator** must validate/integr
 
 A surviving material finding routes to the smallest bounded authorised repair/resolution path. A review that leaves no surviving material finding permits routing only to the remaining declared ADR/human-owner/PR/Phase gates; it does not itself accept an ADR, Phase 0, PR #13 or PR #1.
 
+## Review result
+
+The fresh separate reviewer issued:
+
+**Overall judgement:** **Requires repair**
+
+for exact target:
+
+`a45b463b083604d3f59d75bdca5ba97d5bc170e6`
+
+Surviving findings:
+
+- **F-AR-002 — The repair has no safe activation path for its own verifier/reviewer result intervals** — medium/material, stands;
+- **F-AR-003 — Same-WP stale/ambiguous evidence can create a persistent cold-start livelock** — medium/material, stands;
+- **F-AR-004 — One-shot pending-result discovery has a check-then-act race** — low/timing-dependent, stands.
+
+Canonical review evidence:
+
+`development/06_reviews/ADVERSARIAL-REREVIEW-WP-000-a45b463b-2026-08-26.md`
+
+Reviewer handoff:
+
+`development/07_sessions/SESSION-0017-PHASE0-F-AR-001-REPAIR-ADVERSARIAL-REREVIEWER.md`
+
+## Integration record
+
+Reviewer evidence PR #15 contained only the WP-010 adversarial re-review artefact and SESSION-0017 handoff. A separate Integrator inspected that exact evidence-only scope and merged PR #15 into `phase0/development-os` as merge commit `c8fc17bc50ca04893cc6a87e492408c078c79311`.
+
+The integration preserves **Requires repair** and F-AR-002/F-AR-003/F-AR-004 exactly. Evidence integration is not acceptance of target `a45b463...`, ADR-0002, PR #13, PR #1 or Phase 0, and it performs no repair.
+
+The bounded separate repair responsibility is routed under `development/04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md`.
+
 ## Completion state
 
-Current: **active — fresh separate adversarial re-review required for exact WP-008 repair target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`.**
+**Complete as an adversarial-review activity — result: Requires repair.**
 
-WP-009 verification activity has issued **PASS** for this exact target and is complete as a verification activity once its canonical transition is recorded. PR #13 and PR #1 remain unmerged/draft. ADR-0000, ADR-0001 and ADR-0002 remain unaccepted/proposed according to their declared paths. Phase 0 remains unaccepted and Phase 1 remains blocked.
+WP-009 PASS remains permanently bound to exact target `a45b463...`, but that target is not suitable to proceed because the required WP-010 adversarial re-review found surviving defects. PR #13 and PR #1 remain unmerged/draft. ADR-0000, ADR-0001 and ADR-0002 remain unaccepted/proposed according to their declared paths. Phase 0 remains unaccepted and Phase 1 remains blocked.
