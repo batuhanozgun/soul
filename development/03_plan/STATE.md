@@ -1,15 +1,15 @@
 # SOUL PROJECT STATE
 
 **Current phase:** Phase 0 — Development Operating System  
-**Current work package:** WP-003 — Phase 0 Fresh Re-verification  
+**Current work package:** WP-004 — Phase 0 F2-R1 Repair  
 **Current branch:** `phase0/development-os`  
 **Current PR:** #1 — draft  
-**State:** WP-002 builder repair is materially complete; F1/F2/PD-001 repairs are pending fresh independent verification against the changed exact PR #1 head  
+**State:** WP-003 fresh re-verification completed with exact-target **FAIL**; verifier evidence is integrated; bounded F2-R1 builder repair is now active  
 **Authoritative product branch:** `main`
 
 ## Current objective
 
-Freshly and independently re-verify the repaired Phase 0 development operating system against the **unchanged WP-000 acceptance criteria**, including explicit regression tests for F1, F2, and PD-001. The verifier must bind the new result to the exact draft PR #1 head captured at verification start.
+Repair the single remaining verifier finding F2-R1 without weakening WP-000 acceptance criteria or widening the verifier-triggered repair scope. The stale next-responsibility pointer in `development/03_plan/BUILDER_STOP.md` must stop competing with this canonical state.
 
 ## Canonical current-work rule
 
@@ -19,54 +19,40 @@ This file is the authoritative home for current phase, active WP, and current ne
 
 Fresh-session sequencing is governed by `development/03_plan/COLD_START.md`; semantic authority/conflict resolution remains governed by `development/01_governance/SOURCE_OF_TRUTH.md`.
 
-## Historical verification now stale for the repaired target
+## Current verification result
 
-- WP-001 verification targeted exact draft PR #1 head `1d2dd033ca3068484d841bcebf90e81ea84c7f71`.
-- Overall historical result: **FAIL**.
-- WP-000 criterion 1 — Cold-start sufficiency: **FAIL**.
+WP-003 independently verified exact draft PR #1 head `a02e36e5e71522995b74fb018a6b28235f1d7848` and issued **FAIL**.
+
 - WP-000 criterion 2 — Single-source discipline: **FAIL**.
-- WP-000 criteria 3–11: **PASS** at that historical target only.
-- Canonical historical verification artefact: `development/06_reviews/VERIFICATION-WP-000-2026-08-25.md`.
-- Historical verifier handoff: `development/07_sessions/SESSION-0003-PHASE0-VERIFIER.md`.
-- WP-001 is complete as a verification activity. Its FAIL result does **not** verify or accept WP-000 or Phase 0 and is stale for the materially changed WP-002 target.
+- F2 regression: **FAIL** because `BUILDER_STOP.md` contained a stale unqualified pointer to WP-001.
+- WP-000 criteria 1 and 3–11: **PASS** at that exact target only.
+- F1 regression: **PASS** at that exact target only.
+- PD-001 regression: **PASS** at that exact target only.
 
-## WP-002 repair state
+Canonical verifier artefact: `development/06_reviews/VERIFICATION-WP-000-2026-08-26.md`.
+Verifier handoff: `development/07_sessions/SESSION-0006-PHASE0-REVERIFIER.md`.
 
-WP-002 builder responsibility is complete and the package is in `verification`, not `verified-complete`.
-
-Repair claims awaiting independent verification:
-
-1. **F1 — Cold-start order contradiction:** repaired by assigning fresh-session sequencing to `COLD_START.md`, separating semantic authority from sequencing in `SOURCE_OF_TRUTH.md`, delegating `WORKING_PROTOCOL.md` to COLD_START, and constraining WP-required reading order to COLD_START Step 3.
-2. **F2 — Current-work pointer drift:** repaired by removing current phase/WP/role/target materialisation from `NEXT_SESSION.md` and keeping current-work truth here plus the active WP.
-3. **PD-001 — Missing verifier-result → canonical-state transition:** repaired by an Integrator-owned transition in `VERIFICATION_POLICY.md`, with supporting role/working/PR-gate controls. The defect record is `development/06_reviews/PROCESS-DEFECT-PD-001-VERIFIER-STATE-TRANSITION.md` and remains pending independent verification.
-
-Builder handoff: `development/07_sessions/SESSION-0005-PHASE0-REPAIR-BUILDER.md`.
-
-These statements describe the builder's claimed repair state; they are not independent evidence that the repairs pass.
+The verifier evidence PR #9 was integrated transition-only into `phase0/development-os`. Evidence integration is not acceptance of the target.
 
 ## Required next responsibility
 
-**Fresh verifier session under `development/04_work/WP-003-PHASE0-REVERIFICATION.md`.**
+**Designer/builder session under `development/04_work/WP-004-PHASE0-F2R1-REPAIR.md`.**
 
-The verifier must:
+The builder must repair only the exact F2-R1 stale-pointer class and leave the result awaiting fresh verification. It must not hide unrelated governance redesign inside the verifier-triggered repair.
 
-- start through `development/03_plan/COLD_START.md`;
-- independently capture the exact current draft PR #1 head SHA from PR metadata;
-- derive expected results from unchanged WP-000/current governance before reading the WP-002 builder handoff;
-- re-verify all eleven WP-000 acceptance criteria;
-- explicitly test F1, F2, and PD-001 regressions;
-- re-check target freshness before closing;
-- perform no repair, canonical result integration, ADR acceptance, adversarial review, target merge, or Phase 1 work.
+## Owner-directed reasoning-policy change queued after bounded repair
 
-After the verifier closes, a **separate Integrator session** must execute the verifier-result → canonical-state transition in `VERIFICATION_POLICY.md`. The verifier does not perform that transition itself.
+On 2026-08-26 the human owner explicitly approved adding a canonical SOUL development reasoning policy synthesized from prior KEEL/OS-Architect/KEEL-Research lessons, and integrating it through the single `COLD_START.md` authority rather than creating a second bootstrap order.
+
+This is a **separate material governance change**, not part of F2-R1 repair. After WP-004 is materially complete, it must be represented by its own work package before the next fresh verification target is cut. The next verifier should therefore verify the exact target containing both the completed F2-R1 repair and the separately governed reasoning-policy change, avoiding two redundant verification cycles while preserving scope transparency.
 
 ## Authority boundaries remain unchanged
 
-No current session or repair has authority to:
+No current session has authority to:
 
-- weaken or rewrite WP-000 acceptance criteria,
-- edit the historical verification result to obtain a PASS,
-- allow a builder to self-verify material repair,
+- weaken WP-000 acceptance criteria to obtain a PASS,
+- edit historical verification results,
+- allow a builder to self-verify material repair or governance changes,
 - accept ADR-0000 without its declared human-owner gate,
 - skip required adversarial review,
 - merge PR #1 into `main` before gates are satisfied,
