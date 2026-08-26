@@ -9,6 +9,7 @@
 ## Governance
 - `../01_governance/SOURCE_OF_TRUTH.md`
 - `../01_governance/WORKING_PROTOCOL.md`
+- `../01_governance/REASONING_POLICY.md`
 - `../01_governance/ROLE_MODEL.md`
 - `../01_governance/DECISION_POLICY.md`
 - `../01_governance/VERIFICATION_POLICY.md`
@@ -17,29 +18,30 @@
 ## Planning
 - `ROADMAP.md`
 - `STATE.md`
-- `COLD_START.md`
+- `COLD_START.md` — single fresh-session sequencing authority
 - `PHASE_GATE.md`
 - `PR_GATE.md`
 - `NEXT_SESSION.md` — derived launch view; no authoritative current-state values
-- `BUILDER_STOP.md` — currently inside bounded F2-R1 repair scope; must not remain a competing current-work pointer
+- `CHATGPT_PROJECT_ENTRY.md` — derived minimal Project Instructions convenience; no governance copy
 
 ## Current work
-- Active: `../04_work/WP-004-PHASE0-F2R1-REPAIR.md` — bounded fresh builder repair for verifier finding F2-R1
-- Parent package under repair/re-verification: `../04_work/WP-000-DEVELOPMENT-OS.md`
+- Active: `../04_work/WP-005-DEVELOPMENT-REASONING-POLICY.md` — owner-approved material architecture change; fresh verification still required
+- Materially complete repair awaiting fresh verification: `../04_work/WP-004-PHASE0-F2R1-REPAIR.md`
+- Parent package materially changed and awaiting fresh verification: `../04_work/WP-000-DEVELOPMENT-OS.md`
 - Completed verification activity: `../04_work/WP-003-PHASE0-REVERIFICATION.md` — exact target `a02e36e5...`, result FAIL
-- Completed repair package awaiting superseding fresh verification: `../04_work/WP-002-PHASE0-VERIFICATION-REPAIR.md`
 - Historical completed verification activity: `../04_work/WP-001-PHASE0-VERIFICATION.md` — old target result FAIL
+- Historical repair package: `../04_work/WP-002-PHASE0-VERIFICATION-REPAIR.md`
 
-## Verification and repair evidence
-- `../06_reviews/VERIFICATION-WP-000-2026-08-26.md` — current latest issued verification: FAIL against exact target `a02e36e5e71522995b74fb018a6b28235f1d7848`; finding F2-R1
+## Verification, defects and evidence
+- `../06_reviews/VERIFICATION-WP-000-2026-08-26.md` — latest issued verification: FAIL against exact historical target `a02e36e5e71522995b74fb018a6b28235f1d7848`; stale for current target
 - `../06_reviews/VERIFICATION-WP-000-2026-08-25.md` — historical FAIL against exact old target `1d2dd033ca3068484d841bcebf90e81ea84c7f71`
-- `../06_reviews/PROCESS-DEFECT-PD-001-VERIFIER-STATE-TRANSITION.md` — PD-001 repair passed regression at WP-003 exact target
-
-## Queued owner-directed material change
-- After bounded WP-004 repair completes, create a separate work package for the owner-approved canonical SOUL development reasoning policy and COLD_START integration. It must not be hidden inside WP-004.
+- `../06_reviews/PROCESS-DEFECT-PD-001-VERIFIER-STATE-TRANSITION.md` — PD-001 repair passed regression at WP-003 historical target
+- `../06_reviews/PROCESS-DEFECT-PD-002-WP-ACTIVATION-ORDER.md` — current bootstrap process defect; canonical state corrected; fresh verification required
+- `../05_evidence/REASONING-POLICY-SYNTHESIS-2026-08-26.md` — source-to-SOUL synthesis evidence for WP-005
 
 ## Decisions
 - `../02_architecture/decisions/ADR-0000-DEVELOPMENT-GOVERNANCE-BOOTSTRAP.md` — proposed; still requires its declared owner path
+- `../02_architecture/decisions/ADR-0001-DEVELOPMENT-REASONING-POLICY.md` — proposed; owner direction approved, independent review/verification pending
 
 ## Templates
 - ADR: `../01_governance/ADR_TEMPLATE.md`
@@ -50,11 +52,13 @@
 - Session handoff: `../07_sessions/SESSION_TEMPLATE.md`
 
 ## Handoffs and historical launch records
-- Completed builder record: `../07_sessions/SESSION-0001-PHASE0-BUILDER.md`
-- Historical WP-001 verifier launch brief: `../07_sessions/SESSION-0002-NEXT-VERIFIER-BRIEF.md` — not a current cold-start authority
-- Completed historical verifier record: `../07_sessions/SESSION-0003-PHASE0-VERIFIER.md`
-- Completed first verification-result integrator record: `../07_sessions/SESSION-0004-PHASE0-INTEGRATOR.md`
-- Completed repair-builder handoff: `../07_sessions/SESSION-0005-PHASE0-REPAIR-BUILDER.md`
-- Completed WP-003 verifier record: `../07_sessions/SESSION-0006-PHASE0-REVERIFIER.md`
+- `../07_sessions/SESSION-0001-PHASE0-BUILDER.md`
+- `../07_sessions/SESSION-0002-NEXT-VERIFIER-BRIEF.md` — historical, not a current cold-start authority
+- `../07_sessions/SESSION-0003-PHASE0-VERIFIER.md`
+- `../07_sessions/SESSION-0004-PHASE0-INTEGRATOR.md`
+- `../07_sessions/SESSION-0005-PHASE0-REPAIR-BUILDER.md`
+- `../07_sessions/SESSION-0006-PHASE0-REVERIFIER.md`
+- `../07_sessions/SESSION-0007-PHASE0-REVERIFICATION-INTEGRATOR.md`
+- `../07_sessions/SESSION-0008-PHASE0-F2R1-REPAIR-BUILDER.md`
 
 This index is **navigational and derived only**. It does not override the authority hierarchy defined in `SOURCE_OF_TRUTH.md`, the bootstrap sequence in `COLD_START.md`, or current project truth in `STATE.md`. If any current-work value here ever disagrees with `STATE.md`, `STATE.md` wins and this index is stale until updated.
