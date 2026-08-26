@@ -1,8 +1,8 @@
 # F-AR-001–F-AR-004 Pending-Result Control Regression Evidence
 
-**Date:** 2026-08-26  
-**WP:** WP-011  
-**Role:** designer/builder  
+**Date:** 2026-08-26
+**WP:** WP-011
+**Role:** designer/builder
 **Status:** producer evidence only — fresh independent verification and adversarial re-review required
 
 ## Objective and evidence boundary
