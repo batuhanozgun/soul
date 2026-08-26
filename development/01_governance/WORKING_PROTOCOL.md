@@ -29,6 +29,8 @@ The **single sequencing authority** for fresh-session bootstrap is `development/
 
 A WP's `Required reading` section is loaded at the point assigned by `COLD_START.md`. A WP may prescribe an internal order among those Step 3 readings when needed for independence or evidence handling, but it may not silently reorder the earlier bootstrap steps. Historical launch briefs and handoffs may point to `COLD_START.md`; they are not competing sequencing authorities.
 
+When canonical state assigns an independent verifier or adversarial reviewer, `COLD_START.md` also performs the pending independent-result guard before role selection. That guard may block duplicate independent execution and route the current session to a bounded Integrator check, but it does not itself change canonical state or promote evidence into authority.
+
 If repository state is insufficient or internally contradictory, that is a finding. The session must not repair the gap by silently inventing prior intent.
 
 ## Session role
@@ -79,11 +81,30 @@ The handoff record contains:
 
 A new session should be able to continue from these artefacts without reading the old chat.
 
+### Independent-result publication contract
+
+A verifier or adversarial reviewer may finish its analysis without changing canonical `STATE.md`, but a **completed repository-visible independent result** is not considered published until the role has created a dedicated evidence PR targeting the active development branch.
+
+The publication PR must:
+
+- contain the completed verification/review artefact and the corresponding session handoff;
+- bind both records to the active WP/role and exact target artefact/version/commit;
+- contain only authorised evidence/session files, with no repair, canonical-state/WP transition, acceptance-criteria change, ADR acceptance, target merge, Phase acceptance, or other authority-widening change;
+- use PR metadata that makes the active WP discoverable; metadata is a locator only and does not replace direct artefact/changed-file inspection.
+
+A branch-only result, local draft, or handoff that has not been published through this evidence-PR boundary is **not** a completed published result for cold-start routing. If the environment cannot publish the evidence PR, the independent session closes as blocked/incomplete publication rather than claiming that a completed result is awaiting integration.
+
+After evidence-PR publication, canonical `STATE.md` intentionally remains unchanged until a separate Integrator validates and integrates the result. During that interval, the pending-result guard in `COLD_START.md` prevents a generic fresh session from repeating the just-completed independent role.
+
+This publication rule does not make PR metadata canonical project state. `STATE.md` + active WP remain the canonical current-work authority; the evidence PR is a discoverable, lower-authority trigger that must be validated by the Integrator before any canonical transition.
+
 ### Verifier close and canonical transition
 
-A verifier records the result and verifier handoff but does **not** use verifier authority to integrate its own result into canonical project state or to repair findings. After the verifier closes, a separate integrator performs the result-dependent canonical-state transition defined in `VERIFICATION_POLICY.md`.
+A verifier records the result and verifier handoff, publishes the dedicated evidence PR, but does **not** use verifier authority to integrate its own result into canonical project state or to repair findings. After the verifier closes, a separate integrator performs the result-dependent canonical-state transition defined in `VERIFICATION_POLICY.md`.
 
 This separation prevents a verification result from being silently converted into acceptance, repair, or a new active-work decision by the verifier that issued it.
+
+An adversarial reviewer follows the same publication/separation rule for its review artefact and handoff: the reviewer publishes evidence but does not repair findings or canonically transition its own result.
 
 ## Branch and PR discipline
 
