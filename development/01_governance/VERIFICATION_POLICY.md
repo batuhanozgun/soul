@@ -41,7 +41,15 @@ A material verification artefact should state:
 
 For material architecture and control changes, the verifier must operate in a fresh session or isolated execution and read the authoritative specification before reading the builder's rationale. The purpose is to reduce anchoring and self-confirmation; it does not create true model independence when the same underlying model is used.
 
-The verifier writes the verification artefact and verifier handoff. The verifier does not repair findings or use verifier authority to perform the canonical result-to-state transition described below.
+The verifier writes the verification artefact and verifier handoff and publishes both through the dedicated evidence-PR contract in `WORKING_PROTOCOL.md` / `PR_GATE.md`. A branch-only verifier result is not a completed published result for canonical transition or cold-start routing. If the evidence PR cannot be published, verifier close is blocked/incomplete rather than silently leaving an undiscoverable "completed" result.
+
+The verifier does not repair findings or use verifier authority to integrate its own result into canonical project state. After evidence-PR publication, a separate Integrator owns result validation/integration and the canonical transition below.
+
+## Pending verifier-result discovery
+
+During the intentional post-publication/pre-Integrator interval, canonical `STATE.md` may still assign the verifier role. `COLD_START.md` therefore applies its pending independent-result guard before a fresh session begins duplicate verification.
+
+The guard may use the published evidence PR only to determine that an Integrator check is required. It may not reinterpret PASS / FAIL / NOT VERIFIED, treat PR metadata as proof, update canonical state, or select among conflicting/stale results. Those actions remain bounded by the Integrator preconditions and transition sequence below. Ambiguous, conflicting, stale, target-mismatched, or uninspectable same-WP evidence fails closed into bounded Integrator resolution rather than another verifier execution.
 
 ## Exact-target freshness
 
@@ -61,7 +69,7 @@ A transition-only commit does **not** become the commit certified by the verifie
 
 ## Verifier-result → canonical-state transition
 
-A completed verification does not become canonical project state merely because the verifier wrote a result. A separate **Integrator** owns this control-plane transition.
+A completed verification does not become canonical project state merely because the verifier wrote a result or published an evidence PR. A separate **Integrator** owns this control-plane transition.
 
 ### Trigger and preconditions
 
@@ -71,7 +79,8 @@ The transition begins only when all of the following are available:
 2. a verifier artefact with PASS / FAIL / NOT VERIFIED;
 3. a verifier handoff;
 4. the exact target artefact/version/commit SHA;
-5. enough repository/PR evidence to confirm that the verifier records correspond to that target and that no unreviewed material target change was smuggled into the verifier output branch/PR.
+5. the dedicated evidence PR targeting the active development branch;
+6. enough repository/PR evidence to confirm that the verifier records correspond to that target and that no unreviewed material target change was smuggled into the verifier output branch/PR.
 
 If the claimed target changed materially before verification closed, the integrator must not promote the result as current verification. The result may be integrated as historical evidence, but routing must preserve the stale/not-current condition and require fresh verification.
 
@@ -118,4 +127,4 @@ When a claim depends on calculation or data, verification must be able to inspec
 
 A WP may be marked `verified-complete` only after every required acceptance criterion has a current PASS or an explicitly authorised exception. The working session that produced the artefact cannot grant this state to itself.
 
-A verification-activity WP can separately be marked complete as an activity when it has correctly executed its own verification acceptance criteria and issued its result; that status must not be confused with the verified target's completion state.
+A verification-activity WP can separately be marked complete as an activity when it has correctly executed its own verification acceptance criteria, issued its result, and published the required evidence PR; that status must not be confused with the verified target's completion state.
