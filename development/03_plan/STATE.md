@@ -1,25 +1,25 @@
 # SOUL PROJECT STATE
 
 **Current phase:** Phase 0 — Development Operating System  
-**Current work package:** WP-004 — Phase 0 F2-R1 Repair  
+**Current work package:** WP-005 — Development Reasoning Policy  
 **Current branch:** `phase0/development-os`  
 **Current PR:** #1 — draft  
-**State:** WP-003 fresh re-verification completed with exact-target **FAIL**; verifier evidence is integrated; bounded F2-R1 builder repair is now active  
+**State:** WP-003 re-verification issued FAIL; verifier evidence was integrated; WP-004 F2-R1 repair is materially complete; owner-approved WP-005 reasoning-policy architecture change is active and requires fresh verification  
 **Authoritative product branch:** `main`
 
 ## Current objective
 
-Repair the single remaining verifier finding F2-R1 without weakening WP-000 acceptance criteria or widening the verifier-triggered repair scope. The stale next-responsibility pointer in `development/03_plan/BUILDER_STOP.md` must stop competing with this canonical state.
+Complete the owner-approved canonical development reasoning policy and its single-COLD_START integration, while keeping the F2-R1 repair separately traceable. Then cut one fresh verification target covering the complete changed Phase 0 system.
 
 ## Canonical current-work rule
 
-This file is the authoritative home for current phase, active WP, and current next responsibility. The active WP named here supplies the detailed responsibility, authority, required readings, acceptance criteria, and handoff.
+This file is the authoritative home for current phase, active WP, and current next responsibility. The active WP named here supplies detailed responsibility, authority, required readings, acceptance criteria, and handoff.
 
-`development/03_plan/NEXT_SESSION.md` is a derived launch convenience and intentionally stores no copied current WP/role/target values. `development/03_plan/WORKSPACE_INDEX.md` is navigational and subordinate to this state.
+`development/03_plan/NEXT_SESSION.md` and `development/03_plan/CHATGPT_PROJECT_ENTRY.md` are derived launch conveniences and intentionally store no copied current WP/role/target values. `development/03_plan/WORKSPACE_INDEX.md` is navigational and subordinate to this state.
 
-Fresh-session sequencing is governed by `development/03_plan/COLD_START.md`; semantic authority/conflict resolution remains governed by `development/01_governance/SOURCE_OF_TRUTH.md`.
+Fresh-session sequencing is governed only by `development/03_plan/COLD_START.md`; semantic authority/conflict resolution remains governed by `development/01_governance/SOURCE_OF_TRUTH.md`.
 
-## Current verification result
+## Historical verification state
 
 WP-003 independently verified exact draft PR #1 head `a02e36e5e71522995b74fb018a6b28235f1d7848` and issued **FAIL**.
 
@@ -30,44 +30,54 @@ WP-003 independently verified exact draft PR #1 head `a02e36e5e71522995b74fb018a
 - PD-001 regression: **PASS** at that exact target only.
 
 Canonical verifier artefact: `development/06_reviews/VERIFICATION-WP-000-2026-08-26.md`.
-Verifier handoff: `development/07_sessions/SESSION-0006-PHASE0-REVERIFIER.md`.
 
-The verifier evidence PR #9 was integrated transition-only into `phase0/development-os`. Evidence integration is not acceptance of the target.
+All of those results are stale for the current materially changed target.
+
+## WP-004 repair state
+
+WP-004 removed `development/03_plan/BUILDER_STOP.md` rather than preserving another routing surface. The builder marked the bounded F2-R1 repair materially complete and awaiting fresh independent verification.
+
+Builder handoff: `development/07_sessions/SESSION-0008-PHASE0-F2R1-REPAIR-BUILDER.md`.
+
+## WP-005 reasoning-policy state
+
+The human owner approved the direction on 2026-08-26.
+
+Current material outputs include:
+
+- `development/01_governance/REASONING_POLICY.md`;
+- `development/05_evidence/REASONING-POLICY-SYNTHESIS-2026-08-26.md`;
+- proposed `development/02_architecture/decisions/ADR-0001-DEVELOPMENT-REASONING-POLICY.md`;
+- `COLD_START.md` integration that loads the policy as common governance;
+- strengthened WP-000 acceptance criterion 12;
+- derived `CHATGPT_PROJECT_ENTRY.md` for minimal Project Instructions.
+
+These are builder outputs, not independently verified or accepted architecture.
+
+## Process defect PD-002
+
+During this bootstrap session, material WP-005 artefacts began before canonical `STATE.md` was first transitioned from completed WP-004 to WP-005. The owner-directed change had been queued and WP-005 existed, but the active-WP pointer lagged.
+
+The defect is recorded at `development/06_reviews/PROCESS-DEFECT-PD-002-WP-ACTIVATION-ORDER.md`. The state is corrected here before further material WP-005 work. Fresh verification must inspect the final activation/current-work discipline; the defect is not erased by correction.
 
 ## Required next responsibility
 
-**Designer/builder session under `development/04_work/WP-004-PHASE0-F2R1-REPAIR.md`.**
+**Designer/builder under `development/04_work/WP-005-DEVELOPMENT-REASONING-POLICY.md`** until its material outputs and handoff are complete.
 
-The builder must repair only the exact F2-R1 stale-pointer class and leave the result awaiting fresh verification. It must not hide unrelated governance redesign inside the verifier-triggered repair.
-
-## Owner-directed reasoning-policy change queued after bounded repair
-
-On 2026-08-26 the human owner explicitly approved adding a canonical SOUL development reasoning policy synthesized from prior KEEL/OS-Architect/KEEL-Research lessons, and integrating it through the single `COLD_START.md` authority rather than creating a second bootstrap order.
-
-This is a **separate material governance change**, not part of F2-R1 repair. After WP-004 is materially complete, it must be represented by its own work package before the next fresh verification target is cut. The next verifier should therefore verify the exact target containing both the completed F2-R1 repair and the separately governed reasoning-policy change, avoiding two redundant verification cycles while preserving scope transparency.
+Then activate a **fresh verifier** against the exact changed PR #1 head. The fresh verifier must inspect all strengthened WP-000 criteria, F2-R1, reasoning-policy integration and PD-002 without relying on prior PASS fragments as current proof.
 
 ## Authority boundaries remain unchanged
 
 No current session has authority to:
 
-- weaken WP-000 acceptance criteria to obtain a PASS,
 - edit historical verification results,
-- allow a builder to self-verify material repair or governance changes,
-- accept ADR-0000 without its declared human-owner gate,
+- weaken acceptance criteria to obtain a PASS,
+- allow a builder to independently verify its own material output,
+- accept ADR-0000 or ADR-0001 without their required paths,
 - skip required adversarial review,
 - merge PR #1 into `main` before gates are satisfied,
 - begin Phase 1.
 
-## Proposed foundation on the Phase 0 branch
-
-- SOUL is a general-purpose agentic architecture that creates the task-specific working system needed to pursue an intended outcome.
-- Generality means generating domain/task-specific operating systems above a stable core, not forcing every problem through one fixed workflow.
-- Persistent project truth must live outside chat/model memory.
-- Missing capability creation is a first-class architectural requirement, governed by specification, isolation, testing, independent verification and admission.
-- Completion is a system state, not an agent declaration.
-
-These statements are not yet accepted into `main`; they remain proposed Phase 0 content pending successful fresh independent verification, adversarial review, correct decision status, and human-owner acceptance where required.
-
 ## Phase 1 gate
 
-Phase 1 does not begin until WP-000 is `verified-complete`, required adversarial review is resolved, relevant decisions have the correct status, and the Phase 0 PR is accepted into `main`.
+Phase 1 does not begin until WP-000 is verified-complete on the current exact target, required adversarial review is resolved, relevant decisions have the correct status, and the Phase 0 PR is accepted into `main`.
