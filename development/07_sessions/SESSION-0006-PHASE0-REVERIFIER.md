@@ -45,6 +45,7 @@ Independently re-verify the repaired Phase 0 development operating system agains
 - Explicitly traced F1, F2 and PD-001 regressions.
 - Confirmed WP-000 is byte-identical at the historical and current targets via identical blob SHA `20a74fddac56cd19da0713607c53fed94f514077`, so the repair did not alter parent acceptance criteria.
 - Found one current defect: stale current-work materialisation remains in `development/03_plan/BUILDER_STOP.md`.
+- Re-checked PR #1 metadata immediately before close; the draft head was still exactly `a02e36e5e71522995b74fb018a6b28235f1d7848`, so the verification target remained fresh and unchanged throughout this verification.
 
 ## Outputs produced
 
