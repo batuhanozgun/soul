@@ -3,7 +3,8 @@
 **Date:** 2026-08-26  
 **Work package:** WP-003 — Phase 0 Fresh Re-verification  
 **Role:** verifier  
-**Branch / target:** `verification/wp-003-phase0-2026-08-26-0839`, based directly on draft PR #1 exact head `a02e36e5e71522995b74fb018a6b28235f1d7848`
+**Branch / target:** `verification/wp-003-phase0-2026-08-26-0839`, based directly on draft PR #1 exact head `a02e36e5e71522995b74fb018a6b28235f1d7848`  
+**Evidence PR:** #7 — `verification/wp-003-phase0-2026-08-26-0839` → `phase0/development-os`
 
 ## Required inputs read
 
@@ -47,11 +48,13 @@ Independently re-verify the repaired Phase 0 development operating system agains
 - Confirmed ADR-0000 remains proposed and the owner/adversarial/PR/Phase gates remain in force.
 - Re-checked PR #1 head immediately before writing the verification artefact; it remained `a02e36e5e71522995b74fb018a6b28235f1d7848`.
 - Performed no repair or canonical-state transition.
+- Opened evidence-only PR #7 containing only the verifier artefact and verifier handoff.
 
 ## Outputs produced
 
 - `development/06_reviews/VERIFICATION-WP-000-2026-08-26.md`
 - `development/07_sessions/SESSION-0006-PHASE0-REVERIFIER.md`
+- PR #7 — evidence-only verifier PR into `phase0/development-os`
 
 ## Decisions
 
@@ -112,4 +115,4 @@ This result certifies only the exact target above. The verification-output commi
 
 **Open a new separate Integrator session. Do not continue canonical integration in this verifier chat.**
 
-The Integrator must follow `VERIFICATION_POLICY.md`: inspect this verifier output scope and exact-target binding, integrate only the verifier evidence/handoff into `phase0/development-os`, close the WP-003 verification activity, update canonical `STATE.md`, and route this PASS to the required separate adversarial-review responsibility. The Integrator must not reinterpret the PASS, accept ADR-0000, perform substantive repair, merge target PR #1, or begin Phase 1.
+The Integrator must follow `VERIFICATION_POLICY.md`: inspect PR #7 verifier output scope and exact-target binding, integrate only the verifier evidence/handoff into `phase0/development-os`, close the WP-003 verification activity, update canonical `STATE.md`, and route this PASS to the required separate adversarial-review responsibility. The Integrator must not reinterpret the PASS, accept ADR-0000, perform substantive repair, merge target PR #1, or begin Phase 1.
