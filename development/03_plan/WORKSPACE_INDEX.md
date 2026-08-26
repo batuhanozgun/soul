@@ -25,7 +25,7 @@
 - `CHATGPT_PROJECT_ENTRY.md` — derived minimal Project Instructions convenience; no governance copy
 
 ## Current work
-- Active: `../04_work/WP-013-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEW.md` — fresh separate adversarial reviewer for PR #16 exact target `adf067e...`, result-control attempt 1, including provisional WP-local activation bridge
+- Active: `../04_work/WP-013-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEW.md` — fresh separate adversarial reviewer for PR #16 exact target `adf067e...`, result-control attempt 1, including provisional WP-local activation `18b239e...`
 - Completed verification activity: `../04_work/WP-012-PHASE0-PENDING-RESULT-CONTROL-VERIFICATION.md` — **PASS** for PR #16 exact target `adf067e...` and activation `7c625107...`; evidence PR #17 integrated evidence-only as `2d732950...`
 - Builder-complete repair: `../04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md` — PR #16 exact target `adf067e...` from base `8dcdc750...`; WP-012 PASS, fresh adversarial re-review outstanding
 - Completed adversarial re-review: `../04_work/WP-010-PHASE0-F-AR-001-REPAIR-ADVERSARIAL-REREVIEW.md` — **Requires repair** for exact target `a45b463...`; reviewer evidence PR #15 integrated evidence-only as `c8fc17bc...`

@@ -10,7 +10,7 @@
 **Current verification result:** WP-012 **PASS** for exact target `adf067e4289e4c0b51cf40c1940193e8252b22e0` and activation `7c625107c09788d6066249c67d66cbf7c0c4b576`
 **Verifier evidence integration:** PR #17 head `1caf39a3fcf62c18a8d017f71f26f9c834951e70`, merged evidence-only as `2d7329508fbecf7a05cf7f26cd16e2330985a076`
 **Current result-control key:** `WP-013 / adversarial reviewer / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`
-**Current provisional activation commit:** pending exact binding; fail closed until the next canonical binding commit records the WP-013 activation SHA
+**Current provisional activation commit:** `18b239e05452d1e78afffd6deaaeb2463d077720`
 **State:** WP-012 verification is complete with exact-target PASS and evidence-only integration; fresh separate adversarial re-review is active under WP-013; no adversarial re-review result, ADR acceptance, material merge, Phase acceptance, or Phase 1 claim has occurred
 **Authoritative product branch:** `main`
 
@@ -174,7 +174,7 @@ Dedicated evidence PR #17 contained exactly those two files at immutable head `1
 
 Result-control key: `WP-013 / adversarial reviewer / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`.
 
-The WP-local activation bridge is a provisional material rollout control, not a transition-only relabel and not acceptance of PR #16 governance. Its exact activation commit is pending binding in the next canonical commit; until then the review route fails closed. The reviewer must execute the bridge after COLD_START Steps 1–2 and again immediately before Step 4 responsibility commitment.
+The WP-local activation bridge is a provisional material rollout control, not a transition-only relabel and not acceptance of PR #16 governance. Its exact activation commit is `18b239e05452d1e78afffd6deaaeb2463d077720`. The reviewer must execute the bridge after COLD_START Steps 1–2 and again immediately before Step 4 responsibility commitment.
 
 ## Material architecture status
 
