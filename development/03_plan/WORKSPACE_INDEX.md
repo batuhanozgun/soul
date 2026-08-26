@@ -87,5 +87,6 @@
 - `../07_sessions/SESSION-0016-PHASE0-WP009-INTEGRATOR.md` — PR #14 evidence integration and canonical PASS routing to WP-010; no repair/acceptance
 - `../07_sessions/SESSION-0017-PHASE0-F-AR-001-REPAIR-ADVERSARIAL-REREVIEWER.md` — WP-010 **Requires repair** handoff; F-AR-002/F-AR-003/F-AR-004 stand; reviewer evidence PR #15
 - `../07_sessions/SESSION-0018-PHASE0-WP010-INTEGRATOR.md` — PR #15 evidence integration and canonical **Requires repair** routing to WP-011; no repair/acceptance
+- `../07_sessions/SESSION-0019-PHASE0-PENDING-RESULT-CONTROL-BUILDER.md` — WP-011 builder close; PR #16 exact target `adf067e...`; provisional activation `7c625107...`; WP-012 verifier next
 
 This index is **navigational and derived only**. It does not override the authority hierarchy defined in `SOURCE_OF_TRUTH.md`, the bootstrap sequence in `COLD_START.md`, or current project truth in `STATE.md`. If any current-work value here ever disagrees with `STATE.md`, `STATE.md` wins and this index is stale until updated.
