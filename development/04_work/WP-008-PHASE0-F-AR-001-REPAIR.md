@@ -1,9 +1,11 @@
 # WP-008 — Phase 0 F-AR-001 Repair
 
-**Status:** active  
+**Status:** builder repair published — fresh independent verification required  
 **Owner role:** designer/builder  
-**Decision authority:** bounded repair of F-AR-001 within existing foundation/governance and unchanged WP-000 acceptance criteria; substantive architecture choices must follow `DECISION_POLICY.md`; no independent verification, adversarial-review self-approval, ADR acceptance, PR #1 merge, Phase acceptance, or Phase 1 authority  
-**Branch:** fresh builder-repair branch/execution based on `phase0/development-os`  
+**Decision authority:** bounded repair of F-AR-001 within existing foundation/governance and unchanged WP-000 acceptance criteria; substantive architecture choices must follow `DECISION_POLICY.md`; no independent verification, adversarial-review self-approval, ADR acceptance, PR #13 merge, PR #1 merge, Phase acceptance, or Phase 1 authority  
+**Builder branch:** `repair/wp008-f-ar-001-cold-start-result-discovery`  
+**Repair PR:** #13 — draft  
+**Exact material repair target:** `a45b463b083604d3f59d75bdca5ba97d5bc170e6`  
 **Parent:** `WP-000-DEVELOPMENT-OS.md`  
 **Trigger:** WP-007 adversarial review judgement **Requires repair**, surviving finding F-AR-001  
 **Review evidence:** `development/06_reviews/ADVERSARIAL-REVIEW-WP-000-c690f858-2026-08-26.md`  
@@ -14,7 +16,7 @@
 
 Repair exactly F-AR-001 so a generic fresh-session cold-start can reliably detect a completed but not-yet-canonically-integrated independent verifier/reviewer result before it commits to duplicating the just-completed independent role, while preserving the existing separation between evidence production and Integrator-owned canonical state transition.
 
-This WP routes the finding; it does not prescribe the repair mechanism. The builder must derive the smallest mechanism that satisfies the finding and existing governance.
+This WP routed the finding without prescribing the mechanism. The builder derived the bounded mechanism recorded below; its sufficiency is a producer claim until WP-009 independent verification completes.
 
 ## Exact finding
 
@@ -26,7 +28,7 @@ The WP-007 reviewer found that the architecture intentionally leaves canonical `
 **Severity:** medium — material.  
 **Overall WP-007 judgement:** **Requires repair.**
 
-The canonical claim/evidence/failure-path/impact/disproof record remains the WP-007 adversarial-review artefact and must not be rewritten by this repair WP.
+The canonical claim/evidence/failure-path/impact/disproof record remains the WP-007 adversarial-review artefact and was not rewritten by this repair WP.
 
 ## Scope
 
@@ -47,13 +49,14 @@ The canonical claim/evidence/failure-path/impact/disproof record remains the WP-
 - treating reviewer evidence integration as target acceptance;
 - redesigning unrelated bootstrap, role, verification, reasoning, ADR, or Phase-gate architecture;
 - repairing PD-002 or other historical findings unless a direct contradiction is mechanically inseparable from the F-AR-001 repair and is explicitly recorded;
-- accepting/rejecting ADR-0000 or ADR-0001;
+- accepting/rejecting ADR-0000, ADR-0001, or ADR-0002;
 - independent verification or adversarial re-review of the builder's own material repair;
-- merging PR #1 into `main` or beginning Phase 1.
+- merging PR #13 or PR #1 into their target branches before required gates;
+- beginning Phase 1.
 
 ## Required reading
 
-Enter through `development/03_plan/COLD_START.md`, then read the material needed to preserve the exact finding and existing authority boundaries:
+The builder entered through `development/03_plan/COLD_START.md`, then read the material needed to preserve the exact finding and existing authority boundaries:
 
 1. `development/04_work/WP-000-DEVELOPMENT-OS.md`
 2. `development/06_reviews/ADVERSARIAL-REVIEW-WP-000-c690f858-2026-08-26.md` — exact F-AR-001 record
@@ -68,7 +71,37 @@ Enter through `development/03_plan/COLD_START.md`, then read the material needed
 11. `development/01_governance/VERIFICATION_POLICY.md`
 12. `development/03_plan/PR_GATE.md`
 
-If the chosen repair changes cross-cutting authority, state semantics, evidence/verification semantics, or another architecture-level contract, follow `DECISION_POLICY.md` rather than burying that decision inside implementation prose. This routing WP does not pre-decide the repair architecture.
+Because the chosen repair changes cross-cutting cold-start/evidence/verification semantics, the builder followed `DECISION_POLICY.md` and recorded proposed architecture decision ADR-0002 rather than burying the choice in implementation prose.
+
+## Builder repair output
+
+The frozen material repair target is:
+
+`a45b463b083604d3f59d75bdca5ba97d5bc170e6`
+
+Draft repair PR: **#13 — `WP-008: repair F-AR-001 pending independent-result discovery`**.
+
+The exact material diff from builder base `bf1f89cbc2e407034c3f9a7a7d4ec7001a6a43c5` contains six files:
+
+1. `development/03_plan/COLD_START.md`
+   - adds a pending independent-result guard after authoritative Step 1 state/WP discovery and before independent role-specific execution;
+   - resolves expected target, discovers/inspects same-WP evidence PRs, routes one current match to Integrator, and fails closed on stale/conflicting/ambiguous/uninspectable same-WP evidence;
+   - preserves canonical `STATE.md` until the Integrator performs the authorised transition.
+2. `development/01_governance/WORKING_PROTOCOL.md`
+   - defines the independent-result publication contract: a completed published verifier/reviewer result requires a dedicated evidence PR containing the result artefact + handoff;
+   - branch-only output is incomplete publication rather than an undiscoverable completed result.
+3. `development/01_governance/VERIFICATION_POLICY.md`
+   - binds verifier close/publication to the evidence-PR contract and makes the evidence PR an Integrator transition precondition;
+   - preserves PASS / FAIL / NOT VERIFIED semantics and separate Integrator authority.
+4. `development/03_plan/PR_GATE.md`
+   - defines evidence-PR discovery/validation rules and explicit stale/conflict fail-closed behaviour;
+   - keeps PR metadata as discovery metadata, not proof or canonical state.
+5. `development/02_architecture/decisions/ADR-0002-PENDING-INDEPENDENT-RESULT-DISCOVERY.md`
+   - proposed Class B architecture decision recording the chosen publication + pre-role guard mechanism and rejected alternatives.
+6. `development/05_evidence/F-AR-001-PENDING-RESULT-REGRESSION-2026-08-26.md`
+   - producer regression matrix covering the observed WP-006 / PR #10 verifier case, the WP-007 / PR #12 reviewer-close case, unrelated old-WP evidence, same-WP stale target, conflicting candidates, and discovery-unavailable behaviour.
+
+No WP-000 acceptance criterion or historical verifier/reviewer artefact is changed in PR #13.
 
 ## Acceptance criteria — builder claim only
 
@@ -81,23 +114,37 @@ If the chosen repair changes cross-cutting authority, state semantics, evidence/
 7. No WP-000 acceptance criterion, foundation rule, ADR/human gate, exact historical verification result, or WP-007 finding/judgement is weakened or reinterpreted.
 8. The builder records the material repair target exactly and does not claim independent verification or adversarial re-review.
 
-These are producer claims only. They do not satisfy the required independent gates.
+**Builder assessment:** all eight are claimed satisfied at target `a45b463...`, with the decision-relevant evidence recorded in ADR-0002 and the F-AR-001 regression evidence artefact. These remain producer claims only.
 
 ## Required verification and re-review
 
-F-AR-001 is material and its repair changes the Phase 0 material target. After the builder closes:
+F-AR-001 is material and its repair changes the Phase 0 material target.
 
-- a fresh independent verifier must verify the complete changed Phase 0 target against the current WP-000 acceptance criteria and explicitly regression-test F-AR-001, including both the verifier and reviewer lifecycle cases;
-- the prior WP-006 PASS remains historical/current only for exact target `c690f858e7682f5bdf0511c0f10b0e932d868b0e` and must not be retargeted to the repair commit;
-- after fresh verification, an appropriate fresh separate adversarial re-review is required because the surviving WP-007 finding caused a material repair to the reviewed architecture;
-- result integration remains a separate Integrator responsibility.
+`development/04_work/WP-009-PHASE0-F-AR-001-REPAIR-VERIFICATION.md` is now the active fresh-verifier package for exact target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`.
+
+The fresh verifier must:
+
+- verify the complete changed target against all current WP-000 acceptance criteria;
+- explicitly regression-test F-AR-001 using both the verifier and reviewer lifecycle cases;
+- test stale/conflicting/ambiguous/unavailable discovery paths and unrelated historical evidence noise;
+- treat the builder regression record as producer evidence rather than proof;
+- publish its result through the dedicated evidence-PR contract;
+- perform no repair or canonical result integration.
+
+The prior WP-006 PASS remains historical/current only for exact target `c690f858e7682f5bdf0511c0f10b0e932d868b0e` and is not retargeted to the repair.
+
+After fresh verification, an appropriate fresh separate adversarial re-review is required because F-AR-001 caused a material repair to the reviewed architecture. Result integration remains a separate Integrator responsibility.
 
 ## Completion state
 
-Current: **active — fresh separate builder repair required.**
+Current: **builder responsibility complete — exact material repair published at PR #13 / `a45b463...`; fresh independent verification active under WP-009.**
 
-WP-000/Phase 0 remains unaccepted. PR #1 remains draft. Phase 1 remains blocked.
+This status means the builder has produced a verification candidate. It does **not** mean F-AR-001 is independently closed, ADR-0002 is accepted, WP-000/Phase 0 is accepted, or PR #13/PR #1 may merge.
+
+WP-000/Phase 0 remains unaccepted. PR #13 and PR #1 remain draft/unmerged. Phase 1 remains blocked.
 
 ## Handoff
 
-Builder close must leave the exact repair commit/target, changed artefacts, decision/ADR consequences if any, regression evidence, unresolved items, and the exact fresh-verifier next responsibility. The builder must not perform the independent verifier or adversarial-review roles in the same repair session.
+Builder close is recorded in `development/07_sessions/SESSION-0014-PHASE0-F-AR-001-REPAIR-BUILDER.md`.
+
+Exact next responsibility: **fresh separate verifier under WP-009 against exact material target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`.** The builder must not perform that verification or the subsequent adversarial re-review in this session.
