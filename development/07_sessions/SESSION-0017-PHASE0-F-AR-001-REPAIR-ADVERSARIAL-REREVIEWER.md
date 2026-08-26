@@ -6,7 +6,7 @@
 **Reviewer branch:** `review/wp010-f-ar-001-repair-adversarial-rereview-2026-08-26-1247`  
 **Exact reviewed material target:** `a45b463b083604d3f59d75bdca5ba97d5bc170e6`  
 **Material target PR:** #13  
-**Reviewer evidence PR:** pending publication
+**Reviewer evidence PR:** #15 — `WP-010: F-AR-001 repair adversarial re-review — Requires repair`
 
 ## Required inputs read
 
@@ -40,13 +40,16 @@ No ADR acceptance, PR #13/#1 merge, Phase acceptance, Phase 1 work, canonical re
 - inspected WP-009 PASS evidence PR #14 and the WP-009 → WP-010 transition chain;
 - attempted to falsify candidate findings rather than preserve a finding quota;
 - retained two medium/material findings and one low timing-dependent finding;
+- published the review artefact + this handoff in dedicated evidence PR #15;
+- after PR #15 publication, immediately re-read canonical `STATE.md` and `COLD_START.md` and directly reproduced the F-AR-002 post-result/pre-Integrator exposure: canonical state still assigned WP-010 reviewer while canonical cold-start still lacked the Step 1A pending-result guard;
+- re-checked PR #13 immediately before close and confirmed it remained open/draft at exact head `a45b463...`;
 - performed no repair or canonical transition.
 
 ## Outputs produced
 
 - `development/06_reviews/ADVERSARIAL-REREVIEW-WP-000-a45b463b-2026-08-26.md` — overall judgement **Requires repair**;
 - this handoff;
-- dedicated reviewer evidence PR: pending publication at the time of this handoff draft.
+- dedicated reviewer evidence PR #15 targeting `phase0/development-os`.
 
 ## Findings / result
 
@@ -55,7 +58,9 @@ No ADR acceptance, PR #13/#1 merge, Phase acceptance, Phase 1 work, canonical re
 **Result:** stands.  
 **Severity:** medium — material.
 
-The Step 1A pending-result guard exists only on unmerged PR #13. Canonical `phase0/development-os` still uses the pre-repair `COLD_START.md`, so WP-009 verifier close and WP-010 reviewer close are still exposed to the original generic duplicate-role lifecycle until an explicitly selected separate Integrator acts.
+The Step 1A pending-result guard exists only on unmerged PR #13. Canonical `phase0/development-os` still uses the pre-repair `COLD_START.md`, so WP-009 verifier close and WP-010 reviewer close are exposed to the original generic duplicate-role lifecycle until an explicitly selected separate Integrator acts.
+
+This was directly reproduced at reviewer close: PR #15 was published while canonical `STATE.md` still assigned WP-010 reviewer work and canonical `COLD_START.md` still lacked Step 1A.
 
 ### F-AR-003 — Same-WP stale/ambiguous evidence can create a persistent cold-start livelock
 
@@ -89,9 +94,17 @@ Review is bound only to exact material target:
 
 `a45b463b083604d3f59d75bdca5ba97d5bc170e6`
 
-At review start PR #13 was open/draft with that exact head and exactly the declared six repair files. The post-PR-14 development-line changes inspected were verifier evidence and authorised routing/state/session material, not edits to the six-file repair target.
+At review start and immediately before close, PR #13 was open/draft with that same exact head and the declared six repair files. The post-PR-14 development-line changes inspected were verifier evidence and authorised routing/state/session material, not edits to the six-file repair target.
 
-A final PR #13 freshness check is required immediately before reviewer close. The evidence PR scope must also be re-checked after publication to confirm it contains only this review artefact and this handoff.
+After evidence publication, canonical `STATE.md` still named WP-010 / adversarial reviewer and canonical `COLD_START.md` still lacked Step 1A, directly confirming F-AR-002's activation-gap lifecycle at close.
+
+Final evidence-PR changed-file scope must remain only the review artefact and this handoff; the separate Integrator must independently validate that scope before integration.
+
+## Review status
+
+**Requires repair** for exact target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`.
+
+This status is a reviewer judgement, not a canonical project-state transition and not a repair. Canonical state remains unchanged until the separate Integrator validates/integrates PR #15.
 
 ## Unresolved items
 
@@ -104,8 +117,8 @@ A final PR #13 freshness check is required immediately before reviewer close. Th
 
 ## Exact next required responsibility
 
-**Separate Integrator for the published WP-010 reviewer evidence PR.**
+**Separate Integrator for reviewer evidence PR #15.**
 
-The Integrator must inspect the evidence PR for authorised review/session-only scope, preserve **Requires repair** and F-AR-002/F-AR-003/F-AR-004 without reinterpretation, integrate the immutable reviewer artefact + handoff as evidence only, perform the canonical result transition, and route the smallest bounded repair/resolution responsibility.
+The Integrator must inspect PR #15 for authorised review/session-only scope, preserve **Requires repair** and F-AR-002/F-AR-003/F-AR-004 without reinterpretation, integrate the immutable reviewer artefact + handoff as evidence only, perform the canonical result transition, and route the smallest bounded repair/resolution responsibility.
 
 The Integrator must **not** repair these findings in the same integration session, accept ADR-0002, merge PR #13/#1, accept Phase 0, or begin Phase 1.
