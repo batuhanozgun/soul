@@ -43,6 +43,14 @@ For material architecture and control changes, the verifier must operate in a fr
 
 The verifier writes the verification artefact and verifier handoff. The verifier does not repair findings or use verifier authority to perform the canonical result-to-state transition described below.
 
+The artefact and handoff must bind the result to the complete active result-control key (WP, verifier role, exact target, attempt), and the verifier publishes them through the dedicated evidence-PR contract in `WORKING_PROTOCOL.md` / `PR_GATE.md`. Branch-only output is incomplete publication. The verifier cannot resolve/exclude its own candidate or advance the attempt key.
+
+## Pending verifier-result discovery
+
+During the intentional post-publication/pre-Integrator interval, canonical `STATE.md` may still assign the verifier role. `COLD_START.md` therefore applies pending-result discovery before role loading and a mandatory live re-check immediately before independent-role commitment.
+
+The guard may use evidence PRs and canonical exact-head resolution records only to determine the execution route. It may not reinterpret PASS / FAIL / NOT VERIFIED, treat PR metadata as proof, update canonical state, or allow a resolution record to suppress a candidate that validates against the complete current result-control key.
+
 ## Exact-target freshness
 
 Every verification result remains permanently bound to the exact artefact/version/commit it inspected. A later result must never overwrite that historical binding.
@@ -71,7 +79,8 @@ The transition begins only when all of the following are available:
 2. a verifier artefact with PASS / FAIL / NOT VERIFIED;
 3. a verifier handoff;
 4. the exact target artefact/version/commit SHA;
-5. enough repository/PR evidence to confirm that the verifier records correspond to that target and that no unreviewed material target change was smuggled into the verifier output branch/PR.
+5. enough repository/PR evidence to confirm that the verifier records correspond to that target and that no unreviewed material target change was smuggled into the verifier output branch/PR;
+6. equality between the active canonical result-control key and the key in both verifier records, including attempt number.
 
 If the claimed target changed materially before verification closed, the integrator must not promote the result as current verification. The result may be integrated as historical evidence, but routing must preserve the stale/not-current condition and require fresh verification.
 
@@ -87,6 +96,20 @@ The integrator performs these steps in order:
 6. **Route by result.** Apply the result table below without widening authority or weakening the parent acceptance criteria.
 7. **Update subordinate views and leave an integrator handoff.** Any index/launch view must remain explicitly subordinate to `STATE.md` and the active WP.
 8. **Check freshness after the transition.** Classify every post-target change as transition-only or material. Any material change reopens independent verification for the changed target.
+
+### Invalid/stale/conflicting candidate recovery
+
+Pending-result discovery failures are handled without either failing open or creating permanent cold-start livelock:
+
+1. **Current valid result wins routing, not acceptance.** If one candidate validates against the complete active key and scope, route it through the normal Integrator sequence. No resolution record may exclude it.
+2. **Invalid/stale exact-head candidate.** The Integrator may create a durable resolution record only after direct inspection proves the candidate is not a current valid result. The record must name repository, PR number, immutable PR head SHA, observed/expected keys, changed-file scope, classification, evidence, Integrator session and canonical integration commit. Its effect is limited to that exact PR head.
+3. **Head movement reopens inspection.** If the PR head changes, the prior resolution has no effect on the new head. Closing a PR alone is not a resolution.
+4. **Canonical-before-use.** A resolution record affects cold-start only after it is integrated into the canonical development branch. Local, unmerged or PR-only resolutions cannot unblock independent execution.
+5. **Multiple valid current results.** Preserve the results as a conflict; do not select or exclude one. The Integrator records the conflict and canonically activates a fresh independent attempt/key. Each old exact head is then historical for the new key and may be covered by the conflict record.
+6. **Malformed/incomplete publication.** Resolve only the exact inspected head after recording which publication/scope rule failed. A corrected head must be inspected anew.
+7. **Uninspectable/discovery unavailable.** Remain blocked until inspection capability returns. Unavailability cannot be converted into an exclusion record.
+
+The result-control resolution template under `development/05_evidence/` is a subordinate evidence schema, not a second current-state authority. `STATE.md` + the active WP still determine current work and the active key. Integrator resolution commits are material control evidence unless an already accepted policy explicitly classifies their mechanical integration otherwise.
 
 ### Result routing
 

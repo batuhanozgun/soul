@@ -29,6 +29,10 @@ The **single sequencing authority** for fresh-session bootstrap is `development/
 
 A WP's `Required reading` section is loaded at the point assigned by `COLD_START.md`. A WP may prescribe an internal order among those Step 3 readings when needed for independence or evidence handling, but it may not silently reorder the earlier bootstrap steps. Historical launch briefs and handoffs may point to `COLD_START.md`; they are not competing sequencing authorities.
 
+When canonical state assigns an independent verifier or adversarial reviewer, `COLD_START.md` performs pending-result discovery before role selection and repeats the live check immediately before independent-role commitment. The guard may route the session to bounded Integrator/result-control handling, but it does not itself change canonical state or promote evidence into authority.
+
+Every active independent verification/review WP must declare a result-control key consisting of WP identifier, role, exact target and attempt number. Changing an attempt is a canonical WP/state transition performed only through the bounded Integrator recovery rules; an evidence producer cannot advance its own key.
+
 If repository state is insufficient or internally contradictory, that is a finding. The session must not repair the gap by silently inventing prior intent.
 
 ## Session role
@@ -81,9 +85,21 @@ A new session should be able to continue from these artefacts without reading th
 
 ### Verifier close and canonical transition
 
-A verifier records the result and verifier handoff but does **not** use verifier authority to integrate its own result into canonical project state or to repair findings. After the verifier closes, a separate integrator performs the result-dependent canonical-state transition defined in `VERIFICATION_POLICY.md`.
+A verifier records the result and verifier handoff, binds both to the complete active result-control key, and publishes them in a dedicated evidence PR targeting the active development branch. A result is not a completed published result for cold-start routing until that PR exists. A branch-only or local result is incomplete publication.
+
+The evidence PR contains only the result artefact and corresponding handoff. It contains no repair, canonical state/WP transition, acceptance-criteria change, ADR acceptance, target merge or Phase transition. PR metadata is a locator; direct artefact/handoff/scope inspection is required.
+
+The verifier does **not** use verifier authority to integrate its own result into canonical project state, resolve/exclude its own evidence, advance the attempt key or repair findings. After publication, a separate Integrator performs the result-dependent canonical-state transition defined in `VERIFICATION_POLICY.md`. Adversarial reviewers follow the same publication and separation rules.
 
 This separation prevents a verification result from being silently converted into acceptance, repair, or a new active-work decision by the verifier that issued it.
+
+### Result-control activation bridge
+
+When a proposed general pending-result control is itself still unmerged/unaccepted, the active verification/review WP used to test that proposal must carry a **WP-local activation bridge**. The bridge is a Step-3/Step-4 precondition, not a second bootstrap authority: it preserves COLD_START Steps 1–2, declares the exact result-control key, requires same-WP candidate discovery/resolution handling, and requires the final live re-check immediately before independent-role commitment.
+
+The bridge is activated canonically only by routing `STATE.md` to that active WP. It must be labelled provisional, scoped to the one WP/key, bound to an exact canonical activation commit, and inspected as rollout evidence by the verifier/reviewer. It does not merge or accept the proposed general governance and must not be described as transition-only if it adds substantive temporary control semantics.
+
+Once accepted general governance provides the same control, later WPs use `COLD_START.md` directly and do not retain duplicated bridge text.
 
 ## Branch and PR discipline
 
