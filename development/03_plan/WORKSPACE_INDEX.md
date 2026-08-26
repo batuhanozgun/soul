@@ -25,7 +25,8 @@
 - `CHATGPT_PROJECT_ENTRY.md` — derived minimal Project Instructions convenience; no governance copy
 
 ## Current work
-- Active: `../04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md` — fresh separate bounded builder repair for WP-010 F-AR-002/F-AR-003/F-AR-004; no new exact target yet
+- Active: `../04_work/WP-012-PHASE0-PENDING-RESULT-CONTROL-VERIFICATION.md` — fresh separate verifier for PR #16 exact target `adf067e...`, result-control attempt 1, including provisional WP-local activation bridge
+- Builder-complete repair: `../04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md` — PR #16 exact target `adf067e...` from base `8dcdc750...`; producer-only, independently unverified
 - Completed adversarial re-review: `../04_work/WP-010-PHASE0-F-AR-001-REPAIR-ADVERSARIAL-REREVIEW.md` — **Requires repair** for exact target `a45b463...`; reviewer evidence PR #15 integrated evidence-only as `c8fc17bc...`
 - Completed verification activity: `../04_work/WP-009-PHASE0-F-AR-001-REPAIR-VERIFICATION.md` — **PASS** for exact target `a45b463...`; verifier evidence PR #14 integrated evidence-only as `37f4bceb...`
 - Builder-complete prior repair: `../04_work/WP-008-PHASE0-F-AR-001-REPAIR.md` — exact target `a45b463...`; WP-009 verified PASS, but WP-010 adversarial re-review issued **Requires repair**
@@ -39,6 +40,9 @@
 - Historical repair package: `../04_work/WP-002-PHASE0-VERIFICATION-REPAIR.md`
 
 ## Verification, reviews, defects and evidence
+- `../05_evidence/F-AR-001-TO-004-PENDING-RESULT-CONTROL-REGRESSION-2026-08-26.md` — WP-011 producer regression record on PR #16 target; 13 declared cases, not independent proof
+- `../05_evidence/PENDING-RESULT-RESOLUTION-TEMPLATE.md` — proposed exact-bound canonical Integrator resolution record template on PR #16 target
+- `../05_evidence/pending_result_control_regression.py` — executable producer decision-table regression model on PR #16 target
 - `../06_reviews/ADVERSARIAL-REREVIEW-WP-000-a45b463b-2026-08-26.md` — WP-010 result: **Requires repair**; F-AR-002/F-AR-003 medium/material and F-AR-004 low/timing-dependent stand; PR #15 integrated evidence-only
 - `../06_reviews/VERIFICATION-WP-000-a45b463b-2026-08-26.md` — WP-009 issued **PASS** against exact repair target `a45b463...`; verifier evidence PR #14 integrated evidence-only
 - `../05_evidence/F-AR-001-PENDING-RESULT-REGRESSION-2026-08-26.md` — WP-008 producer regression evidence on PR #13 target; covers WP-006/PR #10 verifier case, WP-007/PR #12 reviewer case, stale/conflict/unavailable cases; not independent proof
@@ -53,7 +57,7 @@
 ## Decisions
 - `../02_architecture/decisions/ADR-0000-DEVELOPMENT-GOVERNANCE-BOOTSTRAP.md` — proposed; still requires its declared owner path
 - `../02_architecture/decisions/ADR-0001-DEVELOPMENT-REASONING-POLICY.md` — proposed; owner direction approved, acceptance path still pending
-- `../02_architecture/decisions/ADR-0002-PENDING-INDEPENDENT-RESULT-DISCOVERY.md` — proposed on exact WP-008 repair target `a45b463...`; WP-009 PASS and WP-010 **Requires repair** recorded; bounded repair and later decision path pending
+- `../02_architecture/decisions/ADR-0002-PENDING-INDEPENDENT-RESULT-DISCOVERY.md` — revised/proposed on exact WP-011 repair target `adf067e...`; no acceptance or current independent verification
 
 ## Templates
 - ADR: `../01_governance/ADR_TEMPLATE.md`
@@ -61,6 +65,7 @@
 - Evidence: `../05_evidence/EVIDENCE_TEMPLATE.md`
 - Verification: `../06_reviews/VERIFICATION_TEMPLATE.md`
 - Adversarial review: `../06_reviews/ADVERSARIAL_REVIEW_TEMPLATE.md`
+- Pending-result resolution: `../05_evidence/PENDING-RESULT-RESOLUTION-TEMPLATE.md` — proposed on exact PR #16 target
 - Session handoff: `../07_sessions/SESSION_TEMPLATE.md`
 
 ## Handoffs and historical launch records

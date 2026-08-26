@@ -1,22 +1,25 @@
 # SOUL PROJECT STATE
 
 **Current phase:** Phase 0 — Development Operating System  
-**Current work package:** WP-011 — Phase 0 Pending Independent-Result Control Repair  
+**Current work package:** WP-012 — Phase 0 Pending-Result Control Verification
 **Current branch:** `phase0/development-os`  
-**Current PR:** #1 — draft  
-**Current rejected material target:** WP-008 repair PR #13 exact commit `a45b463b083604d3f59d75bdca5ba97d5bc170e6`  
-**State:** WP-010 adversarial re-review issued **Requires repair** for exact target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`; F-AR-002/F-AR-003/F-AR-004 stand; reviewer evidence PR #15 is integrated evidence-only; fresh separate bounded repair is now required under WP-011  
+**Current material PR:** #16 — draft
+**Current exact material target:** `adf067e4289e4c0b51cf40c1940193e8252b22e0`
+**Material base:** `8dcdc750600b336a2e97fde3433926b6a2217f26`
+**Superseded material PR:** #13 — closed unmerged at `a45b463b083604d3f59d75bdca5ba97d5bc170e6`
+**Provisional activation commit:** pending exact binding in the immediate follow-up commit; fail closed until recorded
+**State:** WP-011 builder published a bounded changed target on PR #16; fresh separate exact-target verification is active under WP-012; no verification, re-review, ADR acceptance, material merge, Phase acceptance, or Phase 1 claim has occurred
 **Authoritative product branch:** `main`
 
 ## Current objective
 
-Freshly and separately repair the three surviving WP-010 findings under:
+Freshly and separately verify the complete changed repair target under:
 
-`development/04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md`.
+`development/04_work/WP-012-PHASE0-PENDING-RESULT-CONTROL-VERIFICATION.md`.
 
-The builder must derive the smallest coherent repair for safe activation during the control's own verifier/reviewer result intervals (F-AR-002), durable bounded recovery from resolved stale/ambiguous same-WP evidence (F-AR-003), and the one-shot discovery check-then-act race (F-AR-004), while preserving F-AR-001, canonical-state authority, role separation, fail-closed behaviour and unchanged WP-000 acceptance criteria.
+The verifier must independently assess all current WP-000 criteria, F-AR-001 through F-AR-004, the exact PR #16 eight-file scope, the complete result-control lifecycle, and the provisional WP-local activation bridge protecting this verification's own post-result/pre-Integrator interval.
 
-No new material target exists yet. The builder must publish and freeze one exact target, record its relation to PR #13, add regression evidence, and route it to a fresh separate verifier. The builder must not self-verify/re-review, accept an ADR, merge PR #13/PR #1, accept Phase 0, or begin Phase 1.
+The exact target is `adf067e4289e4c0b51cf40c1940193e8252b22e0` from base `8dcdc750600b336a2e97fde3433926b6a2217f26`. Historical WP-009 PASS and WP-010 **Requires repair** remain bound only to `a45b463...` and cannot certify this target. The verifier must not repair, resolve candidates, advance attempts, integrate its own result, perform adversarial re-review, accept an ADR, merge PR #16/PR #1, accept Phase 0, or begin Phase 1.
 
 ## Canonical current-work rule
 
@@ -138,9 +141,19 @@ Reviewer evidence PR #15 contained exactly the review artefact and SESSION-0017 
 
 ## Active bounded repair routing — WP-011
 
-`development/04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md` is active.
+`development/04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md` is builder-complete as a producer responsibility only.
 
-It assigns a fresh separate designer/builder to preserve and coherently repair F-AR-002/F-AR-003/F-AR-004, establish one exact new material target and regression evidence, and route that changed target to fresh verification and re-review without pre-selecting the substantive repair mechanism in this Integrator transition.
+Draft PR #16 freezes exact target `adf067e4289e4c0b51cf40c1940193e8252b22e0` on branch `codex/wp011-pending-result-control-repair`, based on `8dcdc750600b336a2e97fde3433926b6a2217f26`, with exactly eight material files. Producer regression evidence reports 13 passing cases; it is not independent proof. PR #13 is closed unmerged as superseded, while all historical exact-target result bindings remain preserved.
+
+The repair architecture adds a complete result-control key, initial and immediate pre-role live checks, exact-head canonical Integrator resolutions with moved-head reopening, current-valid-result suppression prevention, conflict-preserving attempt advancement, fail-closed recovery and a provisional WP-local activation bridge. It explicitly bounds the remaining publication-after-final-check edge instead of claiming an atomic lock. ADR-0002 remains proposed and PR #16 remains unaccepted/unmerged.
+
+## Active exact-target verification — WP-012
+
+`development/04_work/WP-012-PHASE0-PENDING-RESULT-CONTROL-VERIFICATION.md` is active for a fresh separate verifier.
+
+Result-control key: `WP-012 / verifier / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`.
+
+The WP-local activation bridge is a provisional material rollout control, not a transition-only change and not acceptance of PR #16 governance. Its exact activation commit is pending binding in the immediate follow-up commit; until recorded, independent execution fails closed. The verifier must execute the bridge after COLD_START Steps 1–2 and again immediately before Step 4 responsibility commitment.
 
 ## Material architecture status
 
@@ -170,34 +183,33 @@ WP-007 did not establish PD-002 recurrence as a separate material finding. WP-00
 
 ## Required next responsibility
 
-**Fresh separate designer/builder under `development/04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md`.**
+**Fresh separate verifier under `development/04_work/WP-012-PHASE0-PENDING-RESULT-CONTROL-VERIFICATION.md`.**
 
-No new exact material target exists yet. The rejected prior target remains `a45b463...` until the builder publishes a changed target.
+Verify exact PR #16 target `adf067e4289e4c0b51cf40c1940193e8252b22e0`, using result-control attempt 1 and the exact provisional activation binding. Publish only the dedicated verifier artefact and handoff PR, then stop for a separate Integrator.
 
-This Integrator session must stop after canonical routing/handoff and must not continue into repair.
+No current session may combine verifier, Integrator, reviewer, ADR acceptance, material merge, Phase acceptance, or Phase 1 responsibility.
 
 ## Remaining Phase 0 gates
 
 Remaining gates include:
 
-- WP-011 bounded repair of F-AR-002/F-AR-003/F-AR-004 and publication of one exact new material target;
-- fresh separate verification of that changed target, followed by separate result integration;
+- WP-012 fresh separate verification of exact target `adf067e...`, followed by separate result integration;
 - fresh separate adversarial re-review of the exact verified repair target, followed by separate result integration;
 - repair/resolution or authorised acceptance of any later surviving material findings;
 - ADR-0000, ADR-0001, and ADR-0002 reaching the status required by their declared decision paths;
-- PR #13 material repair integration only after its required gates permit it;
+- PR #16 material repair integration only after its required gates permit it; PR #13 remains closed unmerged and superseded;
 - human-owner/PR acceptance gates where required;
 - PR #1 merge into `main` only after `PR_GATE.md` and `PHASE_GATE.md` are satisfied.
 
 ## Authority boundaries remain unchanged
 
-No current WP-011 builder session may:
+No current WP-012 verifier session may:
 
 - edit historical verifier/reviewer evidence or reinterpret WP-009 PASS, WP-010 **Requires repair**, or F-AR-001 through F-AR-004;
 - weaken WP-000 acceptance criteria;
-- claim independent verification/re-review or canonically integrate a future independent result;
+- repair the candidate, resolve/exclude evidence candidates, advance the attempt, canonically integrate its own result, or perform adversarial re-review;
 - accept ADR-0000, ADR-0001, or ADR-0002;
-- merge PR #13 or PR #1;
+- merge PR #16, PR #13 or PR #1;
 - accept Phase 0 or begin Phase 1.
 
 ## Phase 1 gate
