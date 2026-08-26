@@ -2,7 +2,7 @@
 
 This is the standard and authoritative sequencing procedure for a fresh SOUL development session.
 
-`SOURCE_OF_TRUTH.md` defines which artefact wins when project claims conflict. This file separately defines **the order in which a fresh session discovers and loads those artefacts**. A WP, session launch brief, handoff, index, or chat instruction may add role-specific material, but it may not silently replace or reorder Steps 1–2 below. If another current control requires an incompatible bootstrap order, stop and record the conflict.
+`SOURCE_OF_TRUTH.md` defines which artefact wins when project claims conflict. This file separately defines **the order in which a fresh session discovers and loads those artefacts**. A WP, session launch brief, handoff, index, Project instruction, or chat instruction may add role-specific material, but it may not silently replace or reorder Steps 1–2 below. If another current control requires an incompatible bootstrap order, stop and record the conflict.
 
 ## Step 1 — Identify authoritative state
 
@@ -15,7 +15,15 @@ Read, in this order:
 
 This bootstrap order exists so a fresh session can first discover the current work and then load the rules that govern authority and execution. Reading order does not change the semantic authority hierarchy in `SOURCE_OF_TRUTH.md`.
 
-## Step 2 — Load only role-relevant governance
+## Step 2 — Load common reasoning governance, then role-relevant governance
+
+First, every role reads:
+
+- `development/01_governance/REASONING_POLICY.md`
+
+This is a common reasoning discipline, not a second bootstrap authority. It does not redefine the active WP, role authority or source-of-truth hierarchy.
+
+Then load the role-relevant material:
 
 - Designer/builder: `ROLE_MODEL.md`, `DECISION_POLICY.md`, `CHANGE_POLICY.md`
 - Researcher: `ROLE_MODEL.md`, `SOURCE_OF_TRUTH.md`, active WP evidence obligations
@@ -27,7 +35,7 @@ This bootstrap order exists so a fresh session can first discover the current wo
 
 Read the foundation files and exact `Required reading` references named by the active WP. A WP may specify an order **within this Step 3 material** when independence or evidence handling requires it; that local order begins only after Steps 1–2 are complete and cannot retroactively reorder the bootstrap.
 
-Historical session records and launch briefs are evidence/continuity artefacts, not alternative cold-start authorities. Do not substitute remembered chat context for missing repository material.
+Historical session records and launch briefs are evidence/continuity artefacts, not alternative cold-start authorities. Project Instructions and remembered chat context are entry conveniences only; do not substitute them for missing repository material.
 
 ## Step 4 — Declare session responsibility
 
@@ -35,6 +43,8 @@ Before substantive work, state the session role and one primary responsibility. 
 
 ## Step 5 — Work and close through repository state
 
+Apply `REASONING_POLICY.md` proportionally to the work: baseline epistemic rules always apply; deeper framing/necessity/falsification/root-cause checks are invoked only when their documented triggers apply.
+
 When the responsibility is complete, follow the session-close requirements in `WORKING_PROTOCOL.md` and leave a session handoff. Verifier sessions additionally leave canonical-state transition to a separate integrator under `VERIFICATION_POLICY.md`.
 
-A cold-start is successful when the new session can determine what is true, what work is active, what it is authorised to do, and what completion means without replaying the previous chat.
+A cold-start is successful when the new session can determine what is true, what work is active, what it is authorised to do, what reasoning discipline applies, and what completion means without replaying the previous chat.
