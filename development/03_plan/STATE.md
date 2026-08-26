@@ -1,15 +1,17 @@
 # SOUL PROJECT STATE
 
 **Current phase:** Phase 0 — Development Operating System  
-**Current work package:** WP-006 — Phase 0 Fresh Verification after F2-R1 + Reasoning Policy  
+**Current work package:** WP-007 — Phase 0 Adversarial Review  
 **Current branch:** `phase0/development-os`  
 **Current PR:** #1 — draft  
-**State:** WP-004 bounded F2-R1 repair and WP-005 reasoning-policy material architecture work are complete; fresh independent verification of the complete changed target is now required  
+**State:** WP-006 fresh independent verification completed with **PASS** for exact material target `c690f858e7682f5bdf0511c0f10b0e932d868b0e`; verifier evidence is integrated and the required separate adversarial review is now active  
 **Authoritative product branch:** `main`
 
 ## Current objective
 
-Freshly verify the exact current Phase 0 PR target against all **twelve** current WP-000 acceptance criteria, including F2-R1 regression, the single-COLD_START reasoning-policy integration, source-synthesis evidence integrity and PD-002 current-work discipline.
+Execute a fresh, separate adversarial review of the Phase 0 material target under `development/04_work/WP-007-PHASE0-ADVERSARIAL-REVIEW.md` before any Phase/ADR acceptance or PR #1 merge.
+
+The adversarial reviewer must actively seek material failure paths rather than repeat the WP-006 verifier checklist or producer rationale.
 
 ## Canonical current-work rule
 
@@ -19,76 +21,93 @@ This file is the authoritative home for current phase, active WP, and current ne
 
 Fresh-session sequencing is governed only by `development/03_plan/COLD_START.md`; semantic authority/conflict resolution remains governed by `development/01_governance/SOURCE_OF_TRUTH.md`.
 
-## Material changes awaiting verification
+## Current exact-target verification
+
+WP-006 completed and issued **PASS** against exact draft PR #1 material target:
+
+`c690f858e7682f5bdf0511c0f10b0e932d868b0e`
+
+Canonical verifier artefact:
+
+`development/06_reviews/VERIFICATION-WP-000-c690f858-2026-08-26.md`
+
+Verifier handoff:
+
+`development/07_sessions/SESSION-0010-PHASE0-REASONING-REVERIFIER.md`
+
+Verifier evidence PR #10 was inspected for authorised scope and merged evidence-only into the development line by a separate Integrator. The merge commit is `856c2cdf0a791501477d43dbe7419219f5dd62f0`.
+
+The PASS remains permanently bound to `c690f858e7682f5bdf0511c0f10b0e932d868b0e`; it does not certify later commits. Under `VERIFICATION_POLICY.md`, evidence integration and mechanical routing/state/handoff commits do not make the result stale only while those changes remain explicitly transition-only. Any substantive repair, design, acceptance, authority, or verification-rule change after the target requires freshness re-evaluation and fresh independent verification where applicable.
+
+## Material architecture status
 
 ### WP-004 — F2-R1 repair
 
-- historical verifier finding: stale `BUILDER_STOP.md` next-responsibility pointer;
-- builder repair: `development/03_plan/BUILDER_STOP.md` removed rather than preserved as a second routing surface;
-- status: materially complete, **not independently verified**.
+- historical defect: stale `development/03_plan/BUILDER_STOP.md` next-responsibility pointer;
+- repair: redundant routing artefact removed;
+- WP-006 result: F2-R1 regression **PASS** at exact target `c690f858...`.
 
 ### WP-005 — Development Reasoning Policy
 
-Owner-approved direction implemented as proposed architecture:
+Implemented proposed architecture includes:
 
 - canonical `development/01_governance/REASONING_POLICY.md`;
 - source synthesis evidence under `development/05_evidence/`;
 - proposed ADR-0001;
 - policy loaded for every role through Step 2 of the single `COLD_START.md` sequence;
-- `WORKING_PROTOCOL.md` integration;
 - strengthened WP-000 criterion 12;
-- derived minimal `CHATGPT_PROJECT_ENTRY.md` that points to repository cold-start instead of copying governance.
+- derived minimal `CHATGPT_PROJECT_ENTRY.md`.
 
-Status: materially complete, **not independently verified or accepted**.
+WP-006 verified the current reasoning-policy acceptance properties at exact target `c690f858...`. This does **not** accept ADR-0001 or Phase 0.
 
 ## Process defect PD-002
 
-The bootstrap builder began early WP-005 material writes before first moving this active-WP pointer from completed WP-004 to WP-005. The defect is preserved at `development/06_reviews/PROCESS-DEFECT-PD-002-WP-ACTIVATION-ORDER.md`; canonical state was corrected before further material work.
+PD-002 remains preserved at `development/06_reviews/PROCESS-DEFECT-PD-002-WP-ACTIVATION-ORDER.md`.
 
-Fresh verification must inspect the final activation/current-work discipline. One observed incident does not by itself justify inventing a new mechanical gate; any stronger mechanism must follow `CHANGE_POLICY.md` evidence and change analysis.
+WP-006 found the final current-work/activation discipline sufficient at the verified target and did not find evidence that one observed bootstrap incident alone justifies a new permanent mechanical gate. Recurrence remains subject to `CHANGE_POLICY.md` evidence and change analysis.
 
-## Historical verification is stale
-
-Latest historical independent result before these changes:
-
-- WP-003 target: `a02e36e5e71522995b74fb018a6b28235f1d7848`;
-- result: **FAIL** due F2-R1;
-- F1 and PD-001 passed at that exact target;
-- WP-000 criteria 1 and 3–11 passed at that exact target only.
-
-Canonical historical artefact: `development/06_reviews/VERIFICATION-WP-000-2026-08-26.md`.
-
-No historical PASS fragment certifies the current changed target.
+The defect record is not erased by that PASS.
 
 ## Required next responsibility
 
-**Fresh verifier under `development/04_work/WP-006-PHASE0-REASONING-REVERIFICATION.md`.**
+**Fresh adversarial reviewer under `development/04_work/WP-007-PHASE0-ADVERSARIAL-REVIEW.md`.**
 
-The verifier must:
+The reviewer must:
 
 - enter through `COLD_START.md`;
-- capture the exact current PR #1 head from PR metadata;
-- derive expected results from strengthened WP-000/current governance before reading builder rationale;
-- verify all twelve criteria;
-- regression-test F2-R1;
-- verify reasoning-policy scope, proportionality, no-private-chain-of-thought boundary and no duplicate bootstrap authority;
-- inspect PD-002;
-- perform no repair or canonical result integration.
+- operate separately from builder, verifier, and Integrator roles;
+- bind the review to material target `c690f858e7682f5bdf0511c0f10b0e932d868b0e`;
+- confirm that post-target changes are transition-only before relying on WP-006 freshness;
+- establish attack hypotheses before relying on verifier conclusions;
+- attack authority, state/bootstrap, verification/freshness, false-completion, change-safety, evidence/provenance, development/product separation, PD-002 recurrence, and the reasoning-policy risks specified by WP-005/ADR-0001;
+- attempt to disprove candidate findings rather than preserve a quota;
+- perform no repair, canonical transition, ADR acceptance, PR #1 merge, or Phase 1 work.
 
-After verifier close, a separate Integrator executes the result-dependent transition under `VERIFICATION_POLICY.md`.
+After reviewer close, a separate Integrator must integrate the review evidence and route surviving findings or remaining decision/owner gates.
+
+## Remaining Phase 0 gates
+
+WP-006 PASS is necessary but not sufficient for Phase 0 acceptance. Remaining gates include:
+
+- WP-007 separate adversarial review;
+- resolution or explicit acceptance of any material adversarial findings through existing governance;
+- ADR-0000 and ADR-0001 reaching the status required by their declared owner/decision paths;
+- human-owner/PR acceptance gates where required;
+- PR #1 merge into `main` only after `PR_GATE.md` and `PHASE_GATE.md` are satisfied.
 
 ## Authority boundaries remain unchanged
 
 No current session has authority to:
 
-- edit historical verification results,
-- weaken acceptance criteria to obtain a PASS,
-- allow a builder to independently verify its own material output,
-- accept ADR-0000 or ADR-0001 outside their required paths,
-- skip required adversarial review,
-- merge PR #1 into `main` before gates are satisfied,
+- edit historical verifier evidence or reinterpret WP-006 PASS;
+- weaken WP-000 acceptance criteria;
+- treat transition-only integration as certification of a new material target;
+- allow an adversarial reviewer to repair its own findings while reviewing;
+- accept ADR-0000 or ADR-0001 outside their required paths;
+- skip the required adversarial review;
+- merge PR #1 into `main` before all gates are satisfied;
 - begin Phase 1.
 
 ## Phase 1 gate
 
-Phase 1 does not begin until WP-000 is verified-complete on the current exact target, required adversarial review is resolved, relevant decisions have the correct status, and the Phase 0 PR is accepted into `main`.
+Phase 1 does not begin until WP-000/Phase 0 has current exact-target verification, required adversarial review is resolved, relevant decisions have the correct status, human/PR acceptance gates are satisfied, and the Phase 0 PR is accepted into `main`.
