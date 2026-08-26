@@ -5,7 +5,8 @@
 **Role:** verifier  
 **Verifier branch:** `verification/wp009-f-ar-001-repair-2026-08-26-1226`  
 **Exact verified material target:** `a45b463b083604d3f59d75bdca5ba97d5bc170e6`  
-**Material target PR:** #13
+**Material target PR:** #13  
+**Verifier evidence PR:** #14 — `WP-009: F-AR-001 repair verification PASS`
 
 ## Required inputs read
 
@@ -100,13 +101,14 @@ Independently verify exact repair target `a45b463b083604d3f59d75bdca5ba97d5bc170
 - re-checked PR #13 immediately before close and confirmed its head remained exactly `a45b463...`;
 - checked immediately before close that no other WP-009 evidence PR existed;
 - issued overall **PASS**;
+- published the verifier artefact + handoff through dedicated evidence PR #14;
 - performed no target repair or canonical state transition.
 
 ## Outputs produced
 
 - `development/06_reviews/VERIFICATION-WP-000-a45b463b-2026-08-26.md` — independent **PASS** bound only to exact target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`;
 - this verifier handoff;
-- dedicated verifier evidence PR targeting `phase0/development-os` is the required publication output for this close.
+- verifier evidence PR #14 targeting `phase0/development-os`, containing verifier evidence/session files only.
 
 The verification artefact's final PASS content was committed as:
 
@@ -130,7 +132,7 @@ Key independent evidence includes:
 - historical WP-003 evidence PRs for unrelated-noise testing;
 - repaired Step 1A decision path for stale/conflicting/ambiguous/unavailable negative tests.
 
-Produced evidence is contained only on the verifier branch and dedicated evidence PR.
+Produced evidence is contained only on the verifier branch and dedicated evidence PR #14.
 
 ## Verification status
 
@@ -146,8 +148,7 @@ This PASS does not close Phase 0. A fresh separate adversarial re-review of the 
 
 ## Unresolved items
 
-- verifier evidence must be published through the dedicated evidence PR contract;
-- after publication, a separate Integrator must validate/integrate the PASS without reinterpretation and perform the canonical result-to-state transition;
+- a separate Integrator must validate/integrate PR #14 without reinterpretation and perform the canonical result-to-state transition;
 - the PASS route must activate/route the required fresh separate adversarial re-review of exact repaired target `a45b463...`;
 - ADR-0000, ADR-0001 and ADR-0002 remain subject to their declared acceptance paths;
 - PR #13 and PR #1 remain unmerged/unaccepted;
@@ -156,8 +157,8 @@ This PASS does not close Phase 0. A fresh separate adversarial re-review of the 
 
 ## Next required responsibility
 
-**Separate Integrator for the published WP-009 PASS.**
+**Separate Integrator for published WP-009 PASS evidence PR #14.**
 
-The Integrator must inspect the dedicated evidence PR for evidence/session-only scope, bind the immutable PASS to exact target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`, integrate the verifier artefact + this handoff without reinterpretation, close WP-009 as a verification activity, transition canonical `STATE.md` mechanically, and route PASS to a fresh separate adversarial re-review of the repaired target.
+The Integrator must inspect PR #14 for evidence/session-only scope, bind the immutable PASS to exact target `a45b463b083604d3f59d75bdca5ba97d5bc170e6`, integrate the verifier artefact + this handoff without reinterpretation, close WP-009 as a verification activity, transition canonical `STATE.md` mechanically, and route PASS to a fresh separate adversarial re-review of the repaired target.
 
 The Integrator must not repair F-AR-001 in that transition, accept ADR-0002, accept Phase 0, merge PR #13/#1, or begin Phase 1 merely because verification passed.
