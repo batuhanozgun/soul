@@ -1,6 +1,6 @@
 # WP-016 — Phase 0 Moving-Candidate Convergence Adversarial Re-review
 
-**Status:** active — fresh separate adversarial reviewer required
+**Status:** complete — review issued **Requires repair**; F-AR-006 and F-AR-007 stand; evidence integrated by separate Integrator
 **Owner role:** adversarial reviewer
 **Decision authority:** independently attack exact WP-014 material target `2f5508c1d6941e951d494bb2a700ef861860431d`, its bounded moving-candidate lifecycle and this WP's exact provisional activation; issue evidence-backed findings and an overall suitability judgement; no repair, candidate resolution/containment, attempt advancement, canonical result integration, ADR acceptance, PR #19/#1 merge, Phase acceptance or Phase 1 authority
 **Development branch:** `phase0/development-os`
@@ -256,13 +256,60 @@ transitions canonical state without reinterpretation.
 - cannot assess -> smallest bounded investigation/repair path, followed by
   fresh exact-target checks.
 
+## Review result
+
+**Overall judgement:** **Requires repair**
+
+Exact target/base/key/activation/binding:
+
+- target `2f5508c1d6941e951d494bb2a700ef861860431d`;
+- base `dca520242585a80c2efaf22e18fe3d353147b93e`;
+- key `WP-016 / adversarial reviewer / 2f5508c1d6941e951d494bb2a700ef861860431d / attempt 1`;
+- activation `94bcc9bf9d0352bde67459635a6073c7e65171e2`;
+- binding `91db45818f324a1c1aef4dd16d48e40591a3f4e1`.
+
+Surviving findings preserved exactly in the immutable reviewer artefact:
+
+- **F-AR-006 — Rotating to fresh PR identities resets per-candidate containment and restores unbounded denial** — medium/material, stands;
+- **F-AR-007 — The executable routing model lets an invalid candidate outrank a current-valid result** — low/evidence-model correctness, stands.
+
+Canonical reviewer artefact:
+
+`development/06_reviews/ADVERSARIAL-REREVIEW-WP-000-2f5508c1-2026-08-27.md`
+
+Reviewer handoff:
+
+`development/07_sessions/SESSION-0028-PHASE0-MOVING-CANDIDATE-CONVERGENCE-ADVERSARIAL-REREVIEWER.md`
+
+## Integration record
+
+Reviewer evidence PR #21 contained exactly the canonical adversarial re-review
+artefact and SESSION-0028 handoff at immutable head
+`c2c44604ea1694bd84e34bed950e38efe557ff71`. A separate Integrator validated
+the complete key, completed judgement, target/base/activation/binding, unique
+current candidate and two-file evidence-only scope, then merged PR #21 into
+`phase0/development-os` as `276132a8ad3bcaa5263aba725f6f006019f79287`.
+
+The integration preserves **Requires repair**, F-AR-006 and F-AR-007 exactly.
+It does not reinterpret WP-015 PASS, repair either finding, accept ADR-0002,
+merge PR #19 or PR #1, accept Phase 0 or begin Phase 1.
+
 ## Completion state
 
-Active — fresh separate adversarial reviewer required after exact activation
-binding. No WP-016 review result exists for `2f5508c...`.
+**Complete as an adversarial-review activity — result: Requires repair.**
+
+WP-015 PASS remains permanently bound to exact target `2f5508c...` and its own
+activation/binding; it does not override this later adversarial suitability
+judgement. PR #19 remains draft, unaccepted and unmerged. ADR-0000, ADR-0001
+and ADR-0002 remain on their declared decision paths. Phase 0 remains
+unaccepted and Phase 1 remains blocked.
 
 ## Handoff
 
-Exact next responsibility after the immediate canonical binding commit: fresh
-separate adversarial reviewer executes attempt 1, publishes only the review
-artefact + reviewer handoff PR, and stops for another separate Integrator.
+Exact next responsibility: fresh separate designer/builder under
+`development/04_work/WP-017-PHASE0-CANDIDATE-SET-CONVERGENCE-REPAIR.md`.
+Preserve **Requires repair**, F-AR-006 and F-AR-007; derive the smallest
+coherent bounded repair without weakening current-valid-result protection,
+exact freshness, conflict handling or fail-closed discovery; publish one new
+exact target with red-capable regression evidence; then stop for fresh separate
+verification and re-review.

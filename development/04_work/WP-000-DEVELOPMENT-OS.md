@@ -1,6 +1,6 @@
 # WP-000 — SOUL Development Operating System
 
-**Status:** material change — current exact-target verification PASS; fresh adversarial re-review required
+**Status:** material change — exact-target verification PASS; adversarial re-review **Requires repair**; bounded repair active
 **Owner role:** designer/builder  
 **Decision authority:** foundation changes require human-owner approval; governance design requires independent verification  
 **Branch:** `phase0/development-os`  
@@ -133,14 +133,17 @@ The reasoning-policy synthesis evidence must distinguish observed predecessor-so
 
 ## Completion state
 
-Current: **materially changed — WP-015 exact-target verification PASS; fresh
-adversarial re-review required**. The PASS remains bound only to PR #19 exact
-target `2f5508c...`; adversarial, ADR, owner, PR and Phase gates remain open.
+Current: **materially changed — WP-015 exact-target verification PASS; WP-016
+adversarial re-review Requires repair**. The PASS and review remain bound only
+to PR #19 exact target `2f5508c...`; F-AR-006 medium/material and F-AR-007
+low/evidence-model correctness stand. Repair, fresh verification/re-review,
+ADR, owner, PR and Phase gates remain open.
 
 ## Handoff
 
-The next responsibility is a **fresh separate adversarial reviewer** under
-`WP-016-PHASE0-MOVING-CANDIDATE-CONVERGENCE-ADVERSARIAL-REREVIEW.md` against
-the same exact PR #19 target. The reviewer must establish attack hypotheses
-before relying on producer/verifier conclusions and perform no repair,
-integration, ADR acceptance, material merge or Phase work in the review act.
+The next responsibility is a **fresh separate designer/builder** under
+`WP-017-PHASE0-CANDIDATE-SET-CONVERGENCE-REPAIR.md`. The builder must preserve
+the immutable WP-016 judgement/findings and unchanged parent criteria, derive
+the smallest coherent bounded repair, publish one new exact target plus
+red-capable regression evidence, and stop for fresh separate verification and
+later adversarial re-review without acceptance, material merge or Phase work.
