@@ -10,7 +10,8 @@
 **Exact material target:** `5bd0db27fc3df368c9e112f01b7eed49a64402ab`
 **Material base:** `4524f21cced54c71fb2219b7f42119adbbb5b033`
 **Builder-close routing branch:** `codex/wp017-builder-routing`
-**Builder-close routing PR:** publication locator pending
+**Builder-close preparation commit:** `49c66fd43c42190e3db244d18fbe4c89ae1a3872`
+**Builder-close routing PR:** #23 — initial published head `49c66fd43c42190e3db244d18fbe4c89ae1a3872`
 **Proposed next WP:** WP-018 — Phase 0 Candidate-Set Convergence Verification
 **Proposed result-control key:** `WP-018 / verifier / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`
 
@@ -136,6 +137,11 @@ The `codex/wp017-builder-routing` branch records WP-017 builder output, proposes
 the complete WP-018 verifier specification/key/bridge and adds this SESSION-0030
 handoff. This builder does not change canonical `STATE.md` or the subordinate
 index. Canonical activation/binding is a separate Integrator responsibility.
+
+Initial publication inspection confirmed PR #23 was open/non-draft against
+`phase0/development-os` at head `49c66fd...`, based on `4524f21...`, and changed
+exactly WP-017, proposed WP-018 and this SESSION-0030 handoff. The only later
+branch change is this locator update inside the same authorised handoff.
 
 The Integrator must validate this branch contains only WP-017, proposed WP-018
 and this handoff; integrate those builder-close records; then separately update
