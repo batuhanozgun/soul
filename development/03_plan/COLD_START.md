@@ -32,17 +32,49 @@ Perform the guard in this order:
 
 1. **Resolve the expected key from canonical state.** Read it from the active WP. Do not infer or repair a missing/incomplete key from chat, PR metadata, a handoff or a result artefact. Missing or contradictory key material is a fail-closed blocker.
 2. **Discover same-WP candidates.** Inspect repository PRs targeting the active development branch, including open and merged/closed evidence PRs. PR title/body/labels are locators only.
-3. **Apply only canonical exact-head resolutions.** A resolution record may exclude a candidate from repeated blocking only when the record is already present on the canonical development branch, was produced by a separate Integrator under `VERIFICATION_POLICY.md`, names the candidate PR number and immutable candidate head SHA, records the observed key/scope defect and supporting inspection, and does not purport to exclude a candidate that validates as a current result. A moved PR head is a new candidate; an old resolution does not apply to it.
-4. **Validate every unresolved candidate directly.** A current pending result has the complete expected key in both the result artefact and handoff, a completed result, and evidence/session-only changed-file scope with no repair, canonical-state/WP transition, acceptance, ADR, target-merge or Phase change.
+3. **Apply only canonical candidate controls.** An exact-head resolution may
+   exclude only the repository + PR + immutable head it directly inspected. A
+   moving-candidate containment record may apply only after a separate
+   Integrator recorded an earlier resolved invalid head plus a later directly
+   inspected invalid moved head for the same repository + PR and complete
+   active key. Both record types must already exist on the canonical development
+   branch and satisfy `VERIFICATION_POLICY.md`; local, PR-only or candidate-authored
+   records have no effect.
+4. **Validate every observed head directly when inspectable.** A current pending
+   result has the complete expected key in both the result artefact and handoff,
+   a completed result, and evidence/session-only changed-file scope with no
+   repair, canonical-state/WP transition, acceptance, ADR, target-merge or Phase
+   change. Exact-head resolution never applies after movement. Containment does
+   not skip this current-result validation: a later current-valid head always
+   routes normally and multiple current-valid heads remain a conflict.
 5. **Classify before acting.** Distinguish:
    - no unresolved same-WP candidate;
    - exactly one current-match candidate;
-   - one or more invalid, stale, target/attempt-mismatched, incomplete, malformed or uninspectable candidates;
+   - one or more invalid, stale, target/attempt-mismatched, incomplete, malformed
+     or uninspectable candidates not covered by canonical moving-candidate
+     containment;
+   - one or more later invalid or inaccessible heads covered by canonical
+     moving-candidate containment under the exact active key;
    - multiple current-match or otherwise conflicting candidates;
    - unavailable repository/PR discovery or inspection.
-6. **Route deterministically.** No unresolved candidate permits bootstrap to continue. One current match routes to Integrator and blocks repeat independent execution. Any unresolved invalid/stale/ambiguous candidate, any conflict, or unavailable discovery/inspection fails closed to Integrator/blocker handling; it never permits arbitrary result selection or duplicate independent execution. Clearly unrelated another-WP evidence and exact-head candidates covered by valid canonical resolution records do not block.
+6. **Route deterministically.** One current match routes to Integrator and
+   blocks repeat independent execution. Multiple current matches remain a
+   conflict. A first unresolved invalid head routes to exact-head resolution; a
+   later invalid moved head after that resolution routes once to moving-candidate
+   containment. After canonical containment, later inspectable-invalid or
+   candidate-specifically inaccessible heads of that identity are recorded as
+   contained and do not block the canonical responsibility. They are not
+   accepted, selected or treated as absent. Uncontained invalid/ambiguous/
+   uninspectable candidates and repository-wide discovery failure still fail
+   closed. Clearly unrelated another-WP evidence and exact-head candidates
+   covered by valid canonical resolution records do not block.
 
-An Integrator resolution is bounded by `VERIFICATION_POLICY.md` and `PR_GATE.md`. In particular, an exact-head resolution may classify only a candidate that fails current-result validation; it cannot suppress a valid current result. Multiple valid current results are preserved as a conflict and routed to a fresh canonical attempt instead of choosing one.
+Integrator resolution and containment are bounded by `VERIFICATION_POLICY.md`
+and `PR_GATE.md`. Neither may suppress a valid current result. Containment is
+bound to the complete active key and candidate PR identity, and candidate head,
+state or branch mutation cannot reset it. Multiple valid current results are
+preserved as a conflict and routed to a fresh canonical attempt instead of
+choosing one.
 
 ## Step 2 — Load common reasoning governance, then role-relevant governance
 

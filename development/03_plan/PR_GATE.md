@@ -27,18 +27,37 @@ PR metadata is a locator only. Current-result validation requires direct inspect
 
 `COLD_START.md` checks candidates after canonical state discovery and repeats the live check immediately before independent-role commitment. Discovery/inspection failure fails closed.
 
-### Durable candidate resolution
+### Durable candidate resolution and moving-candidate containment
 
-An Integrator resolution can stop repeated routing only for one exact candidate identity: repository + PR number + immutable PR head SHA. The canonical resolution record must also contain expected and observed result-control keys, classification, changed-file inspection, evidence, Integrator session and canonical integration commit.
+An Integrator exact-head resolution can stop repeated routing only for one exact
+candidate identity: repository + PR number + immutable PR head SHA. The
+canonical record also contains expected and observed result-control keys,
+classification, changed-file inspection, evidence, Integrator session and
+canonical integration commit.
 
 - a record is effective only after it exists on the canonical development branch;
-- a moved head invalidates the record for the new head;
-- closing/merging a candidate does not itself resolve it;
+- a moved head invalidates exact-head resolution for the new head;
+- after one resolved invalid head and one later directly inspected invalid moved
+  head under the same complete active key, a separate Integrator may canonically
+  create moving-candidate containment bound to repository + PR + that exact key;
+- canonical containment survives later head, branch and open/closed state
+  movement, so inspectable-invalid or candidate-specifically inaccessible later
+  heads cannot demand an unbounded series of canonical resolutions;
+- every inspectable later head is still directly validated; a current valid head
+  bypasses containment and routes normally, and multiple current valid results
+  remain a conflict;
+- a first invalid head, global discovery outage or uncontained uninspectable
+  candidate cannot be converted directly into containment;
+- closing/merging a candidate does not itself resolve or contain it;
 - a candidate that validates as a current result cannot be excluded by a resolution record;
 - multiple current valid results remain a conflict and require a fresh canonically routed attempt/key rather than arbitrary selection;
-- uninspectable candidates and unavailable discovery remain blocked until inspectable.
+- unavailable repository-wide discovery remains blocked until available.
 
-Resolution records are subordinate evidence for bounded routing. They do not replace `STATE.md` + the active WP, reinterpret results, accept a target, or grant verifier/reviewer self-transition authority.
+Resolution and containment records are subordinate evidence for bounded routing.
+They do not replace `STATE.md` + the active WP, reinterpret results, accept a
+target, or grant verifier/reviewer self-transition authority. A key change ends
+the scope of prior containment; only a canonical Integrator can create or
+correct it.
 
 ### Provisional self-hosting activation
 
