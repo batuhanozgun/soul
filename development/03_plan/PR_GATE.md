@@ -27,7 +27,7 @@ PR metadata is a locator only. Current-result validation requires direct inspect
 
 `COLD_START.md` checks candidates after canonical state discovery and repeats the live check immediately before independent-role commitment. Discovery/inspection failure fails closed.
 
-### Durable candidate resolution and moving-candidate containment
+### Durable candidate resolution and bounded candidate-set containment
 
 An Integrator exact-head resolution can stop repeated routing only for one exact
 candidate identity: repository + PR number + immutable PR head SHA. The
@@ -46,6 +46,15 @@ canonical integration commit.
 - every inspectable later head is still directly validated; a current valid head
   bypasses containment and routes normally, and multiple current valid results
   remain a conflict;
+- after an earlier canonical invalid-candidate control and a later directly
+  inspected invalid candidate at a distinct PR identity under the same exact
+  repository/key, a separate Integrator may canonically create candidate-set
+  containment bound to that repository + complete key;
+- candidate-set containment survives fresh PR identity creation and is the
+  final recovery escalation for that repository/key; every inspectable head on
+  every later candidate remains directly validated, so exactly one current
+  valid result routes before invalid residue and multiple current valid results
+  remain a conflict;
 - a first invalid head, global discovery outage or uncontained uninspectable
   candidate cannot be converted directly into containment;
 - closing/merging a candidate does not itself resolve or contain it;
@@ -56,8 +65,10 @@ canonical integration commit.
 Resolution and containment records are subordinate evidence for bounded routing.
 They do not replace `STATE.md` + the active WP, reinterpret results, accept a
 target, or grant verifier/reviewer self-transition authority. A key change ends
-the scope of prior containment; only a canonical Integrator can create or
-correct it.
+the scope of prior containment; candidate-set containment also ends at the
+canonical repository boundary. Only a canonical Integrator can create or
+correct either containment mode. Local, PR-only, candidate-authored, wrong-key
+or wrong-repository controls have no effect.
 
 ### Provisional self-hosting activation
 

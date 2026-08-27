@@ -49,11 +49,12 @@ The artefact and handoff must bind the result to the complete active result-cont
 
 During the intentional post-publication/pre-Integrator interval, canonical `STATE.md` may still assign the verifier role. `COLD_START.md` therefore applies pending-result discovery before role loading and a mandatory live re-check immediately before independent-role commitment.
 
-The guard may use evidence PRs, canonical exact-head resolution records and
-canonical moving-candidate containment records only to determine the execution
-route. It may not reinterpret PASS / FAIL / NOT VERIFIED, treat PR metadata as
-proof, update canonical state, or allow either control record to suppress a
-candidate that validates against the complete current result-control key.
+The guard may use evidence PRs, canonical exact-head resolution records,
+canonical moving-candidate containment records and canonical candidate-set
+containment records only to determine the execution route. It may not
+reinterpret PASS / FAIL / NOT VERIFIED, treat PR metadata as proof, update
+canonical state, or allow any control record to suppress a candidate that
+validates against the complete current result-control key.
 
 ## Exact-target freshness
 
@@ -105,21 +106,37 @@ The integrator performs these steps in order:
 
 Pending-result discovery failures are handled without either failing open or creating permanent cold-start livelock:
 
-1. **Current valid result wins routing, not acceptance.** If one candidate validates against the complete active key and scope, route it through the normal Integrator sequence. No resolution record may exclude it.
+1. **Current valid result wins routing, not acceptance.** Validate every
+   inspectable same-WP head before acting on invalid residue. If exactly one
+   candidate validates against the complete active key and scope, route it
+   through the normal Integrator sequence even when resolved, contained or
+   uncontained invalid residue coexists. Multiple current-valid candidates are
+   handled by the conflict rule below. No recovery record may exclude a valid
+   result.
 2. **Invalid/stale exact-head candidate.** The Integrator may create a durable
    resolution record only after direct inspection proves the candidate is not
    a current valid result. The record must name repository, PR number,
    immutable PR head SHA, observed/expected keys, changed-file scope,
    classification, evidence, Integrator session and canonical integration
    commit. Its effect is limited to that exact PR head.
-3. **First movement reopens; repeated invalid movement converges.** If the PR
+3. **First movement reopens; repeated invalid movement converges per PR.** If the PR
    head changes, the prior exact-head resolution has no effect on the new head.
    After the Integrator directly inspects that later head and again proves it
    invalid under the same complete active key, the Integrator may canonically
    contain the moving candidate identity `(repository, PR number, active key)`.
    This is the second and final canonical recovery escalation for that identity;
    lower-authority mutation cannot reset it.
-4. **Containment classifies; it never blindly ignores.** Every later head of a
+4. **Fresh-identity rotation escalates once for the candidate set.** Exact-head
+   resolution and moving-candidate containment remain narrow first responses.
+   If, under one unchanged active key, a later directly inspected invalid
+   candidate appears at a different PR identity from an earlier canonical
+   invalid-candidate control in the same canonical repository, the Integrator
+   may canonically contain the repository-level candidate set
+   `(repository, active key)`. The record binds the earlier control and the
+   later immutable PR/head observation. This is the final recovery escalation
+   for fresh PR identity creation under that repository/key; a candidate author
+   cannot reset it by opening, closing, reopening, moving or replacing PRs.
+5. **Containment classifies; it never blindly ignores.** Every later head of a
    contained identity remains eligible for direct current-result validation. A
    current valid head routes to Integrator, multiple current valid results
    remain a conflict, and containment has no suppressive effect. An inspectable
@@ -128,26 +145,33 @@ Pending-result discovery failures are handled without either failing open or cre
    of that contained identity is likewise recorded as contained rather than
    allowed to recreate indefinite denial; if it later becomes inspectable and
    valid, it routes normally. Closing, reopening, force-pushing or deleting a
-   branch does not erase containment.
-5. **Canonical-before-use and exact key scope.** Resolution or containment
+   branch does not erase containment. Candidate-set containment applies the
+   same classification to later PR identities in the bound repository/key:
+   every inspectable head is still validated, invalid residue is contained
+   non-valid, and a candidate-specific inaccessible head is contained without
+   becoming absence or validity.
+6. **Canonical-before-use and exact key scope.** Resolution or containment
    affects cold-start only after the record is integrated into the canonical
    development branch by a separate Integrator. Local, unmerged or PR-only
    records cannot unblock execution. Containment is bound to all four active-key
    fields and does not carry into a canonically activated later attempt, target,
-   role or WP.
-6. **Multiple valid current results.** Preserve the results as a conflict; do
+   role or WP. Candidate-set containment additionally binds the exact canonical
+   repository identity; mutable names, forks, URLs, remotes or candidate-authored
+   metadata cannot widen it.
+7. **Multiple valid current results.** Preserve the results as a conflict; do
    not select or exclude one. The Integrator records the conflict and
    canonically activates a fresh independent attempt/key. Each old exact head is
    then historical for the new key and may be covered by the conflict record.
-7. **Malformed/incomplete publication.** A first fixed head is resolved only
+8. **Malformed/incomplete publication.** A first fixed head is resolved only
    after recording which publication/scope rule failed. A corrected head is
    inspected anew and, when valid, cannot be suppressed by either record type.
-8. **Discovery and inspection failure.** Repository-wide discovery failure
+9. **Discovery and inspection failure.** Repository-wide discovery failure
    remains blocked until capability returns. An uninspectable candidate not
-   already covered by canonical moving-candidate containment remains blocked.
-   Candidate-specific inaccessibility after containment is an explicit
-   non-valid contained state, not proof of absence or validity; later
-   inspectability always reopens direct validation.
+   already covered by canonical moving-candidate or candidate-set containment
+   remains blocked. Candidate-specific inaccessibility after either containment
+   is an explicit non-valid contained state, not proof of absence or validity;
+   later inspectability always reopens direct validation. Candidate-set
+   containment cannot cover repository-wide discovery failure.
 
 The result-control template under `development/05_evidence/` is a subordinate
 evidence schema, not a second current-state authority. `STATE.md` + the active

@@ -33,16 +33,20 @@ When canonical state assigns an independent verifier or adversarial reviewer,
 `COLD_START.md` performs pending-result discovery before role selection and
 repeats the live check immediately before independent-role commitment. The guard
 may route the session to bounded Integrator/result-control handling, including
-exact-head resolution or moving-candidate containment, but it does not itself
-change canonical state or promote evidence into authority.
+exact-head resolution, moving-candidate containment or repository/key-wide
+candidate-set containment, but it does not itself change canonical state or
+promote evidence into authority.
 
 Every active independent verification/review WP must declare a result-control
 key consisting of WP identifier, role, exact target and attempt number. Changing
 an attempt is a canonical WP/state transition performed only through the bounded
 Integrator recovery rules; an evidence producer cannot advance its own key.
 Candidate containment is likewise canonical Integrator state bound to that
-complete key. A candidate author cannot create, widen or reset it by moving a PR
-head, changing branch/PR state or editing locator metadata.
+complete key. Stream containment additionally binds one PR identity;
+candidate-set containment binds the exact canonical repository. A candidate
+author cannot create, widen or reset either control by moving a PR head,
+changing branch/PR state, opening a fresh PR identity or editing locator
+metadata. Neither control suppresses direct current-valid-result routing.
 
 If repository state is insufficient or internally contradictory, that is a finding. The session must not repair the gap by silently inventing prior intent.
 

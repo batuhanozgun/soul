@@ -1,6 +1,6 @@
 # PENDING RESULT CONTROL — [WP / PR / HEAD OR STREAM]
 
-**Control mode:** exact-head resolution / moving-candidate containment
+**Control mode:** exact-head resolution / moving-candidate containment / candidate-set containment
 **Status:** proposed Integrator control / canonically integrated
 **Integrator session:**
 **Canonical development branch:**
@@ -48,13 +48,27 @@ For moving-candidate containment, also record:
 - proof that both observations are the same repository + PR identity under the same active key;
 - why another exact-head resolution would recreate the repeated-movement denial path.
 
+For candidate-set containment, also record:
+
+- the earlier canonical exact-head resolution or moving-candidate containment;
+- the later distinct PR identity and directly inspected immutable invalid head;
+- proof that both candidate identities belong to the exact canonical repository
+  and unchanged complete active key;
+- why another PR-scoped control would recreate the fresh-identity denial path.
+
 Containment is not available for a first invalid head, a current-valid head, a
 multiple-current-result conflict, global discovery failure, or an uninspectable
-candidate without a directly inspected repeated-movement trigger.
+candidate without the applicable directly inspected repeated-movement or
+fresh-identity trigger.
 
 ## Non-suppression proof
 
 Explain which current-result validation rule the candidate fails. If it validates against the complete expected key and evidence-only scope, stop: this template cannot exclude it. Multiple valid current results require conflict preservation plus a fresh canonical attempt.
+
+Record the complete discovered candidate set and demonstrate that direct
+current-result validation was evaluated before invalid-residue routing. Exactly
+one current-valid result routes to Integrator even when uncontained invalid
+residue coexists.
 
 ## Control effect and boundary
 
@@ -90,12 +104,39 @@ authorise verifier/reviewer self-transition, or apply after a canonical key
 change. The Integrator owns creation/correction of the canonical record; the
 candidate author cannot reset it by changing PR state, branch state or head.
 
+### Candidate-set containment
+
+This mode is available only after an earlier canonical invalid-candidate
+control and a later directly inspected invalid candidate at a distinct PR
+identity prove identity rotation in the same exact canonical repository under
+one unchanged complete active key. Its identity is:
+
+`(canonical repository, active WP, role, exact target, attempt)`.
+
+After canonical integration, every later same-WP candidate in that repository
+is still classified head by head:
+
+- exactly one directly validating current head routes to Integrator before any
+  invalid residue;
+- multiple current heads remain a conflict;
+- inspectable invalid/stale/malformed heads at any PR identity are recorded as
+  contained and cannot demand another canonical resolution;
+- candidate-specific inaccessible heads are contained non-valid, never absent
+  or valid, and later inspectability reopens direct validation;
+- repository-wide discovery failure remains fail-closed and cannot be covered.
+
+The control does not cross a repository or complete-key boundary. Mutable
+repository names, fork/source identity, URL spellings, remotes, branch names and
+candidate-authored metadata cannot widen or reset it. Only a separate
+Integrator can create or correct the canonical record.
+
 ## Recovery / reopen condition
 
 For exact-head resolution, state how work resumes and how movement reopens
-inspection. For containment, state how later heads remain directly eligible for
-current-result validation, how a canonical key change ends the containment
-scope, and how proof that the triggering classification was wrong is corrected.
+inspection. For either containment mode, state how later heads remain directly
+eligible for current-result validation, how the PR/repository and canonical-key
+boundaries end the control scope, and how proof that the triggering
+classification was wrong is corrected.
 
 ## Next responsibility
 

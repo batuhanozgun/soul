@@ -37,43 +37,55 @@ Perform the guard in this order:
    moving-candidate containment record may apply only after a separate
    Integrator recorded an earlier resolved invalid head plus a later directly
    inspected invalid moved head for the same repository + PR and complete
-   active key. Both record types must already exist on the canonical development
-   branch and satisfy `VERIFICATION_POLICY.md`; local, PR-only or candidate-authored
-   records have no effect.
-4. **Validate every observed head directly when inspectable.** A current pending
-   result has the complete expected key in both the result artefact and handoff,
-   a completed result, and evidence/session-only changed-file scope with no
-   repair, canonical-state/WP transition, acceptance, ADR, target-merge or Phase
-   change. Exact-head resolution never applies after movement. Containment does
-   not skip this current-result validation: a later current-valid head always
-   routes normally and multiple current-valid heads remain a conflict.
+   active key. A candidate-set containment record may apply only after a
+   separate Integrator binds an earlier canonical invalid-candidate control plus
+   a later directly inspected invalid candidate at a distinct PR identity to
+   the same canonical repository and complete active key. Every record must
+   already exist on the canonical development branch and satisfy
+   `VERIFICATION_POLICY.md`; local, PR-only or candidate-authored records have
+   no effect.
+4. **Validate every observed head directly when inspectable, before invalid
+   residue is routed.** A current pending result has the complete expected key
+   in both the result artefact and handoff, a completed result, and
+   evidence/session-only changed-file scope with no repair, canonical-state/WP
+   transition, acceptance, ADR, target-merge or Phase change. Exact-head
+   resolution never applies after movement. Neither containment mode skips this
+   current-result validation. Exactly one current-valid head always routes
+   normally even when uncontained invalid residue coexists; multiple
+   current-valid heads remain a conflict.
 5. **Classify before acting.** Distinguish:
    - no unresolved same-WP candidate;
    - exactly one current-match candidate;
    - one or more invalid, stale, target/attempt-mismatched, incomplete, malformed
-     or uninspectable candidates not covered by canonical moving-candidate
-     containment;
+     or uninspectable candidates not covered by canonical moving-candidate or
+     candidate-set containment;
    - one or more later invalid or inaccessible heads covered by canonical
-     moving-candidate containment under the exact active key;
+     moving-candidate or candidate-set containment under the exact active key;
    - multiple current-match or otherwise conflicting candidates;
    - unavailable repository/PR discovery or inspection.
-6. **Route deterministically.** One current match routes to Integrator and
-   blocks repeat independent execution. Multiple current matches remain a
-   conflict. A first unresolved invalid head routes to exact-head resolution; a
-   later invalid moved head after that resolution routes once to moving-candidate
-   containment. After canonical containment, later inspectable-invalid or
-   candidate-specifically inaccessible heads of that identity are recorded as
-   contained and do not block the canonical responsibility. They are not
-   accepted, selected or treated as absent. Uncontained invalid/ambiguous/
-   uninspectable candidates and repository-wide discovery failure still fail
-   closed. Clearly unrelated another-WP evidence and exact-head candidates
-   covered by valid canonical resolution records do not block.
+6. **Route deterministically.** One current match routes to Integrator before
+   invalid residue and blocks repeat independent execution. Multiple current
+   matches remain a conflict. With no current match, a first unresolved invalid
+   head routes to exact-head resolution; a later invalid moved head on the same
+   PR routes once to moving-candidate containment. A later directly inspected
+   invalid candidate at a fresh PR identity, after an earlier canonical
+   invalid-candidate control under the same repository/key, routes once to
+   candidate-set containment. After the applicable canonical containment,
+   later inspectable-invalid or candidate-specifically inaccessible heads or PR
+   identities are recorded as contained and do not block the canonical
+   responsibility. They are not accepted, selected or treated as absent.
+   Uncontained invalid/ambiguous/uninspectable candidates and repository-wide
+   discovery failure still fail closed. Clearly unrelated another-WP evidence
+   and exact-head candidates covered by valid canonical resolution records do
+   not block.
 
 Integrator resolution and containment are bounded by `VERIFICATION_POLICY.md`
-and `PR_GATE.md`. Neither may suppress a valid current result. Containment is
-bound to the complete active key and candidate PR identity, and candidate head,
-state or branch mutation cannot reset it. Multiple valid current results are
-preserved as a conflict and routed to a fresh canonical attempt instead of
+and `PR_GATE.md`. None may suppress a valid current result. Moving-candidate
+containment is bound to the complete active key and candidate PR identity;
+candidate-set containment is bound to the exact canonical repository and
+complete active key. Candidate head, state, branch or fresh PR identity
+mutation cannot reset the applicable control. Multiple valid current results
+are preserved as a conflict and routed to a fresh canonical attempt instead of
 choosing one.
 
 ## Step 2 — Load common reasoning governance, then role-relevant governance
