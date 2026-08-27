@@ -1,11 +1,16 @@
 # WP-014 — Phase 0 Moving-Candidate Convergence Repair
 
-**Status:** active — fresh separate designer/builder required
+**Status:** builder repair published — fresh separate verification required
 **Owner role:** designer/builder
 **Decision authority:** bounded repair of F-AR-005 within existing foundation/governance and unchanged WP-000 acceptance criteria; architecture-level choices must follow `DECISION_POLICY.md`; no independent verification, adversarial-review self-approval, canonical independent-result integration, ADR acceptance, PR #16/#1 merge, Phase acceptance, or Phase 1 authority
 **Development branch:** `phase0/development-os`
-**Rejected material target:** draft PR #16 exact commit `adf067e4289e4c0b51cf40c1940193e8252b22e0`
-**Material base:** `8dcdc750600b336a2e97fde3433926b6a2217f26`
+**Superseded rejected material target:** closed-unmerged PR #16 exact commit `adf067e4289e4c0b51cf40c1940193e8252b22e0`
+**Repair branch:** `codex/wp014-moving-candidate-convergence-repair`
+**Repair PR:** #19 — `WP-014: bound moving-candidate convergence without result suppression`
+**Exact new material target:** `2f5508c1d6941e951d494bb2a700ef861860431d`
+**Material base:** `dca520242585a80c2efaf22e18fe3d353147b93e`
+**Proposed verification routing:** WP-015 spec prepared on builder-close branch;
+not canonically active until a fresh separate Integrator validates and activates it
 **Parent:** `WP-000-DEVELOPMENT-OS.md`
 **Prior repair package:** `WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md`
 **Verification activity:** WP-012 — **PASS** for exact target `adf067e4289e4c0b51cf40c1940193e8252b22e0` and activation `7c625107c09788d6066249c67d66cbf7c0c4b576`
@@ -52,7 +57,7 @@ The full claim, evidence, five-generation failure path, impact, disproof attempt
 - accepting or rejecting ADR-0000, ADR-0001 or ADR-0002;
 - independently verifying or adversarially re-reviewing the builder’s own repair;
 - resolving a live result candidate or advancing an independent-role attempt as part of repair implementation unless a separate currently authorised Integrator responsibility requires it;
-- merging PR #16 or PR #1, accepting Phase 0 or beginning Phase 1;
+- merging PR #19, PR #16 or PR #1, accepting Phase 0 or beginning Phase 1;
 - absorbing unrelated historical PR noise or process defects without a direct demonstrated dependency and explicit routing.
 
 ## Required reading
@@ -97,6 +102,42 @@ Enter through `development/03_plan/COLD_START.md` and complete Steps 1–2 first
 - a fresh builder session handoff;
 - routing to fresh separate verification and later fresh separate adversarial re-review, without performing either.
 
+## Builder output
+
+The fresh designer/builder responsibility is complete as a producer
+responsibility only.
+
+Draft PR #19 freezes exact material target
+`2f5508c1d6941e951d494bb2a700ef861860431d` from current canonical base
+`dca520242585a80c2efaf22e18fe3d353147b93e` and changes exactly nine files:
+
+- `development/01_governance/VERIFICATION_POLICY.md`;
+- `development/01_governance/WORKING_PROTOCOL.md`;
+- `development/02_architecture/decisions/ADR-0002-PENDING-INDEPENDENT-RESULT-DISCOVERY.md`;
+- `development/03_plan/COLD_START.md`;
+- `development/03_plan/PR_GATE.md`;
+- `development/05_evidence/F-AR-001-TO-004-PENDING-RESULT-CONTROL-REGRESSION-2026-08-26.md`;
+- `development/05_evidence/F-AR-005-MOVING-CANDIDATE-CONVERGENCE-REGRESSION-2026-08-27.md`;
+- `development/05_evidence/PENDING-RESULT-RESOLUTION-TEMPLATE.md`;
+- `development/05_evidence/pending_result_control_regression.py`.
+
+The repair carries PR #16's fixed-head lifecycle onto current canonical base and
+adds one bounded escalation: after an exact-head invalid resolution plus one
+later directly inspected invalid moved head, a separate Integrator may
+canonically contain repository + PR + the complete active key. Every later
+inspectable head is still validated; current-valid bypasses containment,
+multiple current-valid remains conflict, and only invalid or
+candidate-specifically inaccessible later generations lose their ability to
+reset recovery. Repository-wide discovery failure remains fail-closed.
+
+Producer execution passed 28/28 declared cases and `git diff --check`. The
+evidence is not independent proof. ADR-0002 remains proposed.
+
+PR #16 was not amended or merged. It was closed unmerged as superseded after an
+explicit locator comment/body update; its exact head `adf067e...`, WP-012 PASS,
+WP-013 Requires repair and F-AR-005 wording remain immutable. PR #19 is the one
+new material target and remains draft/unaccepted/unmerged.
+
 ## Acceptance criteria — builder claim until independently verified
 
 1. **Finding preservation:** F-AR-005 is addressed without weakening or erasing immutable F-AR-001 through F-AR-004 evidence or the WP-013 judgement.
@@ -136,8 +177,19 @@ Preserve a claim-to-trace chain for F-AR-005 and every preserved safety property
 
 ## Completion state
 
-Active — fresh separate designer/builder required. No repaired exact target exists yet.
+Builder repair published — fresh separate verification required.
+
+PR #19 exact target `2f5508c...` is producer-complete only. No independent
+verification or adversarial re-review exists for it. WP-012 PASS and WP-013
+Requires repair remain bound only to the superseded PR #16 target `adf067e...`.
 
 ## Handoff
 
-Exact next responsibility: fresh separate designer/builder under this WP. Preserve the immutable reviewer judgement and finding, derive and publish the smallest coherent repair with one exact target and regression evidence, route that target to fresh separate verification, and stop without self-verification, self-review, result integration, ADR acceptance, target merge, Phase acceptance or Phase 1 work.
+Exact next responsibility: fresh separate Integrator to validate the exact
+builder-close/routing branch scope, integrate these builder-authorised records,
+canonically activate and bind
+`development/04_work/WP-015-PHASE0-MOVING-CANDIDATE-CONVERGENCE-VERIFICATION.md`,
+then dispatch a fresh separate verifier for exact target `2f5508c...`, attempt 1.
+The builder stops without canonical transition, self-verification, self-review,
+result integration, ADR acceptance, target merge, Phase acceptance or Phase 1
+work.
