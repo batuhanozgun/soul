@@ -29,9 +29,20 @@ The **single sequencing authority** for fresh-session bootstrap is `development/
 
 A WP's `Required reading` section is loaded at the point assigned by `COLD_START.md`. A WP may prescribe an internal order among those Step 3 readings when needed for independence or evidence handling, but it may not silently reorder the earlier bootstrap steps. Historical launch briefs and handoffs may point to `COLD_START.md`; they are not competing sequencing authorities.
 
-When canonical state assigns an independent verifier or adversarial reviewer, `COLD_START.md` performs pending-result discovery before role selection and repeats the live check immediately before independent-role commitment. The guard may route the session to bounded Integrator/result-control handling, but it does not itself change canonical state or promote evidence into authority.
+When canonical state assigns an independent verifier or adversarial reviewer,
+`COLD_START.md` performs pending-result discovery before role selection and
+repeats the live check immediately before independent-role commitment. The guard
+may route the session to bounded Integrator/result-control handling, including
+exact-head resolution or moving-candidate containment, but it does not itself
+change canonical state or promote evidence into authority.
 
-Every active independent verification/review WP must declare a result-control key consisting of WP identifier, role, exact target and attempt number. Changing an attempt is a canonical WP/state transition performed only through the bounded Integrator recovery rules; an evidence producer cannot advance its own key.
+Every active independent verification/review WP must declare a result-control
+key consisting of WP identifier, role, exact target and attempt number. Changing
+an attempt is a canonical WP/state transition performed only through the bounded
+Integrator recovery rules; an evidence producer cannot advance its own key.
+Candidate containment is likewise canonical Integrator state bound to that
+complete key. A candidate author cannot create, widen or reset it by moving a PR
+head, changing branch/PR state or editing locator metadata.
 
 If repository state is insufficient or internally contradictory, that is a finding. The session must not repair the gap by silently inventing prior intent.
 
