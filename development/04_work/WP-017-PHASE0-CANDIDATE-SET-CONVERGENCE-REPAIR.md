@@ -1,11 +1,17 @@
 # WP-017 — Phase 0 Candidate-Set Convergence Repair
 
-**Status:** active — fresh separate designer/builder required
+**Status:** builder repair published — fresh separate verifier activation pending
 **Owner role:** designer/builder
 **Decision authority:** bounded repair of F-AR-006 and F-AR-007 within existing foundation/governance and unchanged WP-000 acceptance criteria; architecture-level choices must follow `DECISION_POLICY.md`; no independent verification, adversarial-review self-approval, canonical independent-result integration, ADR acceptance, PR #19/#1 merge, Phase acceptance or Phase 1 authority
 **Development branch:** `phase0/development-os`
 **Rejected material target:** draft/unmerged PR #19 exact commit `2f5508c1d6941e951d494bb2a700ef861860431d`
 **Material base:** `dca520242585a80c2efaf22e18fe3d353147b93e`
+**Repair branch:** `codex/wp017-candidate-set-convergence-repair`
+**Repair PR:** #22 — `WP-017: bound candidate-set convergence and restore result precedence`
+**Exact new material target:** `5bd0db27fc3df368c9e112f01b7eed49a64402ab`
+**Exact new material base:** `4524f21cced54c71fb2219b7f42119adbbb5b033`
+**Proposed verification routing:** WP-018 spec prepared on builder-close branch;
+not canonically active until a fresh separate Integrator validates and activates it
 **Parent:** `WP-000-DEVELOPMENT-OS.md`
 **Prior repair package:** `WP-014-PHASE0-MOVING-CANDIDATE-CONVERGENCE-REPAIR.md`
 **Verification activity:** WP-015 — **PASS** for exact target `2f5508c1d6941e951d494bb2a700ef861860431d`, activation `5368abd0f0c9a846f89120be44c19b1f1b1825d9` and binding `3d49561b4bb87e36c4bbbf18c7a72247070f77e2`
@@ -157,6 +163,47 @@ Within Step 3, read:
 - routing to fresh separate verification and later fresh separate adversarial
   re-review, without performing either.
 
+## Builder output
+
+The fresh designer/builder responsibility is complete as a producer
+responsibility only.
+
+Draft PR #22 freezes exact material target
+`5bd0db27fc3df368c9e112f01b7eed49a64402ab` from current canonical base
+`4524f21cced54c71fb2219b7f42119adbbb5b033` and changes exactly ten files:
+
+- `development/01_governance/VERIFICATION_POLICY.md`;
+- `development/01_governance/WORKING_PROTOCOL.md`;
+- `development/02_architecture/decisions/ADR-0002-PENDING-INDEPENDENT-RESULT-DISCOVERY.md`;
+- `development/03_plan/COLD_START.md`;
+- `development/03_plan/PR_GATE.md`;
+- `development/05_evidence/F-AR-001-TO-004-PENDING-RESULT-CONTROL-REGRESSION-2026-08-26.md`;
+- `development/05_evidence/F-AR-005-MOVING-CANDIDATE-CONVERGENCE-REGRESSION-2026-08-27.md`;
+- `development/05_evidence/F-AR-006-AND-007-CANDIDATE-SET-CONVERGENCE-REGRESSION-2026-08-27.md`;
+- `development/05_evidence/PENDING-RESULT-RESOLUTION-TEMPLATE.md`;
+- `development/05_evidence/pending_result_control_regression.py`.
+
+The repair carries PR #19's exact-head and per-PR stream controls onto the
+current canonical base and adds one final Integrator-only escalation. After an
+earlier canonical invalid-candidate control and a later directly inspected
+invalid claim at a distinct PR identity, candidate-set containment binds the
+exact canonical repository + complete active key. Fresh PR identities cannot
+reset it. Every inspectable head remains directly validated; exactly one
+current-valid result routes before invalid residue, multiple current-valid
+results remain conflict, and only invalid or candidate-specifically
+inaccessible residue is contained non-valid. Repository-wide discovery and
+uncontained inspection failures remain fail-closed.
+
+Producer execution passed 67/67 declared cases. The deliberate invalid-first
+mutation failed red/non-zero after 26 prior PASS observations at the first mixed
+valid/invalid case. `git diff --check` passed. This is producer evidence, not
+independent proof. ADR-0002 remains proposed.
+
+PR #19 was not amended or merged. It was closed unmerged as superseded at
+immutable head `2f5508c...`; WP-015 PASS, WP-016 **Requires repair** and
+F-AR-006/F-AR-007 remain permanently bound only to that historical target. PR
+#22 is the sole new WP-017 material target and remains draft/unaccepted/unmerged.
+
 ## Acceptance criteria — builder claim until independently verified
 
 1. **Finding preservation:** F-AR-006 and F-AR-007 are addressed without weakening or erasing immutable F-AR-001 through F-AR-005 evidence or the WP-016 judgement.
@@ -211,16 +258,18 @@ credible alternatives.
 
 ## Completion state
 
-**Active — fresh separate designer/builder required.**
+**Builder repair published — fresh separate verifier activation pending.**
 
-PR #19 exact target `2f5508c...` remains historically verified **PASS** under
-WP-015 but unsuitable because WP-016 issued **Requires repair**. No repaired
-material target exists until the builder publishes and freezes one.
+PR #22 exact target `5bd0db2...` is producer-complete only. No independent
+verification or adversarial re-review exists for it. PR #19 remains closed
+unmerged and immutable at `2f5508c...`; its historical results are not reused.
 
 ## Handoff
 
-Exact next responsibility: **fresh separate designer/builder under WP-017**.
-The builder must derive and publish the smallest coherent bounded repair,
-preserve both findings and unchanged parent criteria, produce one exact new
-target plus regression evidence, route it to fresh separate verification and
-later re-review, and stop without self-certification, acceptance or merge.
+Exact next responsibility: **fresh separate Integrator for the WP-017
+builder-close/routing package.** Validate live PR #22 target/base/ten-file scope,
+PR #19 closure, the exact builder-close branch scope and proposed WP-018
+attempt-1 key/bridge. Integrate only the authorised close records, then
+canonically activate and bind WP-018 before dispatching a fresh separate
+verifier. Do not verify/review the target, accept ADR-0002, merge PR #22/#1,
+accept Phase 0 or begin Phase 1.
