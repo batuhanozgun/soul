@@ -12,7 +12,7 @@
 **Verification activity:** WP-015 — **PASS** for this exact target, activation `5368abd0f0c9a846f89120be44c19b1f1b1825d9` and binding `3d49561b4bb87e36c4bbbf18c7a72247070f77e2`
 **Verifier evidence:** PR #20, head `a1a0c07c2f16faa4c963bec6da7dad85baeb5565`, integrated evidence-only as `df9c9c12129bb8c55e4948fa095a90ab25b90811`
 **Result-control key:** `WP-016 / adversarial reviewer / 2f5508c1d6941e951d494bb2a700ef861860431d / attempt 1`
-**Provisional activation commit:** pending exact binding; fail closed until the next canonical binding commit records this activation SHA
+**Provisional activation commit:** `94bcc9bf9d0352bde67459635a6073c7e65171e2`
 
 ## Objective
 
