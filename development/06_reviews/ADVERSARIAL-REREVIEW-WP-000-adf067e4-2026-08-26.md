@@ -8,6 +8,7 @@
 **Result-control key:** `WP-013 / adversarial reviewer / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`
 **Provisional activation commit:** `18b239e05452d1e78afffd6deaaeb2463d077720`
 **Reviewer output branch:** `codex/wp013-pending-result-control-adversarial-rereview`
+**Reviewer evidence PR:** #18 — `WP-013: pending-result control adversarial re-review — Requires repair`
 **Date:** 2026-08-26; resumed and revalidated after interruption on 2026-08-27
 
 ## Pre-evidence attack model
@@ -116,6 +117,21 @@ The review will try to disprove these hypotheses through exact commit/blob inspe
 - No live malicious PR was created; doing so would mutate external project state unnecessarily. The five-generation trace uses the exact specified state transitions and the observed public-repository access setting.
 - The documented publication-after-final-check host edge remains real but was not promoted to a finding without evidence that it exceeds the explicitly accepted residual boundary.
 - Same-model fresh-context review is not true model diversity.
+
+## Publication and close evidence
+
+Dedicated reviewer evidence PR #18 was opened against `phase0/development-os` from `codex/wp013-pending-result-control-adversarial-rereview`. Its initial published head was `12696c27c6b16ab6812b228fd8bbaba74d467064`; the only later change is this locator/close-evidence update within the same two authorised records.
+
+Immediately after PR creation, live generic WP-013 candidate discovery found PR #18. Direct GitHub/ref/content inspection confirmed:
+
+- canonical `phase0/development-os` remained `7a51a1872a71723e3b21c2507666d3f760a5250f`, still assigning WP-013 and the same complete result-control key;
+- PR #18 was open/non-draft against that branch and its API head equalled fetched `refs/pull/18/head` at `12696c27...`;
+- both result records carried the complete expected key;
+- this artefact contained completed judgement **Requires repair** and F-AR-005;
+- changed-file scope was exactly this artefact plus SESSION-0022, with no repair, resolution, attempt advancement, canonical transition, ADR/acceptance, target merge or Phase work;
+- PR #16 remained open/draft at exact target `adf067e...` and the declared eight files.
+
+Therefore the WP-013 provisional activation close condition is directly reproduced: a generic fresh session now sees one current WP-013 result and routes to a separate Integrator rather than repeating adversarial review. This reviewer does not change `STATE.md` or integrate the result.
 
 ## Overall judgement
 

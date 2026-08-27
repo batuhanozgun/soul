@@ -10,7 +10,7 @@
 **Material target PR:** #16
 **Provisional activation commit:** `18b239e05452d1e78afffd6deaaeb2463d077720`
 **Activation-binding commit:** `131e987ff6e768b667eef439cfed1f029120e8de`
-**Reviewer evidence PR:** pending publication
+**Reviewer evidence PR:** #18 — initial head `12696c27c6b16ab6812b228fd8bbaba74d467064`
 
 ## Required inputs read
 
@@ -55,7 +55,7 @@ Independent model SHA-256:
 
 - `development/06_reviews/ADVERSARIAL-REREVIEW-WP-000-adf067e4-2026-08-26.md` — overall judgement **Requires repair**;
 - this SESSION-0022 handoff;
-- dedicated reviewer evidence PR targeting `phase0/development-os` — pending publication at this record stage.
+- dedicated reviewer evidence PR #18 targeting `phase0/development-os`, initial head `12696c27c6b16ab6812b228fd8bbaba74d467064`.
 
 ## Finding / result
 
@@ -87,6 +87,8 @@ The reviewer did not choose a repair architecture, accept/reject ADR-0002, reint
 Review remains permanently bound to the exact four-field key, material target/base and activation above. PR #16 was live-checked at start, immediately before publication preparation and after interruption and remained open/draft at exact head `adf067e...` with exactly eight files.
 
 The WP-012 PASS remains exact for `adf067e...` plus activation `7c625107...`; it is preserved as verification evidence, not acceptance. The WP-013 activation `18b239e...` is separately reviewed here as provisional material rollout control and remains unaccepted general governance.
+
+After PR #18 publication, live generic WP-013 discovery directly validated both exact-key records, completed **Requires repair** judgement and exact two-file evidence/session-only scope while canonical `STATE.md` still assigned WP-013. The bridge therefore routes a fresh session to separate Integrator rather than duplicate review. The only later PR-head change is this close-evidence update in those same two authorised files.
 
 ## Unresolved items
 
