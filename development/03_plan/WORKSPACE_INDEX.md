@@ -25,9 +25,10 @@
 - `CHATGPT_PROJECT_ENTRY.md` — derived minimal Project Instructions convenience; no governance copy
 
 ## Current work
-- Active: `../04_work/WP-013-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEW.md` — fresh separate adversarial reviewer for PR #16 exact target `adf067e...`, result-control attempt 1, including provisional WP-local activation `18b239e...`
+- Active: `../04_work/WP-014-PHASE0-MOVING-CANDIDATE-CONVERGENCE-REPAIR.md` — fresh separate bounded designer/builder repair for WP-013 F-AR-005; no repaired exact target exists yet
+- Completed adversarial re-review: `../04_work/WP-013-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEW.md` — **Requires repair** for PR #16 exact target `adf067e...`; F-AR-005 medium/material stands; evidence PR #18 integrated evidence-only as `fda96891...`
 - Completed verification activity: `../04_work/WP-012-PHASE0-PENDING-RESULT-CONTROL-VERIFICATION.md` — **PASS** for PR #16 exact target `adf067e...` and activation `7c625107...`; evidence PR #17 integrated evidence-only as `2d732950...`
-- Builder-complete repair: `../04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md` — PR #16 exact target `adf067e...` from base `8dcdc750...`; WP-012 PASS, fresh adversarial re-review outstanding
+- Builder-complete repair: `../04_work/WP-011-PHASE0-PENDING-RESULT-CONTROL-REPAIR.md` — PR #16 exact target `adf067e...` from base `8dcdc750...`; WP-012 PASS, WP-013 **Requires repair**, F-AR-005 routed to WP-014
 - Completed adversarial re-review: `../04_work/WP-010-PHASE0-F-AR-001-REPAIR-ADVERSARIAL-REREVIEW.md` — **Requires repair** for exact target `a45b463...`; reviewer evidence PR #15 integrated evidence-only as `c8fc17bc...`
 - Completed verification activity: `../04_work/WP-009-PHASE0-F-AR-001-REPAIR-VERIFICATION.md` — **PASS** for exact target `a45b463...`; verifier evidence PR #14 integrated evidence-only as `37f4bceb...`
 - Builder-complete prior repair: `../04_work/WP-008-PHASE0-F-AR-001-REPAIR.md` — exact target `a45b463...`; WP-009 verified PASS, but WP-010 adversarial re-review issued **Requires repair**
@@ -35,12 +36,13 @@
 - Completed verification activity: `../04_work/WP-006-PHASE0-REASONING-REVERIFICATION.md` — historical **PASS** against exact old material target `c690f858...`; not certification of `a45b463...`
 - Material reasoning-policy architecture: `../04_work/WP-005-DEVELOPMENT-REASONING-POLICY.md` — ADR-0001 remains proposed/not Phase-accepted
 - Completed bounded repair: `../04_work/WP-004-PHASE0-F2R1-REPAIR.md` — F2-R1 regression PASS at old target `c690f858...`
-- Parent package: `../04_work/WP-000-DEVELOPMENT-OS.md` — Phase 0 remains unaccepted pending WP-010, subsequent result integration, decision/owner/PR gates
+- Parent package: `../04_work/WP-000-DEVELOPMENT-OS.md` — Phase 0 remains unaccepted pending WP-014 repair, fresh verification/re-review, decision/owner/PR gates
 - Historical completed verification activity: `../04_work/WP-003-PHASE0-REVERIFICATION.md` — exact old target `a02e36e5...`, result FAIL
 - Historical completed verification activity: `../04_work/WP-001-PHASE0-VERIFICATION.md` — old target result FAIL
 - Historical repair package: `../04_work/WP-002-PHASE0-VERIFICATION-REPAIR.md`
 
 ## Verification, reviews, defects and evidence
+- `../06_reviews/ADVERSARIAL-REREVIEW-WP-000-adf067e4-2026-08-26.md` — WP-013 result: **Requires repair** for exact target `adf067e...`; F-AR-005 medium/material stands; PR #18 integrated evidence-only as `fda96891...`
 - `../06_reviews/VERIFICATION-WP-000-adf067e4-2026-08-26.md` — WP-012 issued **PASS** for exact PR #16 target `adf067e...` and activation `7c625107...`; PR #17 integrated evidence-only as `2d732950...`
 - `../05_evidence/F-AR-001-TO-004-PENDING-RESULT-CONTROL-REGRESSION-2026-08-26.md` — WP-011 producer regression record on PR #16 target; 13 declared cases, not independent proof
 - `../05_evidence/PENDING-RESULT-RESOLUTION-TEMPLATE.md` — proposed exact-bound canonical Integrator resolution record template on PR #16 target
@@ -59,7 +61,7 @@
 ## Decisions
 - `../02_architecture/decisions/ADR-0000-DEVELOPMENT-GOVERNANCE-BOOTSTRAP.md` — proposed; still requires its declared owner path
 - `../02_architecture/decisions/ADR-0001-DEVELOPMENT-REASONING-POLICY.md` — proposed; owner direction approved, acceptance path still pending
-- `../02_architecture/decisions/ADR-0002-PENDING-INDEPENDENT-RESULT-DISCOVERY.md` — revised/proposed on exact WP-011 repair target `adf067e...`; WP-012 verification PASS, fresh adversarial re-review and acceptance path still outstanding
+- `../02_architecture/decisions/ADR-0002-PENDING-INDEPENDENT-RESULT-DISCOVERY.md` — revised/proposed on exact WP-011 repair target `adf067e...`; WP-012 verification PASS, WP-013 adversarial re-review **Requires repair**; remains unaccepted and subject to WP-014 repair
 
 ## Templates
 - ADR: `../01_governance/ADR_TEMPLATE.md`
@@ -92,5 +94,6 @@
 - `../07_sessions/SESSION-0019-PHASE0-PENDING-RESULT-CONTROL-BUILDER.md` — WP-011 builder close; PR #16 exact target `adf067e...`; provisional activation `7c625107...`; WP-012 verifier next
 - `../07_sessions/SESSION-0020-PHASE0-PENDING-RESULT-CONTROL-VERIFIER.md` — WP-012 **PASS** for exact target `adf067e...`; verifier evidence PR #17 integrated evidence-only as `2d732950...`
 - `../07_sessions/SESSION-0021-PHASE0-WP012-INTEGRATOR.md` — PR #17 evidence integration, WP-012 PASS binding and canonical WP-013 adversarial re-review activation; no review/repair/acceptance
+- `../07_sessions/SESSION-0022-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEWER.md` — WP-013 **Requires repair** for exact target `adf067e...`; F-AR-005 medium/material; evidence PR #18
 
 This index is **navigational and derived only**. It does not override the authority hierarchy defined in `SOURCE_OF_TRUTH.md`, the bootstrap sequence in `COLD_START.md`, or current project truth in `STATE.md`. If any current-work value here ever disagrees with `STATE.md`, `STATE.md` wins and this index is stale until updated.

@@ -1,6 +1,6 @@
 # WP-011 — Phase 0 Pending Independent-Result Control Repair
 
-**Status:** builder repair published — WP-012 verification PASS; fresh separate adversarial re-review required
+**Status:** builder repair published — WP-012 verification PASS; WP-013 adversarial re-review **Requires repair**; F-AR-005 routed to WP-014
 **Owner role:** designer/builder  
 **Decision authority:** bounded repair of F-AR-002, F-AR-003 and F-AR-004 within existing foundation/governance and unchanged WP-000 acceptance criteria; architecture-level choices must follow `DECISION_POLICY.md`; no independent verification, adversarial-review self-approval, canonical result integration, ADR acceptance, PR #13 merge, PR #1 merge, Phase acceptance, or Phase 1 authority  
 **Development branch:** `phase0/development-os`  
@@ -172,10 +172,12 @@ The builder must preserve a claim-to-trace chain for each finding, including the
 
 ## Completion state
 
-Current: **builder repair published — WP-012 verification PASS; fresh separate adversarial re-review required.**
+Current: **builder repair published — WP-012 verification PASS; WP-013 adversarial re-review Requires repair.**
 
-The prior target `a45b463...` remains historically verified PASS under WP-009 but unsuitable because WP-010 issued **Requires repair**. The changed target `adf067e...` has WP-012 **PASS**, permanently bound only to that exact target and activation `7c625107...`; it has no fresh adversarial re-review result and remains unaccepted/unmerged.
+The prior target `a45b463...` remains historically verified PASS under WP-009 but unsuitable because WP-010 issued **Requires repair**. The changed target `adf067e...` has WP-012 **PASS**, permanently bound only to that exact target and activation `7c625107...`; WP-013 later issued **Requires repair** because F-AR-005 stands medium/material. PR #16 remains draft, unaccepted and unmerged.
+
+Reviewer evidence PR #18 at head `2e78421f1c618995fe0cc0c8eb62104ecae63be1` was integrated evidence-only as `fda9689107cf96ad2cc01e1b1bbe74b86055e771`. The result and finding are routed without reinterpretation to the fresh separate bounded repair responsibility under WP-014.
 
 ## Handoff
 
-Exact next responsibility: **fresh separate adversarial reviewer under WP-013** for exact target `adf067e4289e4c0b51cf40c1940193e8252b22e0`, result-control attempt 1, including an equivalent exact-key WP-local activation bridge while PR #16 governance remains unmerged. The builder performed no self-verification, self-review, result integration, acceptance, or merge.
+Exact next responsibility: **fresh separate designer/builder under `development/04_work/WP-014-PHASE0-MOVING-CANDIDATE-CONVERGENCE-REPAIR.md`**. Preserve WP-012 PASS exactness, WP-013 **Requires repair** and F-AR-005; produce one new exact target and regression evidence; then stop for fresh separate verification and re-review without self-certification, acceptance or merge.

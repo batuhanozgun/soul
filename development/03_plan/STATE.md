@@ -1,28 +1,29 @@
 # SOUL PROJECT STATE
 
 **Current phase:** Phase 0 — Development Operating System  
-**Current work package:** WP-013 — Phase 0 Pending-Result Control Adversarial Re-review
+**Current work package:** WP-014 — Phase 0 Moving-Candidate Convergence Repair
 **Current branch:** `phase0/development-os`  
-**Current material PR:** #16 — draft
-**Current exact material target:** `adf067e4289e4c0b51cf40c1940193e8252b22e0`
+**Current material PR:** #16 — draft, unaccepted and requires repair
+**Current exact material target:** `adf067e4289e4c0b51cf40c1940193e8252b22e0` — rejected by required adversarial re-review; no repaired target exists yet
 **Material base:** `8dcdc750600b336a2e97fde3433926b6a2217f26`
 **Superseded material PR:** #13 — closed unmerged at `a45b463b083604d3f59d75bdca5ba97d5bc170e6`
 **Current verification result:** WP-012 **PASS** for exact target `adf067e4289e4c0b51cf40c1940193e8252b22e0` and activation `7c625107c09788d6066249c67d66cbf7c0c4b576`
 **Verifier evidence integration:** PR #17 head `1caf39a3fcf62c18a8d017f71f26f9c834951e70`, merged evidence-only as `2d7329508fbecf7a05cf7f26cd16e2330985a076`
-**Current result-control key:** `WP-013 / adversarial reviewer / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`
-**Current provisional activation commit:** `18b239e05452d1e78afffd6deaaeb2463d077720`
-**State:** WP-012 verification is complete with exact-target PASS and evidence-only integration; fresh separate adversarial re-review is active under WP-013; no adversarial re-review result, ADR acceptance, material merge, Phase acceptance, or Phase 1 claim has occurred
+**Current adversarial re-review result:** WP-013 **Requires repair** for exact target `adf067e4289e4c0b51cf40c1940193e8252b22e0` and activation `18b239e05452d1e78afffd6deaaeb2463d077720`; F-AR-005 medium/material, stands
+**Reviewer evidence integration:** PR #18 head `2e78421f1c618995fe0cc0c8eb62104ecae63be1`, merged evidence-only as `fda9689107cf96ad2cc01e1b1bbe74b86055e771`
+**Completed WP-013 result-control key:** `WP-013 / adversarial reviewer / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`
+**State:** WP-012 PASS remains exact-target verification evidence; WP-013 adversarial re-review is complete with **Requires repair** and F-AR-005 preserved; fresh separate bounded repair is active under WP-014; no F-AR-005 repair, ADR acceptance, material merge, Phase acceptance, or Phase 1 claim has occurred
 **Authoritative product branch:** `main`
 
 ## Current objective
 
-Freshly and separately adversarially re-review the complete changed repair target under:
+Freshly and separately repair the bounded moving-candidate convergence defect under:
 
-`development/04_work/WP-013-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEW.md`.
+`development/04_work/WP-014-PHASE0-MOVING-CANDIDATE-CONVERGENCE-REPAIR.md`.
 
-The reviewer must establish its attack model before relying on producer/verifier conclusions, actively attack F-AR-001 through F-AR-004 and the broader result-control lifecycle, inspect the exact PR #16 eight-file scope and test the WP-013 provisional activation bridge protecting the review's own post-result/pre-Integrator interval.
+The builder must preserve the immutable WP-013 **Requires repair** judgement and F-AR-005 exactly, derive the smallest coherent bounded convergence repair, preserve exact-head freshness and current-valid-result non-suppression, publish one new exact target plus regression evidence, and stop for fresh separate verification and later fresh adversarial re-review.
 
-The exact target remains `adf067e4289e4c0b51cf40c1940193e8252b22e0` from base `8dcdc750600b336a2e97fde3433926b6a2217f26`. WP-012 PASS is current only for that exact target and activation `7c625107...`; it does not accept the target or substitute for adversarial re-review. The reviewer must not repair, resolve candidates, advance attempts, integrate its own result, accept an ADR, merge PR #16/PR #1, accept Phase 0, or begin Phase 1.
+The rejected exact target remains `adf067e4289e4c0b51cf40c1940193e8252b22e0` from base `8dcdc750600b336a2e97fde3433926b6a2217f26` until the builder establishes one new target and its relation to PR #16. WP-012 PASS remains current evidence only for that old exact target and activation `7c625107...`; WP-013 later judged the target **Requires repair**. The builder must not self-verify, self-review, integrate an independent result, accept an ADR, merge PR #16/PR #1, accept Phase 0, or begin Phase 1.
 
 ## Canonical current-work rule
 
@@ -168,13 +169,35 @@ Verifier handoff:
 
 Dedicated evidence PR #17 contained exactly those two files at immutable head `1caf39a3fcf62c18a8d017f71f26f9c834951e70` and was merged evidence-only by a separate Integrator as `2d7329508fbecf7a05cf7f26cd16e2330985a076`. PASS remains exact-target evidence, not target/ADR/Phase acceptance.
 
-## Active exact-target adversarial re-review — WP-013
+## Completed exact-target adversarial re-review — WP-013
 
-`development/04_work/WP-013-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEW.md` is active for a fresh separate adversarial reviewer.
+`development/04_work/WP-013-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEW.md` is complete as an adversarial-review activity.
 
 Result-control key: `WP-013 / adversarial reviewer / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`.
 
-The WP-local activation bridge is a provisional material rollout control, not a transition-only relabel and not acceptance of PR #16 governance. Its exact activation commit is `18b239e05452d1e78afffd6deaaeb2463d077720`. The reviewer must execute the bridge after COLD_START Steps 1–2 and again immediately before Step 4 responsibility commitment.
+The reviewer issued **Requires repair** and preserved:
+
+- **F-AR-005 — A mutable lower-authority candidate can repeatedly invalidate exact-head resolutions and deny progress indefinitely** — medium/material, stands.
+
+Canonical review artefact:
+
+`development/06_reviews/ADVERSARIAL-REREVIEW-WP-000-adf067e4-2026-08-26.md`
+
+Reviewer handoff:
+
+`development/07_sessions/SESSION-0022-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEWER.md`
+
+Dedicated evidence PR #18 contained exactly those two files at immutable head `2e78421f1c618995fe0cc0c8eb62104ecae63be1` and was merged evidence-only by a separate Integrator as `fda9689107cf96ad2cc01e1b1bbe74b86055e771`.
+
+The result remains bound only to target `adf067e...`, the exact four-field key and activation `18b239e...`. Evidence integration is not repair or acceptance and does not reinterpret WP-012 PASS.
+
+## Active bounded repair routing — WP-014
+
+`development/04_work/WP-014-PHASE0-MOVING-CANDIDATE-CONVERGENCE-REPAIR.md` is active for a fresh separate designer/builder.
+
+The repair is bounded to F-AR-005 and preservation of the existing pending-result safety properties. The routing WP does not choose the repair architecture or decide whether PR #16 is amended or superseded. The builder must produce one new exact material target, deterministic/reproducible repeated-movement regression evidence, a safe activation story and routing to fresh separate verification and re-review.
+
+No repaired exact target, repair PR or new independent-result control key exists yet.
 
 ## Material architecture status
 
@@ -204,34 +227,35 @@ WP-007 did not establish PD-002 recurrence as a separate material finding. WP-00
 
 ## Required next responsibility
 
-**Fresh separate adversarial reviewer under `development/04_work/WP-013-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEW.md`.**
+**Fresh separate designer/builder under `development/04_work/WP-014-PHASE0-MOVING-CANDIDATE-CONVERGENCE-REPAIR.md`.**
 
-Attack exact PR #16 target `adf067e4289e4c0b51cf40c1940193e8252b22e0`, using WP-013 result-control attempt 1 and the exact provisional activation binding. Establish attack hypotheses before relying on producer/verifier conclusions; publish only the dedicated adversarial-review artefact and reviewer handoff PR, then stop for a separate Integrator.
+Preserve WP-013 **Requires repair** and F-AR-005 exactly. Derive and publish the smallest coherent bounded repair that prevents repeated invalid-head movement from indefinitely denying canonical work while preserving exact-head/current-valid-result safety. Produce one new exact target plus regression evidence, route it to fresh separate verification and later fresh adversarial re-review, then stop.
 
-No current session may combine adversarial reviewer, Integrator, repair, ADR acceptance, material merge, Phase acceptance, or Phase 1 responsibility.
+No current session may combine builder repair with independent verification, adversarial re-review, independent-result integration, ADR acceptance, material merge, Phase acceptance, or Phase 1 responsibility.
 
 ## Remaining Phase 0 gates
 
 Remaining gates include:
 
-- WP-013 fresh separate adversarial re-review of exact target `adf067e...`, followed by separate result integration;
+- WP-014 bounded repair of F-AR-005 producing one new exact material target;
+- fresh exact-target verification, separate result integration and fresh adversarial re-review of that changed target;
 - repair/resolution or authorised acceptance of any later surviving material findings;
 - ADR-0000, ADR-0001, and ADR-0002 reaching the status required by their declared decision paths;
-- PR #16 material repair integration only after its required gates permit it; PR #13 remains closed unmerged and superseded;
+- the resulting material repair PR may be integrated only after its required gates permit it; WP-014 must explicitly record whether PR #16 is amended or superseded, while PR #13 remains closed unmerged and superseded;
 - human-owner/PR acceptance gates where required;
 - PR #1 merge into `main` only after `PR_GATE.md` and `PHASE_GATE.md` are satisfied.
 
 ## Authority boundaries remain unchanged
 
-No current WP-013 adversarial-reviewer session may:
+No current WP-014 designer/builder session may:
 
-- edit historical verifier/reviewer evidence or reinterpret WP-009 PASS, WP-010 **Requires repair**, or F-AR-001 through F-AR-004;
+- edit historical verifier/reviewer evidence or reinterpret WP-012 PASS, WP-013 **Requires repair**, or F-AR-001 through F-AR-005;
 - weaken WP-000 acceptance criteria;
-- repair the candidate, resolve/exclude evidence candidates, advance the attempt, or canonically integrate its own result;
+- independently verify or adversarially re-review its own repair, or canonically integrate a later independent result;
 - accept ADR-0000, ADR-0001, or ADR-0002;
-- merge PR #16, PR #13 or PR #1;
+- merge PR #16 or PR #1;
 - accept Phase 0 or begin Phase 1.
 
 ## Phase 1 gate
 
-Phase 1 does not begin until a changed repair target resolving the current findings has current independent verification and required adversarial re-review, all surviving material findings and decision gates are resolved through authorised paths, the authorised material repair is properly integrated, human/PR acceptance gates are satisfied, and the Phase 0 PR is accepted into `main`.
+Phase 1 does not begin until a changed repair target resolving F-AR-005 has current independent verification and required adversarial re-review, all surviving material findings and decision gates are resolved through authorised paths, the authorised material repair is properly integrated, human/PR acceptance gates are satisfied, and the Phase 0 PR is accepted into `main`.

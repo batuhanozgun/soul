@@ -1,6 +1,6 @@
 # WP-013 — Phase 0 Pending-Result Control Adversarial Re-review
 
-**Status:** active — fresh separate adversarial reviewer required
+**Status:** complete — review issued **Requires repair**; F-AR-005 stands; evidence integrated by separate Integrator
 **Owner role:** adversarial reviewer
 **Decision authority:** independently attack exact WP-011 material target `adf067e4289e4c0b51cf40c1940193e8252b22e0`, its result-control lifecycle and this WP's exact provisional activation; issue evidence-backed findings and an overall suitability judgement; no repair, candidate resolution, attempt advancement, canonical result integration, ADR acceptance, PR #16/#1 merge, Phase acceptance, or Phase 1 authority
 **Development branch:** `phase0/development-os`
@@ -13,6 +13,8 @@
 **Verifier evidence:** PR #17, head `1caf39a3fcf62c18a8d017f71f26f9c834951e70`, integrated evidence-only as `2d7329508fbecf7a05cf7f26cd16e2330985a076`
 **Result-control key:** `WP-013 / adversarial reviewer / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`
 **Provisional activation commit:** `18b239e05452d1e78afffd6deaaeb2463d077720`
+**Reviewer evidence PR:** #18, head `2e78421f1c618995fe0cc0c8eb62104ecae63be1`
+**Evidence merge:** `fda9689107cf96ad2cc01e1b1bbe74b86055e771`
 
 ## Objective
 
@@ -172,10 +174,46 @@ After publication, a separate Integrator validates/integrates the evidence and t
 - no surviving material finding and a suitable-to-proceed judgement → only the remaining ADR/human-owner/PR/Phase gates; the review itself accepts none of them;
 - cannot assess → smallest bounded investigation/repair path, followed by fresh exact-target checks.
 
+## Review result
+
+The fresh separate reviewer issued:
+
+**Overall judgement:** **Requires repair**
+
+for exact target:
+
+`adf067e4289e4c0b51cf40c1940193e8252b22e0`
+
+under exact result-control key:
+
+`WP-013 / adversarial reviewer / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`
+
+Surviving finding:
+
+- **F-AR-005 — A mutable lower-authority candidate can repeatedly invalidate exact-head resolutions and deny progress indefinitely** — medium/material, stands.
+
+Canonical review evidence:
+
+`development/06_reviews/ADVERSARIAL-REREVIEW-WP-000-adf067e4-2026-08-26.md`
+
+Reviewer handoff:
+
+`development/07_sessions/SESSION-0022-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEWER.md`
+
+## Integration record
+
+Reviewer evidence PR #18 contained exactly the canonical adversarial re-review artefact and SESSION-0022 handoff at immutable head `2e78421f1c618995fe0cc0c8eb62104ecae63be1`. A separate Integrator validated the exact key, completed judgement, target freshness and two-file evidence-only scope, then merged PR #18 into `phase0/development-os` as `fda9689107cf96ad2cc01e1b1bbe74b86055e771`.
+
+The integration preserves **Requires repair** and F-AR-005 exactly. It does not reinterpret WP-012 PASS, repair the finding, accept ADR-0002, merge PR #16 or PR #1, accept Phase 0 or begin Phase 1.
+
+The smallest bounded separate repair responsibility is routed under `development/04_work/WP-014-PHASE0-MOVING-CANDIDATE-CONVERGENCE-REPAIR.md`.
+
 ## Completion state
 
-Active — fresh separate adversarial reviewer required. No WP-013 review result exists yet for `adf067e...`.
+**Complete as an adversarial-review activity — result: Requires repair.**
+
+WP-012 PASS remains permanently bound to exact target `adf067e...` and activation `7c625107...`; it does not override this later adversarial suitability judgement. PR #16 remains draft, unaccepted and unmerged. ADR-0000, ADR-0001 and ADR-0002 remain on their declared decision paths. Phase 0 remains unaccepted and Phase 1 remains blocked.
 
 ## Handoff
 
-Exact next responsibility: fresh separate adversarial reviewer under this WP and result-control key attempt 1. Stop after publishing the review artefact + handoff PR; do not repair, integrate the result, accept an ADR, merge a target, accept Phase 0 or begin Phase 1.
+Exact next responsibility: fresh separate designer/builder under `development/04_work/WP-014-PHASE0-MOVING-CANDIDATE-CONVERGENCE-REPAIR.md`. Preserve **Requires repair** and F-AR-005; derive the smallest coherent bounded repair without weakening current-valid-result protection or exact-head freshness; publish one new exact target with regression evidence; then stop for fresh separate verification and re-review.
