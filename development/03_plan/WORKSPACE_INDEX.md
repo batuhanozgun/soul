@@ -102,5 +102,6 @@
 - `../07_sessions/SESSION-0024-PHASE0-MOVING-CANDIDATE-CONVERGENCE-BUILDER.md` — WP-014 builder close; PR #19 exact target `2f5508c...`; WP-015 verifier routing prepared for separate Integrator activation
 - `../07_sessions/SESSION-0025-PHASE0-WP015-ACTIVATION-INTEGRATOR.md` — exact builder-close integration and WP-015 activation/binding; no verification/review/repair/acceptance
 - `../07_sessions/SESSION-0026-PHASE0-MOVING-CANDIDATE-CONVERGENCE-VERIFIER.md` — WP-015 **PASS** for exact target `2f5508c...`; verifier evidence PR #20 integrated evidence-only as `df9c9c12...`
+- `../07_sessions/SESSION-0027-PHASE0-WP015-INTEGRATOR.md` — PR #20 evidence integration, WP-015 PASS binding and canonical WP-016 adversarial re-review activation; no review/repair/acceptance
 
 This index is **navigational and derived only**. It does not override the authority hierarchy defined in `SOURCE_OF_TRUTH.md`, the bootstrap sequence in `COLD_START.md`, or current project truth in `STATE.md`. If any current-work value here ever disagrees with `STATE.md`, `STATE.md` wins and this index is stale until updated.
