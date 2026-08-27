@@ -67,7 +67,7 @@ Enter through `development/03_plan/COLD_START.md` and complete Steps 1–2 first
 6. `development/04_work/WP-013-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEW.md`;
 7. exact PR #16 metadata/diff and all eight files at `adf067e4289e4c0b51cf40c1940193e8252b22e0`;
 8. exact PR #18 metadata, two-file evidence scope and evidence merge `fda9689107cf96ad2cc01e1b1bbe74b86055e771`;
-9. `development/07_sessions/SESSION-0021-PHASE0-WP012-INTEGRATOR.md` and the current WP-013 Integrator handoff;
+9. `development/07_sessions/SESSION-0021-PHASE0-WP012-INTEGRATOR.md` and `development/07_sessions/SESSION-0023-PHASE0-WP013-INTEGRATOR.md`;
 10. `development/01_governance/SOURCE_OF_TRUTH.md`;
 11. `development/01_governance/WORKING_PROTOCOL.md`;
 12. `development/01_governance/REASONING_POLICY.md`;

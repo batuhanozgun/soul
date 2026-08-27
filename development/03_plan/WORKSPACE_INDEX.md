@@ -95,5 +95,6 @@
 - `../07_sessions/SESSION-0020-PHASE0-PENDING-RESULT-CONTROL-VERIFIER.md` — WP-012 **PASS** for exact target `adf067e...`; verifier evidence PR #17 integrated evidence-only as `2d732950...`
 - `../07_sessions/SESSION-0021-PHASE0-WP012-INTEGRATOR.md` — PR #17 evidence integration, WP-012 PASS binding and canonical WP-013 adversarial re-review activation; no review/repair/acceptance
 - `../07_sessions/SESSION-0022-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEWER.md` — WP-013 **Requires repair** for exact target `adf067e...`; F-AR-005 medium/material; evidence PR #18
+- `../07_sessions/SESSION-0023-PHASE0-WP013-INTEGRATOR.md` — PR #18 evidence integration, WP-013 **Requires repair** binding and canonical WP-014 bounded repair activation; no repair/acceptance
 
 This index is **navigational and derived only**. It does not override the authority hierarchy defined in `SOURCE_OF_TRUTH.md`, the bootstrap sequence in `COLD_START.md`, or current project truth in `STATE.md`. If any current-work value here ever disagrees with `STATE.md`, `STATE.md` wins and this index is stale until updated.
