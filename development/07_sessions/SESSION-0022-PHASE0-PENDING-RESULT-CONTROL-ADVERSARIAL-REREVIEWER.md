@@ -1,15 +1,15 @@
 # SESSION-0022 — Phase 0 Pending-Result Control Adversarial Re-reviewer
 
-**Date:** 2026-08-26–2026-08-27 (resumed after interruption)  
-**Work package:** WP-013 — Phase 0 Pending-Result Control Adversarial Re-review  
-**Role:** fresh separate adversarial reviewer  
-**Result-control key:** `WP-013 / adversarial reviewer / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`  
-**Reviewer branch:** `codex/wp013-pending-result-control-adversarial-rereview`  
-**Exact reviewed material target:** `adf067e4289e4c0b51cf40c1940193e8252b22e0`  
-**Material base:** `8dcdc750600b336a2e97fde3433926b6a2217f26`  
-**Material target PR:** #16  
-**Provisional activation commit:** `18b239e05452d1e78afffd6deaaeb2463d077720`  
-**Activation-binding commit:** `131e987ff6e768b667eef439cfed1f029120e8de`  
+**Date:** 2026-08-26–2026-08-27 (resumed after interruption)
+**Work package:** WP-013 — Phase 0 Pending-Result Control Adversarial Re-review
+**Role:** fresh separate adversarial reviewer
+**Result-control key:** `WP-013 / adversarial reviewer / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`
+**Reviewer branch:** `codex/wp013-pending-result-control-adversarial-rereview`
+**Exact reviewed material target:** `adf067e4289e4c0b51cf40c1940193e8252b22e0`
+**Material base:** `8dcdc750600b336a2e97fde3433926b6a2217f26`
+**Material target PR:** #16
+**Provisional activation commit:** `18b239e05452d1e78afffd6deaaeb2463d077720`
+**Activation-binding commit:** `131e987ff6e768b667eef439cfed1f029120e8de`
 **Reviewer evidence PR:** pending publication
 
 ## Required inputs read
@@ -61,7 +61,7 @@ Independent model SHA-256:
 
 ### F-AR-005 — A mutable lower-authority candidate can repeatedly invalidate exact-head resolutions and deny progress indefinitely
 
-**Result:** stands.  
+**Result:** stands.
 **Severity:** medium — material.
 
 Exact-head resolution converges for a fixed invalid/stale PR head. It does not converge when the same subordinate same-WP PR keeps moving: each update intentionally invalidates the prior resolution, every new invalid head blocks all independent execution, closed PRs remain discoverable, closing is not resolution, and attempt advancement leaves the candidate as a same-WP mismatch. No trust, freeze, quarantine or bounded repeat-movement rule exists. The independent five-generation trace reproduced this denial path.

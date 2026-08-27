@@ -1,13 +1,13 @@
 # ADVERSARIAL RE-REVIEW — WP-000 / PENDING-RESULT CONTROL REPAIR
 
-**Reviewer session:** SESSION-0022  
-**Reviewed commit/artefact:** `adf067e4289e4c0b51cf40c1940193e8252b22e0`  
-**Material base:** `8dcdc750600b336a2e97fde3433926b6a2217f26`  
-**Material target PR:** #16 — `WP-011: repair pending independent-result control lifecycle`  
-**Authoritative specification:** `development/04_work/WP-000-DEVELOPMENT-OS.md`; `development/04_work/WP-013-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEW.md`  
-**Result-control key:** `WP-013 / adversarial reviewer / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`  
-**Provisional activation commit:** `18b239e05452d1e78afffd6deaaeb2463d077720`  
-**Reviewer output branch:** `codex/wp013-pending-result-control-adversarial-rereview`  
+**Reviewer session:** SESSION-0022
+**Reviewed commit/artefact:** `adf067e4289e4c0b51cf40c1940193e8252b22e0`
+**Material base:** `8dcdc750600b336a2e97fde3433926b6a2217f26`
+**Material target PR:** #16 — `WP-011: repair pending independent-result control lifecycle`
+**Authoritative specification:** `development/04_work/WP-000-DEVELOPMENT-OS.md`; `development/04_work/WP-013-PHASE0-PENDING-RESULT-CONTROL-ADVERSARIAL-REREVIEW.md`
+**Result-control key:** `WP-013 / adversarial reviewer / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`
+**Provisional activation commit:** `18b239e05452d1e78afffd6deaaeb2463d077720`
+**Reviewer output branch:** `codex/wp013-pending-result-control-adversarial-rereview`
 **Date:** 2026-08-26; resumed and revalidated after interruption on 2026-08-27
 
 ## Pre-evidence attack model
