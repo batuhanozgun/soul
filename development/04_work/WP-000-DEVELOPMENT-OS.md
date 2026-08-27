@@ -1,6 +1,6 @@
 # WP-000 — SOUL Development Operating System
 
-**Status:** material change — fresh verification required  
+**Status:** material change — current exact-target verification PASS; fresh adversarial re-review required
 **Owner role:** designer/builder  
 **Decision authority:** foundation changes require human-owner approval; governance design requires independent verification  
 **Branch:** `phase0/development-os`  
@@ -133,8 +133,14 @@ The reasoning-policy synthesis evidence must distinguish observed predecessor-so
 
 ## Completion state
 
-Current: **materially changed — fresh verification required**. Builder output exists; independent verification and adversarial review are still required.
+Current: **materially changed — WP-015 exact-target verification PASS; fresh
+adversarial re-review required**. The PASS remains bound only to PR #19 exact
+target `2f5508c...`; adversarial, ADR, owner, PR and Phase gates remain open.
 
 ## Handoff
 
-After WP-005 closes, the next responsibility is a **fresh Verifier** against the exact changed Phase 0 PR head. The verifier must derive expectations from this strengthened WP before reading builder rationale, verify all twelve criteria, regression-test F2-R1 and the single-cold-start rule, and perform no repair in the verification act.
+The next responsibility is a **fresh separate adversarial reviewer** under
+`WP-016-PHASE0-MOVING-CANDIDATE-CONVERGENCE-ADVERSARIAL-REREVIEW.md` against
+the same exact PR #19 target. The reviewer must establish attack hypotheses
+before relying on producer/verifier conclusions and perform no repair,
+integration, ADR acceptance, material merge or Phase work in the review act.

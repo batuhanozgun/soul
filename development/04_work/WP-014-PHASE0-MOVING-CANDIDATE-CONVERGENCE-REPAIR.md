@@ -1,6 +1,6 @@
 # WP-014 — Phase 0 Moving-Candidate Convergence Repair
 
-**Status:** builder repair published — fresh separate verification required
+**Status:** builder repair published — WP-015 verification **PASS**; fresh separate adversarial re-review required
 **Owner role:** designer/builder
 **Decision authority:** bounded repair of F-AR-005 within existing foundation/governance and unchanged WP-000 acceptance criteria; architecture-level choices must follow `DECISION_POLICY.md`; no independent verification, adversarial-review self-approval, canonical independent-result integration, ADR acceptance, PR #16/#1 merge, Phase acceptance, or Phase 1 authority
 **Development branch:** `phase0/development-os`
@@ -17,6 +17,7 @@ not canonically active until a fresh separate Integrator validates and activates
 **Adversarial re-review activity:** WP-013 — **Requires repair**; F-AR-005 medium/material, stands
 **Reviewer evidence:** `development/06_reviews/ADVERSARIAL-REREVIEW-WP-000-adf067e4-2026-08-26.md`
 **Reviewer evidence PR:** #18, head `2e78421f1c618995fe0cc0c8eb62104ecae63be1`, integrated evidence-only as `fda9689107cf96ad2cc01e1b1bbe74b86055e771`
+**Current verification activity:** WP-015 — **PASS** for exact target `2f5508c1d6941e951d494bb2a700ef861860431d`; evidence PR #20 head `a1a0c07c2f16faa4c963bec6da7dad85baeb5565`, integrated evidence-only as `df9c9c12129bb8c55e4948fa095a90ab25b90811`
 
 ## Objective
 
@@ -177,19 +178,17 @@ Preserve a claim-to-trace chain for F-AR-005 and every preserved safety property
 
 ## Completion state
 
-Builder repair published — fresh separate verification required.
+Builder repair published — WP-015 verification issued **PASS**; fresh separate
+adversarial re-review required.
 
-PR #19 exact target `2f5508c...` is producer-complete only. No independent
-verification or adversarial re-review exists for it. WP-012 PASS and WP-013
-Requires repair remain bound only to the superseded PR #16 target `adf067e...`.
+PR #19 exact target `2f5508c...` is producer-complete and independently verified
+**PASS** under WP-015. No fresh adversarial re-review exists for it. WP-012 PASS
+and WP-013 Requires repair remain bound only to the superseded PR #16 target
+`adf067e...`.
 
 ## Handoff
 
-Exact next responsibility: fresh separate Integrator to validate the exact
-builder-close/routing branch scope, integrate these builder-authorised records,
-canonically activate and bind
-`development/04_work/WP-015-PHASE0-MOVING-CANDIDATE-CONVERGENCE-VERIFICATION.md`,
-then dispatch a fresh separate verifier for exact target `2f5508c...`, attempt 1.
-The builder stops without canonical transition, self-verification, self-review,
-result integration, ADR acceptance, target merge, Phase acceptance or Phase 1
-work.
+Exact next responsibility: fresh separate adversarial reviewer under
+`development/04_work/WP-016-PHASE0-MOVING-CANDIDATE-CONVERGENCE-ADVERSARIAL-REREVIEW.md`
+for exact target `2f5508c...`, attempt 1. WP-015 PASS is evidence, not material
+or ADR acceptance. PR #19, PR #1, Phase 0 and Phase 1 remain gated.

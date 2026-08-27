@@ -1,6 +1,6 @@
 # WP-015 — Phase 0 Moving-Candidate Convergence Verification
 
-**Status:** active — fresh separate verifier required
+**Status:** complete — verification issued **PASS**; evidence integrated by separate Integrator
 **Owner role:** verifier
 **Decision authority:** independently issue PASS / FAIL / NOT VERIFIED for the
 complete WP-014 material target and its exact provisional activation; no repair,
@@ -18,6 +18,9 @@ acceptance or Phase 1 authority
 **Result-control key:** `WP-015 / verifier / 2f5508c1d6941e951d494bb2a700ef861860431d / attempt 1`
 **Provisional activation commit:**
 `5368abd0f0c9a846f89120be44c19b1f1b1825d9`
+**Activation binding:** `3d49561b4bb87e36c4bbbf18c7a72247070f77e2`
+**Verifier evidence PR:** #20, head `a1a0c07c2f16faa4c963bec6da7dad85baeb5565`
+**Evidence merge:** `df9c9c12129bb8c55e4948fa095a90ab25b90811`
 
 ## Objective
 
@@ -212,13 +215,47 @@ transitions canonical state without reinterpretation.
 - FAIL -> smallest bounded separate repair and a new exact target;
 - NOT VERIFIED -> smallest bounded investigation/repair, then fresh verification.
 
+## Verification result
+
+The fresh separate verifier issued **PASS** for exact material target
+`2f5508c1d6941e951d494bb2a700ef861860431d`, material base
+`dca520242585a80c2efaf22e18fe3d353147b93e`, provisional activation
+`5368abd0f0c9a846f89120be44c19b1f1b1825d9`, activation binding
+`3d49561b4bb87e36c4bbbf18c7a72247070f77e2` and attempt 1.
+
+Canonical verification evidence:
+
+`development/06_reviews/VERIFICATION-WP-000-2f5508c1-2026-08-27.md`
+
+Verifier handoff:
+
+`development/07_sessions/SESSION-0026-PHASE0-MOVING-CANDIDATE-CONVERGENCE-VERIFIER.md`
+
+## Integration record
+
+Verifier evidence PR #20 contained exactly the canonical verification artefact
+and SESSION-0026 handoff at immutable head
+`a1a0c07c2f16faa4c963bec6da7dad85baeb5565`. A separate Integrator validated
+the exact key, target/base/activation/binding, completed **PASS** and two-file
+evidence-only scope, then merged PR #20 into `phase0/development-os` as
+`df9c9c12129bb8c55e4948fa095a90ab25b90811`.
+
+The integration preserves **PASS** exactly. It does not accept ADR-0000,
+ADR-0001 or ADR-0002, merge PR #19 or PR #1, accept WP-000 or Phase 0, or begin
+Phase 1.
+
 ## Completion state
 
-Active — fresh separate verifier required after exact activation binding. No
-verification result exists for `2f5508c...`.
+**Complete as a verification activity — result: PASS.**
+
+The result remains permanently bound only to the exact target/base/activation/
+binding/key above. PR #19 remains draft, unaccepted and unmerged. Fresh separate
+adversarial re-review remains required.
 
 ## Handoff
 
-Exact next responsibility after the immediate canonical binding commit: fresh
-separate verifier executes attempt 1, publishes only verification artefact +
-handoff PR, and stops for another separate Integrator.
+Exact next responsibility: fresh separate adversarial reviewer under
+`development/04_work/WP-016-PHASE0-MOVING-CANDIDATE-CONVERGENCE-ADVERSARIAL-REREVIEW.md`.
+Attack the same exact target under the fresh WP-016 attempt-1 key and exact
+provisional activation; publish only the review artefact + reviewer handoff PR,
+then stop for another separate Integrator.
