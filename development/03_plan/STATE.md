@@ -13,7 +13,7 @@
 **Reviewer evidence integration:** PR #18 head `2e78421f1c618995fe0cc0c8eb62104ecae63be1`, merged evidence-only as `fda9689107cf96ad2cc01e1b1bbe74b86055e771`
 **Completed WP-013 result-control key:** `WP-013 / adversarial reviewer / adf067e4289e4c0b51cf40c1940193e8252b22e0 / attempt 1`
 **Current result-control key:** `WP-015 / verifier / 2f5508c1d6941e951d494bb2a700ef861860431d / attempt 1`
-**Current provisional activation commit:** pending exact binding; fail closed until the next canonical binding commit records the WP-015 activation SHA
+**Current provisional activation commit:** `5368abd0f0c9a846f89120be44c19b1f1b1825d9`
 **State:** WP-014 producer repair is published on exact PR #19 target `2f5508c...`; fresh separate verification is active under WP-015; no WP-015 result, fresh adversarial re-review, ADR acceptance, material merge, Phase acceptance, or Phase 1 claim has occurred
 **Authoritative product branch:** `main`
 
@@ -207,7 +207,7 @@ PR #16 was not amended or merged. It is closed unmerged as superseded at immutab
 
 Result-control key: `WP-015 / verifier / 2f5508c1d6941e951d494bb2a700ef861860431d / attempt 1`.
 
-The WP-local activation bridge is a provisional material rollout control, not a transition-only relabel and not acceptance of PR #19 governance. Its exact activation commit is pending binding in the next canonical commit; until then the verifier route fails closed. The verifier must execute both bridge checks and publish only the exact verification artefact plus verifier handoff for a separate Integrator.
+The WP-local activation bridge is a provisional material rollout control, not a transition-only relabel and not acceptance of PR #19 governance. Its exact activation commit is `5368abd0f0c9a846f89120be44c19b1f1b1825d9`. The verifier must execute both bridge checks and publish only the exact verification artefact plus verifier handoff for a separate Integrator.
 
 ## Material architecture status
 
