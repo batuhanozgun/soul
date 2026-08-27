@@ -9,6 +9,7 @@
 **Provisional activation commit:** `94bcc9bf9d0352bde67459635a6073c7e65171e2`
 **Activation-binding commit:** `91db45818f324a1c1aef4dd16d48e40591a3f4e1`
 **Reviewer output branch:** `codex/wp016-adversarial-reviewer`
+**Reviewer evidence PR:** #21 — initial published head `85673cbd291a5571c1cb5ce4601a8ffd4eb1bc62`
 **Date:** 2026-08-27
 
 ## Pre-evidence attack model
@@ -352,6 +353,30 @@ bridge check and immediate reviewer-role commitment.
   not eliminated. Same-model isolated review is not true model diversity.
 - Reviewer publication/close freshness and the generic WP-016 post-publication
   route are recorded after the dedicated evidence PR exists.
+
+## Publication and close evidence
+
+Dedicated reviewer evidence PR #21 was published against
+`phase0/development-os` at initial head
+`85673cbd291a5571c1cb5ce4601a8ffd4eb1bc62`. Immediate direct inspection found:
+
+- source branch and `refs/pull/21/head` both resolved to that exact head;
+- PR #21 was open/non-draft and its changed-file scope was exactly this review
+  artefact plus SESSION-0028;
+- both records carried the identical complete WP-016 key, target, base,
+  activation/binding and completed **Requires repair** judgement with F-AR-006
+  and F-AR-007;
+- live all-state discovery found exactly one WP-016 candidate, PR #21;
+- canonical `origin/phase0/development-os` remained exact `acf163f...`, still
+  assigning WP-016 and the same key/activation;
+- live PR #19 remained open/draft at exact `2f5508c...` from `dca520...` with
+  exactly nine files; PR #16 remained closed/unmerged at `adf067e...`.
+
+The generic WP-016 bridge therefore routes a fresh session to a separate
+Integrator rather than repeating adversarial review. The only later evidence
+branch change is this publication/close locator update inside the same two
+authorised records. The reviewer does not update `STATE.md`, integrate the
+result or create a candidate control.
 
 ## Overall judgement
 

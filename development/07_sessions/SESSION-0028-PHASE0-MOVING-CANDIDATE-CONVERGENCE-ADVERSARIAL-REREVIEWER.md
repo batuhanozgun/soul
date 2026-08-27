@@ -12,7 +12,7 @@
 **Provisional activation:** `94bcc9bf9d0352bde67459635a6073c7e65171e2`
 **Activation binding:** `91db45818f324a1c1aef4dd16d48e40591a3f4e1`
 **Canonical state inspected through:** `acf163f3073e25d9390b883786143d520d0859cf`
-**Reviewer evidence PR:** pending publication
+**Reviewer evidence PR:** #21 — initial published head `85673cbd291a5571c1cb5ce4601a8ffd4eb1bc62`
 
 ## Entry, independence and responsibility
 
@@ -149,6 +149,14 @@ The dedicated reviewer PR must contain exactly:
 
 No temp oracle/mutation script, repair, control, state/WP transition,
 acceptance, target merge or Phase work is authorised for publication.
+
+Immediate post-publication inspection confirmed PR #21 was open/non-draft at
+the initial head above, `refs/pull/21/head` matched, changed-file scope was
+exactly the two records above, both records carried the complete key/result,
+canonical `phase0/development-os` remained `acf163f...`, and PR #19 remained
+exact. Live generic WP-016 discovery found exactly PR #21 and therefore routes a
+fresh session to separate Integrator rather than duplicate review. The only
+later branch change is this two-record publication/close locator update.
 
 ## Unresolved items
 
