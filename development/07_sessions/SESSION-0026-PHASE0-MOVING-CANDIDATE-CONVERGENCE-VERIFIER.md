@@ -12,6 +12,8 @@
 **Provisional activation:** `5368abd0f0c9a846f89120be44c19b1f1b1825d9`
 **Activation binding:** `3d49561b4bb87e36c4bbbf18c7a72247070f77e2`
 **Canonical state inspected through:** `b630cfeafc50647a0ebde7589f5d9304518ef985`
+**Verifier evidence PR:** #20 — initial published head
+`0ef8067d77f21e567dc38d6dba723a51299c8169`
 
 ## Entry, independence and responsibility
 
@@ -71,6 +73,10 @@ authorised or performed.
   produced the expected AssertionError/red.
 - `git diff --check dca520... 2f5508c...` passed; exactly one COLD_START exists
   and historical `BUILDER_STOP.md` remains absent.
+- After PR #20 publication, generic all-state WP-015 discovery found exactly
+  that one candidate. Direct live head, two-file scope, both record keys,
+  completed PASS and unchanged canonical WP-015 state/activation all validated,
+  so the bridge now routes a fresh session to a separate Integrator.
 
 ## Verification status
 
@@ -103,7 +109,8 @@ does not substitute for fresh separate adversarial re-review.
 - uniquely named exact-target verification artefact above;
 - this SESSION-0026 handoff;
 - dedicated evidence PR targeting `phase0/development-os`, containing exactly
-  these two files after publication.
+  these two files; initial published head `0ef8067...`. The only later branch
+  change is the publication/close locator update in these same records.
 
 ## Decisions
 
