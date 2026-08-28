@@ -110,5 +110,6 @@
 - `../07_sessions/SESSION-0028-PHASE0-MOVING-CANDIDATE-CONVERGENCE-ADVERSARIAL-REREVIEWER.md` — WP-016 **Requires repair** for exact target `2f5508c...`; F-AR-006/F-AR-007 stand; reviewer evidence PR #21
 - `../07_sessions/SESSION-0029-PHASE0-WP016-RESULT-INTEGRATOR.md` — PR #21 evidence integration, WP-016 **Requires repair** binding and canonical WP-017 bounded repair activation; no repair/acceptance
 - `../07_sessions/SESSION-0030-PHASE0-CANDIDATE-SET-CONVERGENCE-BUILDER.md` — WP-017 builder close; PR #22 exact target `5bd0db2...`; WP-018 verifier routing prepared for separate Integrator activation
+- `../07_sessions/SESSION-0031-PHASE0-WP018-ACTIVATION-INTEGRATOR.md` — exact builder-close integration and WP-018 activation/binding; no verification/review/repair/acceptance
 
 This index is **navigational and derived only**. It does not override the authority hierarchy defined in `SOURCE_OF_TRUTH.md`, the bootstrap sequence in `COLD_START.md`, or current project truth in `STATE.md`. If any current-work value here ever disagrees with `STATE.md`, `STATE.md` wins and this index is stale until updated.
