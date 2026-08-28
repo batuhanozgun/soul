@@ -24,8 +24,8 @@ authority
 **Historical rejected target:** closed-unmerged PR #19 at
 `2f5508c1d6941e951d494bb2a700ef861860431d`
 **Result-control key:** `WP-019 / adversarial reviewer / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`
-**Provisional activation commit:** pending exact binding; fail closed until the
-immediate canonical binding commit records this activation SHA
+**Provisional activation commit:**
+`3b91acf02df2852c43404ec164725ac5748b9bad`
 
 ## Objective
 

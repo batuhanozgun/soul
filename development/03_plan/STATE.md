@@ -23,7 +23,7 @@
 **Current candidate-set verification result:** WP-018 **PASS** for exact target `5bd0db27fc3df368c9e112f01b7eed49a64402ab`, activation `fbe517bef10b5e820dc096a8a82e2c1a3047a38c` and binding `e62075228054f43f4dc8d318210ce9de0bf8b8ae`
 **Current verifier evidence integration:** PR #24 head `1b1d5effa21e156d09b56db741fec0ae0966f2a7`, merged evidence-only as `b2e54a1f7398328a17ba6aaf3a6a91ddbe3c4595`
 **Current result-control key:** `WP-019 / adversarial reviewer / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`
-**Current provisional activation commit:** pending exact binding; fail closed until the next canonical binding commit records the WP-019 activation SHA
+**Current provisional activation commit:** `3b91acf02df2852c43404ec164725ac5748b9bad`
 **State:** WP-018 verification is complete with exact-target PASS and evidence-only integration; fresh separate adversarial re-review is active under WP-019; no WP-019 result, ADR acceptance, material merge, Phase acceptance, or Phase 1 claim has occurred
 **Authoritative product branch:** `main`
 
@@ -276,7 +276,7 @@ Dedicated evidence PR #24 contained exactly those two files at immutable head `1
 
 Result-control key: `WP-019 / adversarial reviewer / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`.
 
-The WP-local activation bridge is a provisional material rollout control, not a transition-only relabel and not acceptance of PR #22 governance. Its exact activation commit is pending binding in the next canonical commit; until then the review route fails closed. The reviewer must execute both bridge checks and publish only the exact review artefact plus reviewer handoff for a separate Integrator.
+The WP-local activation bridge is a provisional material rollout control, not a transition-only relabel and not acceptance of PR #22 governance. Its exact activation commit is `3b91acf02df2852c43404ec164725ac5748b9bad`. The reviewer must execute both bridge checks and publish only the exact review artefact plus reviewer handoff for a separate Integrator.
 
 ## Material architecture status
 
