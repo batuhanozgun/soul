@@ -1,6 +1,6 @@
 # WP-019 — Phase 0 Candidate-Set Convergence Adversarial Re-review
 
-**Status:** active — fresh separate adversarial reviewer required
+**Status:** complete as review activity — **Requires repair**; F-AR-008 medium/material, stands
 **Owner role:** adversarial reviewer
 **Decision authority:** independently attack exact WP-017 material target
 `5bd0db27fc3df368c9e112f01b7eed49a64402ab`, the complete candidate-set
@@ -26,6 +26,13 @@ authority
 **Result-control key:** `WP-019 / adversarial reviewer / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`
 **Provisional activation commit:**
 `3b91acf02df2852c43404ec164725ac5748b9bad`
+**Activation binding:** `fa6f208e6133f746a69a4a51faff3f2485798d24`
+**Review result:** **Requires repair**
+**Surviving finding:** F-AR-008 — medium/material, stands
+**Reviewer evidence PR:** #25 — initial immutable result commit
+`6b328cdeb127f56b163b999eaa8621fd6d5ead19`, final locator head
+`16b5aacb12d05157e183cb9257025f30636e0f71`, integrated evidence-only as
+`8022ca6fb30fc32e6a95f22c5c1d58c5ab8c1745`
 
 ## Objective
 
@@ -258,11 +265,21 @@ transitions canonical state without reinterpretation.
 
 ## Completion state
 
-Active — fresh separate adversarial reviewer required after exact activation
-binding. No WP-019 result exists for `5bd0db2...`.
+Complete as an adversarial-review activity. The reviewer issued **Requires
+repair** for exact target `5bd0db27...`; F-AR-008 medium/material stands.
+
+The immutable review artefact is
+`development/06_reviews/ADVERSARIAL-REREVIEW-WP-000-5bd0db27-2026-08-28.md`
+and the reviewer handoff is
+`development/07_sessions/SESSION-0034-PHASE0-CANDIDATE-SET-CONVERGENCE-ADVERSARIAL-REREVIEWER.md`.
+PR #25 was integrated evidence-only as `8022ca6f...`. Evidence integration is
+not repair or acceptance and does not reinterpret WP-018 PASS.
 
 ## Handoff
 
-Exact next responsibility after the immediate canonical binding commit: fresh
-separate adversarial reviewer executes attempt 1, publishes only adversarial
-review artefact + handoff PR, and stops for another separate Integrator.
+Exact next responsibility: fresh separate designer/builder under
+`WP-020-PHASE0-UNCONTAINED-INSPECTION-FAIL-CLOSED-REPAIR.md`. Preserve the
+review result and unchanged parent criteria, publish one new exact material
+target with fresh verification/re-review requirements, and perform no
+self-certification, ADR acceptance, PR #22/#1 merge, Phase acceptance or Phase
+1 work.

@@ -1,6 +1,6 @@
 # WP-000 — SOUL Development Operating System
 
-**Status:** material change — current exact-target verification PASS; fresh adversarial re-review required
+**Status:** material change — exact-target verification PASS; adversarial re-review Requires repair; bounded F-AR-008 repair required
 **Owner role:** designer/builder  
 **Decision authority:** foundation changes require human-owner approval; governance design requires independent verification  
 **Branch:** `phase0/development-os`  
@@ -133,15 +133,18 @@ The reasoning-policy synthesis evidence must distinguish observed predecessor-so
 
 ## Completion state
 
-Current: **materially changed — WP-018 exact-target verification PASS; fresh
-WP-019 adversarial re-review required**. The PASS remains bound only to PR #22
-exact target `5bd0db2...`; adversarial, ADR, owner, PR and Phase gates remain
-open.
+Current: **materially changed — WP-018 exact-target verification PASS; WP-019
+adversarial re-review Requires repair; bounded F-AR-008 repair required**. The
+PASS and review result remain bound only to PR #22 exact target `5bd0db2...`;
+F-AR-008, fresh changed-target verification/re-review, ADR, owner, PR and Phase
+gates remain open.
 
 ## Handoff
 
-The next responsibility is a **fresh separate adversarial reviewer** under
-`WP-019-PHASE0-CANDIDATE-SET-CONVERGENCE-ADVERSARIAL-REREVIEW.md` against the
-same exact PR #22 target. The reviewer must establish attack hypotheses before
-relying on producer/verifier conclusions and perform no repair, integration,
-ADR acceptance, material merge or Phase work in the review act.
+The next responsibility is a **fresh separate designer/builder** under
+`WP-020-PHASE0-UNCONTAINED-INSPECTION-FAIL-CLOSED-REPAIR.md`. Preserve the
+immutable WP-019 **Requires repair** result and F-AR-008, keep all WP-000
+criteria unchanged, publish the smallest coherent bounded repair as one new
+exact target, and stop for fresh separate verification and later fresh separate
+adversarial re-review. Do not accept an ADR, merge PR #22/#1, accept Phase 0 or
+begin Phase 1.

@@ -1,6 +1,6 @@
 # WP-017 — Phase 0 Candidate-Set Convergence Repair
 
-**Status:** builder repair published — WP-018 verification **PASS**; fresh separate adversarial re-review required
+**Status:** builder repair rejected after review — WP-018 **PASS**; WP-019 **Requires repair**; F-AR-008 routed to WP-020
 **Owner role:** designer/builder
 **Decision authority:** bounded repair of F-AR-006 and F-AR-007 within existing foundation/governance and unchanged WP-000 acceptance criteria; architecture-level choices must follow `DECISION_POLICY.md`; no independent verification, adversarial-review self-approval, canonical independent-result integration, ADR acceptance, PR #19/#1 merge, Phase acceptance or Phase 1 authority
 **Development branch:** `phase0/development-os`
@@ -10,8 +10,10 @@
 **Repair PR:** #22 — `WP-017: bound candidate-set convergence and restore result precedence`
 **Exact new material target:** `5bd0db27fc3df368c9e112f01b7eed49a64402ab`
 **Exact new material base:** `4524f21cced54c71fb2219b7f42119adbbb5b033`
-**Verification activity:** WP-018 — **PASS** and integrated evidence-only;
-fresh separate adversarial re-review is active under WP-019
+**Verification activity:** WP-018 — **PASS** and integrated evidence-only
+**Current adversarial re-review:** WP-019 — **Requires repair**; F-AR-008
+medium/material, stands; integrated evidence-only
+**Current repair route:** WP-020 — fresh separate designer/builder required
 **Parent:** `WP-000-DEVELOPMENT-OS.md`
 **Prior repair package:** `WP-014-PHASE0-MOVING-CANDIDATE-CONVERGENCE-REPAIR.md`
 **Historical verification activity:** WP-015 — **PASS** for exact target `2f5508c1d6941e951d494bb2a700ef861860431d`, activation `5368abd0f0c9a846f89120be44c19b1f1b1825d9` and binding `3d49561b4bb87e36c4bbbf18c7a72247070f77e2`
@@ -22,6 +24,12 @@ fresh separate adversarial re-review is active under WP-019
 **Completed review activation/binding:** `94bcc9bf9d0352bde67459635a6073c7e65171e2` / `91db45818f324a1c1aef4dd16d48e40591a3f4e1`
 **Current exact-target verification result:** WP-018 — **PASS** for exact target `5bd0db27fc3df368c9e112f01b7eed49a64402ab`, activation `fbe517bef10b5e820dc096a8a82e2c1a3047a38c` and binding `e62075228054f43f4dc8d318210ce9de0bf8b8ae`
 **Verifier evidence PR:** #24, head `1b1d5effa21e156d09b56db741fec0ae0966f2a7`, integrated evidence-only as `b2e54a1f7398328a17ba6aaf3a6a91ddbe3c4595`
+**Current reviewer evidence PR:** #25, initial result commit
+`6b328cdeb127f56b163b999eaa8621fd6d5ead19`, final head
+`16b5aacb12d05157e183cb9257025f30636e0f71`, integrated evidence-only as
+`8022ca6fb30fc32e6a95f22c5c1d58c5ab8c1745`
+**Completed WP-019 result-control key:** `WP-019 / adversarial reviewer / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`
+**Completed WP-019 activation/binding:** `3b91acf02df2852c43404ec164725ac5748b9bad` / `fa6f208e6133f746a69a4a51faff3f2485798d24`
 
 ## Objective
 
@@ -260,17 +268,18 @@ credible alternatives.
 
 ## Completion state
 
-**Builder repair published — WP-018 verification PASS; fresh separate adversarial re-review required.**
+**Builder repair rejected after review — WP-018 PASS; WP-019 Requires repair; F-AR-008 routed to WP-020.**
 
 PR #22 exact target `5bd0db2...` is producer-complete only. No independent
-adversarial re-review exists for it. WP-018 PASS remains exact-target evidence,
-not acceptance. PR #19 remains closed unmerged and immutable at `2f5508c...`;
-its historical results are not reused.
+acceptance exists for it. WP-018 PASS remains exact-target evidence, while
+WP-019 **Requires repair** and F-AR-008 stand for the same target. Neither
+result is reused for a changed target. PR #22 remains draft/unaccepted/unmerged;
+PR #19 remains closed unmerged and immutable at `2f5508c...`.
 
 ## Handoff
 
-Exact next responsibility: **fresh separate adversarial reviewer under WP-019.**
-Attack the exact PR #22 target after WP-018 PASS, preserve all historical
-bindings, publish only review evidence + handoff and stop for a separate
-Integrator. Do not repair, accept ADR-0002, merge PR #22/#1, accept Phase 0 or
-begin Phase 1.
+Exact next responsibility: **fresh separate designer/builder under WP-020.**
+Repair F-AR-008 within unchanged WP-000 criteria, publish one new exact target
+with red-capable regression evidence, and stop for fresh separate verification
+and later fresh separate adversarial re-review. Do not self-certify, accept
+ADR-0002, merge PR #22/#1, accept Phase 0 or begin Phase 1.
