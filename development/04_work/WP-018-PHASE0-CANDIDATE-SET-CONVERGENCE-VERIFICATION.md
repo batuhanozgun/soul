@@ -1,6 +1,6 @@
 # WP-018 — Phase 0 Candidate-Set Convergence Verification
 
-**Status:** proposed — awaiting fresh separate Integrator activation
+**Status:** active — fresh separate verifier required
 **Owner role:** verifier
 **Decision authority:** independently issue PASS / FAIL / NOT VERIFIED for the
 complete WP-017 material target and its exact provisional activation; no repair,
@@ -16,8 +16,8 @@ acceptance or Phase 1 authority
 **Historical rejected target:** closed-unmerged PR #19 at
 `2f5508c1d6941e951d494bb2a700ef861860431d`
 **Result-control key:** `WP-018 / verifier / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`
-**Provisional activation commit:** not yet assigned; a fresh separate Integrator
-must activate and bind this WP canonically before verifier execution
+**Provisional activation commit:** pending exact binding; fail closed until the
+next canonical commit records this activation SHA
 
 ## Objective
 
@@ -234,13 +234,11 @@ transitions canonical state without reinterpretation.
 
 ## Completion state
 
-Proposed — awaiting separate Integrator validation, canonical activation and
-exact activation binding. No verification result exists for `5bd0db2...`.
+Active — fresh separate verifier required after exact activation binding. No
+verification result exists for `5bd0db2...`.
 
 ## Handoff
 
-Exact next responsibility before verification: fresh separate Integrator to
-validate/integrate the builder-close routing records and canonically activate
-this WP with an exact binding. Only then does a fresh separate verifier execute
-attempt 1, publish only verification artefact + handoff PR, and stop for another
-separate Integrator.
+Exact next responsibility after the immediate canonical binding commit: fresh
+separate verifier executes attempt 1, publishes only verification artefact +
+handoff PR, and stops for another separate Integrator.
