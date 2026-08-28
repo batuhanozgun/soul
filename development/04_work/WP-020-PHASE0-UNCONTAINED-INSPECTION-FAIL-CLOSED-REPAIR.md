@@ -1,17 +1,23 @@
 # WP-020 — Phase 0 Uncontained Inspection Fail-Closed Repair
 
-**Status:** active — fresh separate designer/builder required
+**Status:** builder-complete as producer responsibility — proposed fresh verification routing awaits separate Integrator activation
 **Owner role:** designer/builder
 **Decision authority:** bounded repair of F-AR-008 within existing
 foundation/governance and unchanged WP-000 acceptance criteria;
 architecture-level choices must follow `DECISION_POLICY.md`; no independent
 verification, adversarial-review self-approval, canonical independent-result
-integration, ADR acceptance, PR #22/#1 merge, Phase acceptance or Phase 1
+integration, ADR acceptance, PR #22/#26/#1 merge, Phase acceptance or Phase 1
 authority
 **Development branch:** `phase0/development-os`
-**Rejected material target:** draft/unmerged PR #22 exact commit
+**Rejected material target:** closed-unmerged superseded PR #22 exact commit
 `5bd0db27fc3df368c9e112f01b7eed49a64402ab`
 **Material base:** `4524f21cced54c71fb2219b7f42119adbbb5b033`
+**Repair branch:** `codex/wp020-uncontained-inspection-fail-closed-repair`
+**Repair PR:** #26 — `WP-020: fail closed on uncontained inspection unknowns`
+**Exact new material target:** `a42101cfc7fef58ac169150458ff3f889f10527b`
+**Exact new material base:** `c4ebef9e58a4a94edce22ebbb94d94414dffd92c`
+**Proposed verification activity:** WP-021 — fresh separate verifier; awaiting
+separate Integrator validation, canonical activation and binding
 **Parent:** `WP-000-DEVELOPMENT-OS.md`
 **Prior repair package:** `WP-017-PHASE0-CANDIDATE-SET-CONVERGENCE-REPAIR.md`
 **Exact-target verification:** WP-018 — **PASS** for exact target
@@ -108,7 +114,7 @@ WP must not rewrite, soften or reinterpret them.
   repair;
 - resolving/containing a live evidence candidate, advancing an independent-role
   attempt or integrating an independent result;
-- merging PR #22 or PR #1, accepting Phase 0 or beginning Phase 1;
+- merging PR #22, PR #26 or PR #1, accepting Phase 0 or beginning Phase 1;
 - absorbing generic host abuse prevention, platform administration or product-
   runtime architecture without a demonstrated direct dependency and explicit
   governance path.
@@ -142,8 +148,8 @@ Within Step 3, read:
 - F-AR-008 medium/material, standing;
 - WP-018 historical **PASS** permanently bound only to exact target
   `5bd0db27...` and its activation/binding;
-- PR #22 remaining draft, unaccepted and unmerged until a new-target relation
-  and all later gates are established;
+- PR #22 closed unmerged and superseded by draft PR #26 after exact publication;
+  its immutable target and historical result bindings remain unchanged;
 - unchanged WP-000 criteria and foundation/governance authority boundaries.
 
 ## Outputs
@@ -158,6 +164,50 @@ Within Step 3, read:
 - a fresh builder session handoff;
 - routing to fresh separate verification and later fresh separate adversarial
   re-review, without performing either.
+
+## Builder output
+
+The fresh designer/builder responsibility is complete as a producer
+responsibility only.
+
+Draft PR #26 freezes exact material target
+`a42101cfc7fef58ac169150458ff3f889f10527b` from current canonical base
+`c4ebef9e58a4a94edce22ebbb94d94414dffd92c` and changes exactly eleven files:
+
+- `development/01_governance/VERIFICATION_POLICY.md`;
+- `development/01_governance/WORKING_PROTOCOL.md`;
+- `development/02_architecture/decisions/ADR-0002-PENDING-INDEPENDENT-RESULT-DISCOVERY.md`;
+- `development/03_plan/COLD_START.md`;
+- `development/03_plan/PR_GATE.md`;
+- `development/05_evidence/F-AR-001-TO-004-PENDING-RESULT-CONTROL-REGRESSION-2026-08-26.md`;
+- `development/05_evidence/F-AR-005-MOVING-CANDIDATE-CONVERGENCE-REGRESSION-2026-08-27.md`;
+- `development/05_evidence/F-AR-006-AND-007-CANDIDATE-SET-CONVERGENCE-REGRESSION-2026-08-27.md`;
+- `development/05_evidence/F-AR-008-UNCONTAINED-INSPECTION-FAIL-CLOSED-REGRESSION-2026-08-28.md`;
+- `development/05_evidence/PENDING-RESULT-RESOLUTION-TEMPLATE.md`;
+- `development/05_evidence/pending_result_control_regression.py`.
+
+The repair retains PR #22's exact-head, moving-stream and repository/key
+candidate-set convergence controls, but replaces the collapsed generic
+non-current class with explicit current-valid, directly inspected invalid,
+exactly resolved/contained non-valid and uncontained uninspectable classes.
+Repository-wide discovery failure or any same-scope uncontained uninspectable
+candidate blocks before visible-result/conflict routing. When no such unknown
+remains, multiple current-valid results remain conflict and exactly one
+current-valid result routes before directly proven invalid or validly
+resolved/contained non-valid residue. No new authority or control record is
+introduced.
+
+The exact producer model passed **84/84** declared routes. The preserved
+F-AR-007 invalid-first mutation failed red/non-zero after **26 PASS**
+observations, and the F-AR-008 unknown-after-result mutation failed red/non-zero
+after **30 PASS** observations. `git diff --check` passed. These are producer
+checks, not independent verification. ADR-0002 remains proposed.
+
+PR #22 was not amended or merged. After PR #26 was published and live-validated
+at its exact head/base/eleven-file scope, PR #22 received a supersession locator
+and was closed unmerged at immutable head `5bd0db27...`. WP-018 **PASS**, WP-019
+**Requires repair** and F-AR-008 remain permanently bound only to that target.
+PR #26 remains draft, unaccepted and unmerged.
 
 ## Acceptance criteria
 
@@ -188,7 +238,7 @@ Within Step 3, read:
 12. **Exact target and fresh gates:** one new target/base/scope is frozen and
     receives fresh separate verification plus fresh separate adversarial
     re-review before any ADR/PR/Phase acceptance.
-13. **No false completion:** the repair accepts no ADR, merges no PR #22/#1,
+13. **No false completion:** the repair accepts no ADR, merges no PR #22/#26/#1,
     accepts no Phase and begins no Phase 1 work.
 14. **Scope discipline:** unrelated host administration, historical PR noise
     and product-runtime architecture are not silently absorbed.
@@ -226,14 +276,18 @@ and smaller than those alternatives.
 
 ## Completion state
 
-Active — fresh separate designer/builder required. No F-AR-008 repair, new
-exact material target, verification or re-review exists.
+Builder-complete as a producer responsibility only. Draft PR #26 freezes exact
+target `a42101c...` from base `c4ebef9...` with eleven material files. No
+independent verification or adversarial re-review exists for that target;
+ADR-0002, PR #26/#1, WP-000 and Phase 0 remain unaccepted/unmerged.
 
 ## Handoff
 
-Exact next responsibility: **fresh separate designer/builder**. Preserve the
-reviewer result and unchanged parent criteria, derive and publish the smallest
-coherent repair with one new exact target and red-capable regression evidence,
-then stop for fresh separate verification. Do not self-certify, integrate an
-independent result, accept/reject ADR-0002, merge PR #22/#1, accept Phase 0 or
+Exact next responsibility: **fresh separate Integrator**. Validate the exact
+builder-close routing branch/PR containing only this WP, proposed WP-021 and
+the builder handoff; integrate those records if exact; then separately update
+canonical state/index, activate and bind WP-021, and dispatch a fresh verifier.
+
+The Integrator must not verify or adversarially review the target, reinterpret
+WP-018/WP-019 or F-AR-008, accept ADR-0002, merge PR #26/#1, accept Phase 0 or
 begin Phase 1.
