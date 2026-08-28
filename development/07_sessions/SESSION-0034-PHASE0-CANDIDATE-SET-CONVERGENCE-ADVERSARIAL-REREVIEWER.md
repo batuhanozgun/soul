@@ -12,7 +12,7 @@
 **Provisional activation:** `3b91acf02df2852c43404ec164725ac5748b9bad`
 **Activation binding:** `fa6f208e6133f746a69a4a51faff3f2485798d24`
 **Canonical state inspected through:** `39a91e9a4d11f10ce720458686f33c98a87d20a4`
-**Reviewer evidence PR:** pending publication
+**Reviewer evidence PR:** #25 — initial published head `6b328cdeb127f56b163b999eaa8621fd6d5ead19`, base `39a91e9a4d11f10ce720458686f33c98a87d20a4`, exactly two files
 
 ## Entry, independence and responsibility
 

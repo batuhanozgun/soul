@@ -10,6 +10,7 @@
 **Activation-binding commit:** `fa6f208e6133f746a69a4a51faff3f2485798d24`
 **Canonical state inspected through:** `39a91e9a4d11f10ce720458686f33c98a87d20a4`
 **Reviewer output branch:** `codex/wp019-adversarial-rereview`
+**Reviewer evidence PR:** #25 — initial published head `6b328cdeb127f56b163b999eaa8621fd6d5ead19`, base `39a91e9a4d11f10ce720458686f33c98a87d20a4`
 **Date:** 2026-08-28
 
 ## Pre-evidence attack model
@@ -360,6 +361,15 @@ re-fetched all pull heads and repeated the canonical bridge:
   outage or applicable control displaced this review. The fresh reviewer role
   and sole result-publication responsibility were recommitted immediately after
   this PASS; no further material reading or attack design intervened.
+
+The result was then initially published as PR #25 at immutable head
+`6b328cdeb127f56b163b999eaa8621fd6d5ead19` against base
+`39a91e9a4d11f10ce720458686f33c98a87d20a4`. Its authorised and observed
+changed-file scope is exactly this review artefact plus SESSION-0034. The only
+later branch change permitted is the locator-only update binding that
+publication in those same two records; the final PR head is recorded in the PR
+close update and post-publication bridge rather than through impossible
+self-reference.
 
 ## Overall judgement
 
