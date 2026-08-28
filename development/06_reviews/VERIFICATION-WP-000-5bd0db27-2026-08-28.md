@@ -8,7 +8,8 @@
 **Provisional activation:** `fbe517bef10b5e820dc096a8a82e2c1a3047a38c`
 **Activation binding:** `e62075228054f43f4dc8d318210ce9de0bf8b8ae`
 **Verifier branch:** `codex/wp018-verifier-fresh-20260828`
-**Verifier evidence PR:** pending publication
+**Verifier evidence PR:** #24
+**Initial published PASS head:** `73988f806fcf554885b12c3e8fd394ee9a766d24`
 **Date:** 2026-08-28
 
 ## Pre-producer expected criterion/result matrix
@@ -255,10 +256,23 @@ Preserved limitations:
 
 ## Publication and close evidence
 
-Pending dedicated evidence-PR publication and immediate post-publication
-all-state bridge inspection. The evidence PR must contain exactly this artefact
-plus SESSION-0032, both carrying the complete key/target/base/activation/binding
-and completed PASS.
+Dedicated evidence PR #24 was published open, non-draft and unmerged against
+`phase0/development-os` at initial immutable PASS head
+`73988f806fcf554885b12c3e8fd394ee9a766d24`. Immediate live API + pull-ref
+inspection proved exactly two changed files: this artefact and SESSION-0032.
+Both carry the complete key/target/base/activation/binding and completed PASS.
+
+The immediate all-state bridge found exactly one current valid WP-018 verifier
+result, PR #24. Merged PR #23 remained the directly inspected non-result
+builder-routing locator. Canonical head remained `c8b3cb97...`, the active key
+and activation remained exact, and material PR #22 remained open/draft at exact
+`5bd0db2...` with its declared ten-file scope. Therefore a generic fresh session
+must route to a separate Integrator for PR #24, not execute verification again.
+
+This publication-locator update changes only the same two authorised evidence
+records. Its resulting PR head and exact scope are live-inspected again during
+the final close check; the initial PASS head above remains the immutable result
+commit named by both records.
 
 ## Required next responsibility
 

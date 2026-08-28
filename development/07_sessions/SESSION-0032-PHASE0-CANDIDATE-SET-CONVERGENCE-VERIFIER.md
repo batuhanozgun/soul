@@ -12,7 +12,8 @@
 **Provisional activation:** `fbe517bef10b5e820dc096a8a82e2c1a3047a38c`
 **Activation binding:** `e62075228054f43f4dc8d318210ce9de0bf8b8ae`
 **Canonical state inspected through:** `c8b3cb97dfdf95f8b6f7f49e3e7140950128b560`
-**Verifier evidence PR:** pending publication
+**Verifier evidence PR:** #24
+**Initial published PASS head:** `73988f806fcf554885b12c3e8fd394ee9a766d24`
 
 ## Entry, independence and responsibility
 
@@ -134,8 +135,11 @@ does not substitute for fresh separate adversarial re-review.
 
 - exact-target verification artefact above;
 - this SESSION-0032 handoff;
-- dedicated evidence PR targeting `phase0/development-os`, containing exactly
-  these two files after publication.
+- dedicated evidence PR #24 targeting `phase0/development-os`, initially
+  published at immutable PASS head `73988f806fcf554885b12c3e8fd394ee9a766d24`
+  with exactly these two files. Immediate all-state discovery found PR #24 as
+  the sole current valid WP-018 verifier result and routes a fresh session to a
+  separate Integrator.
 
 ## Decisions
 
