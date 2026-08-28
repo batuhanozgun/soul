@@ -1,7 +1,7 @@
 # SOUL PROJECT STATE
 
 **Current phase:** Phase 0 — Development Operating System  
-**Current work package:** WP-018 — Phase 0 Candidate-Set Convergence Verification
+**Current work package:** WP-019 — Phase 0 Candidate-Set Convergence Adversarial Re-review
 **Current branch:** `phase0/development-os`  
 **Current material PR:** #22 — draft, unaccepted and unmerged
 **Current exact material target:** `5bd0db27fc3df368c9e112f01b7eed49a64402ab`
@@ -19,20 +19,23 @@
 **Completed WP-016 activation/binding:** `94bcc9bf9d0352bde67459635a6073c7e65171e2` / `91db45818f324a1c1aef4dd16d48e40591a3f4e1`
 **Current changed-target adversarial re-review result:** WP-016 **Requires repair** for exact target `2f5508c1d6941e951d494bb2a700ef861860431d`; F-AR-006 medium/material and F-AR-007 low/evidence-model correctness stand
 **Current reviewer evidence integration:** PR #21 head `c2c44604ea1694bd84e34bed950e38efe557ff71`, merged evidence-only as `276132a8ad3bcaa5263aba725f6f006019f79287`
-**Current result-control key:** `WP-018 / verifier / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`
-**Current provisional activation commit:** `fbe517bef10b5e820dc096a8a82e2c1a3047a38c`
-**State:** WP-017 producer repair is published on exact PR #22 target `5bd0db2...`; fresh separate verification is active under WP-018; no WP-018 result, fresh adversarial re-review, ADR acceptance, material merge, Phase acceptance, or Phase 1 claim has occurred
+**Completed WP-018 result-control key:** `WP-018 / verifier / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`
+**Current candidate-set verification result:** WP-018 **PASS** for exact target `5bd0db27fc3df368c9e112f01b7eed49a64402ab`, activation `fbe517bef10b5e820dc096a8a82e2c1a3047a38c` and binding `e62075228054f43f4dc8d318210ce9de0bf8b8ae`
+**Current verifier evidence integration:** PR #24 head `1b1d5effa21e156d09b56db741fec0ae0966f2a7`, merged evidence-only as `b2e54a1f7398328a17ba6aaf3a6a91ddbe3c4595`
+**Current result-control key:** `WP-019 / adversarial reviewer / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`
+**Current provisional activation commit:** pending exact binding; fail closed until the next canonical binding commit records the WP-019 activation SHA
+**State:** WP-018 verification is complete with exact-target PASS and evidence-only integration; fresh separate adversarial re-review is active under WP-019; no WP-019 result, ADR acceptance, material merge, Phase acceptance, or Phase 1 claim has occurred
 **Authoritative product branch:** `main`
 
 ## Current objective
 
-Freshly and independently verify the complete candidate-set convergence repair under:
+Freshly and independently adversarially re-review the complete candidate-set convergence repair under:
 
-`development/04_work/WP-018-PHASE0-CANDIDATE-SET-CONVERGENCE-VERIFICATION.md`.
+`development/04_work/WP-019-PHASE0-CANDIDATE-SET-CONVERGENCE-ADVERSARIAL-REREVIEW.md`.
 
-The verifier must derive expectations before reading builder rationale, independently assess all current WP-000 criteria and F-AR-001 through F-AR-007, inspect the exact PR #22 ten-file target and test the exact WP-018 provisional activation bridge protecting this verification's own result interval.
+The reviewer must establish attack hypotheses before relying on producer/verifier conclusions, actively attack all current WP-000 criteria, F-AR-001 through F-AR-007, the exact PR #22 ten-file target, candidate-set convergence/result precedence and the exact WP-019 provisional activation bridge protecting this review's own result interval.
 
-The exact target is `5bd0db27fc3df368c9e112f01b7eed49a64402ab` from base `4524f21cced54c71fb2219b7f42119adbbb5b033`. WP-015 PASS and WP-016 **Requires repair** remain permanently bound only to the superseded PR #19 target `2f5508c...` and cannot certify this changed target. The verifier must not repair, resolve or contain candidates, advance attempts, integrate its own result, perform adversarial re-review, accept an ADR, merge PR #22/PR #1, accept Phase 0, or begin Phase 1.
+The exact target remains `5bd0db27fc3df368c9e112f01b7eed49a64402ab` from base `4524f21cced54c71fb2219b7f42119adbbb5b033`. WP-018 PASS is current only for that exact target and exact activation/binding; it does not accept the target or substitute for adversarial re-review. The reviewer must not repair, resolve or contain candidates, advance attempts, integrate its own result, accept an ADR, merge PR #22/PR #1, accept Phase 0, or begin Phase 1.
 
 ## Canonical current-work rule
 
@@ -249,13 +252,31 @@ Draft PR #22 freezes exact target `5bd0db27fc3df368c9e112f01b7eed49a64402ab` fro
 
 PR #19 was not amended or merged. It is closed unmerged as superseded at immutable head `2f5508c...`; WP-015 PASS, WP-016 **Requires repair** and F-AR-006/F-AR-007 remain permanently bound only to that historical target.
 
-## Active exact-target verification — WP-018
+## Completed exact-target verification — WP-018
 
-`development/04_work/WP-018-PHASE0-CANDIDATE-SET-CONVERGENCE-VERIFICATION.md` is active for a fresh separate verifier.
+`development/04_work/WP-018-PHASE0-CANDIDATE-SET-CONVERGENCE-VERIFICATION.md` is complete as a verification activity and issued:
+
+**PASS** for exact material target `5bd0db27fc3df368c9e112f01b7eed49a64402ab`, material base `4524f21cced54c71fb2219b7f42119adbbb5b033`, provisional activation `fbe517bef10b5e820dc096a8a82e2c1a3047a38c` and binding `e62075228054f43f4dc8d318210ce9de0bf8b8ae`.
 
 Result-control key: `WP-018 / verifier / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`.
 
-The WP-local activation bridge is a provisional material rollout control, not a transition-only relabel and not acceptance of PR #22 governance. Its exact activation commit is `fbe517bef10b5e820dc096a8a82e2c1a3047a38c`. The verifier must execute both bridge checks and publish only the exact verification artefact plus verifier handoff for a separate Integrator.
+Canonical verifier artefact:
+
+`development/06_reviews/VERIFICATION-WP-000-5bd0db27-2026-08-28.md`
+
+Verifier handoff:
+
+`development/07_sessions/SESSION-0032-PHASE0-CANDIDATE-SET-CONVERGENCE-VERIFIER.md`
+
+Dedicated evidence PR #24 contained exactly those two files at immutable head `1b1d5effa21e156d09b56db741fec0ae0966f2a7` and was merged evidence-only by a separate Integrator as `b2e54a1f7398328a17ba6aaf3a6a91ddbe3c4595`. PASS remains exact-target evidence, not target/ADR/Phase acceptance.
+
+## Active exact-target adversarial re-review — WP-019
+
+`development/04_work/WP-019-PHASE0-CANDIDATE-SET-CONVERGENCE-ADVERSARIAL-REREVIEW.md` is active for a fresh separate adversarial reviewer.
+
+Result-control key: `WP-019 / adversarial reviewer / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`.
+
+The WP-local activation bridge is a provisional material rollout control, not a transition-only relabel and not acceptance of PR #22 governance. Its exact activation commit is pending binding in the next canonical commit; until then the review route fails closed. The reviewer must execute both bridge checks and publish only the exact review artefact plus reviewer handoff for a separate Integrator.
 
 ## Material architecture status
 
@@ -285,18 +306,17 @@ WP-007 did not establish PD-002 recurrence as a separate material finding. WP-00
 
 ## Required next responsibility
 
-**Fresh separate verifier under `development/04_work/WP-018-PHASE0-CANDIDATE-SET-CONVERGENCE-VERIFICATION.md`.**
+**Fresh separate adversarial reviewer under `development/04_work/WP-019-PHASE0-CANDIDATE-SET-CONVERGENCE-ADVERSARIAL-REREVIEW.md`.**
 
-Verify exact PR #22 target `5bd0db2...`, using WP-018 result-control attempt 1 and the exact provisional activation binding. Publish only the dedicated verifier artefact and handoff PR, then stop for a separate Integrator.
+Attack exact PR #22 target `5bd0db2...`, using WP-019 result-control attempt 1 and the exact provisional activation binding. Establish attack hypotheses before relying on producer/verifier conclusions; publish only the dedicated adversarial-review artefact and handoff PR, then stop for a separate Integrator.
 
-No current session may combine verifier, Integrator, repair, adversarial re-review, ADR acceptance, material merge, Phase acceptance, or Phase 1 responsibility.
+No current session may combine adversarial reviewer, Integrator, repair, ADR acceptance, material merge, Phase acceptance, or Phase 1 responsibility.
 
 ## Remaining Phase 0 gates
 
 Remaining gates include:
 
-- WP-018 fresh exact-target verification of `5bd0db2...`, followed by separate result integration;
-- fresh separate adversarial re-review of the exact verified target, followed by separate result integration;
+- WP-019 fresh separate adversarial re-review of exact target `5bd0db2...`, followed by separate result integration;
 - repair/resolution or authorised acceptance of any later surviving material findings;
 - ADR-0000, ADR-0001, and ADR-0002 reaching the status required by their declared decision paths;
 - PR #22 may be integrated only after its required gates permit it; PR #19, PR #16 and PR #13 remain closed unmerged and superseded;
@@ -305,11 +325,11 @@ Remaining gates include:
 
 ## Authority boundaries remain unchanged
 
-No current WP-018 verifier session may:
+No current WP-019 adversarial-reviewer session may:
 
 - edit historical verifier/reviewer evidence or reinterpret WP-015 PASS, WP-016 **Requires repair**, or F-AR-001 through F-AR-007;
 - weaken WP-000 acceptance criteria;
-- repair the candidate, resolve or contain evidence candidates, advance the attempt, canonically integrate its own result, or perform adversarial re-review;
+- repair the candidate, resolve or contain evidence candidates, advance the attempt, or canonically integrate its own result;
 - accept ADR-0000, ADR-0001, or ADR-0002;
 - merge PR #22, PR #19, PR #16 or PR #1;
 - accept Phase 0 or begin Phase 1.

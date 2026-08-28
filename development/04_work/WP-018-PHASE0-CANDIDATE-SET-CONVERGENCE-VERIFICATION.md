@@ -1,6 +1,6 @@
 # WP-018 — Phase 0 Candidate-Set Convergence Verification
 
-**Status:** active — fresh separate verifier required
+**Status:** complete — verification issued **PASS**; evidence integrated by separate Integrator
 **Owner role:** verifier
 **Decision authority:** independently issue PASS / FAIL / NOT VERIFIED for the
 complete WP-017 material target and its exact provisional activation; no repair,
@@ -234,11 +234,17 @@ transitions canonical state without reinterpretation.
 
 ## Completion state
 
-Active — fresh separate verifier required after exact activation binding. No
-verification result exists for `5bd0db2...`.
+**Complete as a verification activity — result: PASS.**
+
+The result remains permanently bound only to exact target/base/activation/
+binding/key named above. Dedicated verifier evidence PR #24 at immutable head
+`1b1d5effa21e156d09b56db741fec0ae0966f2a7` was integrated evidence-only as
+`b2e54a1f7398328a17ba6aaf3a6a91ddbe3c4595`. This does not accept ADR-0002,
+PR #22/#1, WP-000 or Phase 0.
 
 ## Handoff
 
-Exact next responsibility after the immediate canonical binding commit: fresh
-separate verifier executes attempt 1, publishes only verification artefact +
-handoff PR, and stops for another separate Integrator.
+Exact next responsibility: fresh separate adversarial reviewer under
+`WP-019-PHASE0-CANDIDATE-SET-CONVERGENCE-ADVERSARIAL-REREVIEW.md` executes its
+own attempt-1 key against the same exact target, publishes only review artefact
++ handoff PR, and stops for another separate Integrator.
