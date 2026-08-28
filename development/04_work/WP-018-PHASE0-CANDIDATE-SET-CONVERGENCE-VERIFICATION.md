@@ -16,8 +16,8 @@ acceptance or Phase 1 authority
 **Historical rejected target:** closed-unmerged PR #19 at
 `2f5508c1d6941e951d494bb2a700ef861860431d`
 **Result-control key:** `WP-018 / verifier / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`
-**Provisional activation commit:** pending exact binding; fail closed until the
-next canonical commit records this activation SHA
+**Provisional activation commit:**
+`fbe517bef10b5e820dc096a8a82e2c1a3047a38c`
 
 ## Objective
 

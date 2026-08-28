@@ -20,7 +20,7 @@
 **Current changed-target adversarial re-review result:** WP-016 **Requires repair** for exact target `2f5508c1d6941e951d494bb2a700ef861860431d`; F-AR-006 medium/material and F-AR-007 low/evidence-model correctness stand
 **Current reviewer evidence integration:** PR #21 head `c2c44604ea1694bd84e34bed950e38efe557ff71`, merged evidence-only as `276132a8ad3bcaa5263aba725f6f006019f79287`
 **Current result-control key:** `WP-018 / verifier / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`
-**Current provisional activation commit:** pending exact binding; fail closed until the next canonical binding commit records the WP-018 activation SHA
+**Current provisional activation commit:** `fbe517bef10b5e820dc096a8a82e2c1a3047a38c`
 **State:** WP-017 producer repair is published on exact PR #22 target `5bd0db2...`; fresh separate verification is active under WP-018; no WP-018 result, fresh adversarial re-review, ADR acceptance, material merge, Phase acceptance, or Phase 1 claim has occurred
 **Authoritative product branch:** `main`
 
@@ -255,7 +255,7 @@ PR #19 was not amended or merged. It is closed unmerged as superseded at immutab
 
 Result-control key: `WP-018 / verifier / 5bd0db27fc3df368c9e112f01b7eed49a64402ab / attempt 1`.
 
-The WP-local activation bridge is a provisional material rollout control, not a transition-only relabel and not acceptance of PR #22 governance. Its exact activation commit is pending binding in the next canonical commit; until then the verifier route fails closed. The verifier must execute both bridge checks and publish only the exact verification artefact plus verifier handoff for a separate Integrator.
+The WP-local activation bridge is a provisional material rollout control, not a transition-only relabel and not acceptance of PR #22 governance. Its exact activation commit is `fbe517bef10b5e820dc096a8a82e2c1a3047a38c`. The verifier must execute both bridge checks and publish only the exact verification artefact plus verifier handoff for a separate Integrator.
 
 ## Material architecture status
 
