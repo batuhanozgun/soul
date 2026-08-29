@@ -6,6 +6,8 @@
 **Reviewed commit:** `acf6ddc621c644e5a0960e3382b25928d2518041`  
 **Reviewed base:** `6fca29474ab97d22e363108b8be6438456316e01`  
 **Result-control key:** `WP-022 / adversarial reviewer / acf6ddc621c644e5a0960e3382b25928d2518041 / attempt 1`  
+**Reviewer output branch:** `codex/wp022-prebuild-adversarial-review`
+**Reviewer evidence PR:** `#29` — initial published result head `f351d54d2ef937141fec7e889c702e05c7468d22`
 **Authoritative specification:** `WP-000`, `WP-021`, `WP-022`, current foundation and governance  
 **Date:** 2026-08-29
 
