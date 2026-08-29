@@ -123,5 +123,9 @@
 - `../07_sessions/SESSION-0033-PHASE0-WP018-RESULT-INTEGRATOR-RECOVERY.md` — recovered PR #24 evidence merge, WP-018 PASS binding and canonical WP-019 adversarial re-review activation/binding; no review/repair/acceptance
 - `../07_sessions/SESSION-0034-PHASE0-CANDIDATE-SET-CONVERGENCE-ADVERSARIAL-REREVIEWER.md` — WP-019 **Requires repair** for exact target `5bd0db2...`; F-AR-008 medium/material stands; evidence PR #25 integrated evidence-only as `8022ca6f...`
 - `../07_sessions/SESSION-0035-PHASE0-WP019-RESULT-INTEGRATOR.md` — PR #25 evidence integration, WP-019 **Requires repair** binding and canonical WP-020 bounded repair activation; no repair/acceptance
+- `../07_sessions/SESSION-0036-PHASE0-WP021-ACTIVATION.md` — owner-directed WP-021 design/evaluation activation, immutable fallback checkpoint and WP-020 block without F-AR-008 reinterpretation
+- `../07_sessions/SESSION-0038-PHASE0-WP021-DESIGN-TARGET-ROUTING.md` — exact PR #28 design-only target `acf6ddc...` routed to fresh WP-022 pre-build adversarial review
+- `../07_sessions/SESSION-0039-PHASE0-WP021-PREBUILD-ADVERSARIAL-REVIEWER.md` — WP-022 **Requires design revision** for `acf6ddc...`; F-AR-009 through F-AR-012 medium/material stand; evidence PR #29 integrated as `71e3c8b4...`
+- `../07_sessions/SESSION-0040-PHASE0-WP022-RESULT-INTEGRATOR.md` — PR #29 evidence integration, unchanged WP-022 result binding and canonical WP-021 design revision/synthesis routing; no repair/implementation/acceptance
 
 This index is **navigational and derived only**. It does not override the authority hierarchy defined in `SOURCE_OF_TRUTH.md`, the bootstrap sequence in `COLD_START.md`, or current project truth in `STATE.md`. If any current-work value here ever disagrees with `STATE.md`, `STATE.md` wins and this index is stale until updated.
