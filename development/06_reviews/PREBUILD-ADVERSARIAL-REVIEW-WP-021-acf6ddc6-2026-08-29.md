@@ -48,7 +48,63 @@ Observed live PR metadata at the precheck:
 
 ## First-pass design attack
 
-Pending exact-target design inspection.
+The following candidate failure paths were frozen after reading only the exact
+lifecycle specification and proposed ADR-0003, before producer evidence or
+SESSION-0037. They are hypotheses to disprove, not final findings.
+
+1. **Technical-decision acceptance is circular or unowned.** Lifecycle lines
+   262–272 make the responsible Designer the technical decision owner after
+   review, while forbidding the Integrator from supplying acceptance judgement.
+   ADR-0003 line 6 explicitly defers final non-owner acceptance authority to the
+   future accepted WP-021 decision-policy change. No actor or rule in the frozen
+   design says who independently determines that review findings/gates are
+   satisfied and authorises the ADR status transition. A Designer can therefore
+   become producer and accepter, or the ADR can remain permanently proposed.
+   Disproof sought from producer material: an already-frozen non-circular status
+   transition and finding-disposition authority.
+2. **Context classification can hide evidence with no detection path.**
+   Lifecycle lines 274–290 define three context classes and prohibit hiding
+   required sources, but do not assign authority for classification, require a
+   manifest of omitted sources, or define how a fresh role discovers that an
+   unknown trigger was omitted. A WP author can classify disconfirming evidence
+   as forensic; a fresh reviewer following required-now material cannot know to
+   retrieve it. Disproof sought: an explicit independent classification/checking
+   mechanism that is part of the frozen candidate rather than future work.
+3. **Rollback is asserted but not designed.** ADR-0003 line 216 names rollback
+   as mitigation, while the lifecycle contains no rollback/disable procedure,
+   migration invariant, or forward-restoration semantics. A checkpoint ref alone
+   cannot safely undo operational governance after later canonical evidence and
+   state commits exist. Disproof sought: an executable forward-restoration plan
+   in the frozen design or an explicit pre-implementation output/gate that blocks
+   build readiness until it exists.
+4. **Planner can change canonical work scope through an undefined boundary.**
+   Lifecycle lines 85–94 allow Planner to define the next objective/problem and
+   recognise that a prior WP should remain blocked, be superseded or resume, but
+   only prohibit authority outside accepted roadmap/phase boundaries. Superseding
+   an owner-directed or active WP can itself alter accepted scope/priority. The
+   design does not state which such transitions are technical routing, which need
+   an ADR/WP change, and which return to Human Owner authority. Disproof sought:
+   a concrete decision table or authority-preserving escalation rule.
+5. **Route classification has no convergence criterion.** Strong Route-3
+   triggers are intentionally broad; de-escalation needs evidence, ambiguity
+   opens investigation, and the only liveness guard is the qualitative phrase
+   `supports the candidate` / `proceed rather than researching indefinitely`
+   (lifecycle lines 318–326). Repeated missing or mixed evidence can therefore
+   produce unbounded Planner/investigation loops without a representable terminal
+   not-assessable/owner-decision state. Disproof sought: bounded evaluation or a
+   terminal routing state with authority and evidence criteria.
+6. **The distinct permanent Planner may be more mechanism than the design has
+   yet earned.** The design states a unique motivation but does not itself show
+   why a bounded work-selection function plus deterministic route gate could not
+   be assigned to an existing Designer execution with fresh-context separation.
+   Disproof sought from producer analysis/replay: concrete conflict evidence and
+   a lower-complexity comparison showing the permanent role changes outcomes.
+7. **Pre-build independence can be consumed by Designer-controlled synthesis.**
+   Lifecycle lines 185–207 freeze perspectives/review but return all synthesis to
+   the Designer. It does not define an immutable finding-disposition gate or who
+   prevents the Designer from labelling a material finding resolved in its own
+   revised design. Disproof sought: exact-target re-review/finding acceptance
+   rules outside the Designer's sole judgement.
 
 ## Producer evidence challenge
 
