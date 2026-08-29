@@ -1,9 +1,9 @@
 # WP-020 — Phase 0 Uncontained Inspection Fail-Closed Repair
 
-**Status:** active — fresh separate designer/builder required
-**Owner role:** designer/builder
+**Status:** blocked — unresolved F-AR-008 preserved; execution deferred while WP-021 evaluates and strengthens Development OS lifecycle/work-selection  
+**Owner role:** designer/builder when/if this repair is reactivated under the then-current accepted lifecycle
 **Decision authority:** bounded repair of F-AR-008 within existing
-foundation/governance and unchanged WP-000 acceptance criteria;
+foundation/governance and unchanged WP-000 acceptance criteria unless a later accepted Development OS change explicitly supersedes this routing;
 architecture-level choices must follow `DECISION_POLICY.md`; no independent
 verification, adversarial-review self-approval, canonical independent-result
 integration, ADR acceptance, PR #22/#1 merge, Phase acceptance or Phase 1
@@ -14,6 +14,7 @@ authority
 **Material base:** `4524f21cced54c71fb2219b7f42119adbbb5b033`
 **Parent:** `WP-000-DEVELOPMENT-OS.md`
 **Prior repair package:** `WP-017-PHASE0-CANDIDATE-SET-CONVERGENCE-REPAIR.md`
+**Current blocker:** `WP-021-DEVELOPMENT-LIFECYCLE-WORK-SELECTION-IMPROVEMENT.md` — Development OS must decide/evaluate whether the correct next work is still this bounded repair before implementation proceeds
 **Exact-target verification:** WP-018 — **PASS** for exact target
 `5bd0db27fc3df368c9e112f01b7eed49a64402ab`, activation
 `fbe517bef10b5e820dc096a8a82e2c1a3047a38c` and binding
@@ -33,7 +34,7 @@ medium/material, stands
 
 ## Objective
 
-Produce the smallest coherent material repair for F-AR-008 so the pending
+If reactivated after WP-021 work-selection/design evaluation, produce the smallest coherent material repair for F-AR-008 so the pending
 independent-result route does not convert an uncontained, uninspectable
 same-key candidate into invalid residue merely because one current-valid result
 is visible.
@@ -44,6 +45,8 @@ fail closed when an uncontained candidate is epistemically unknown and could
 conceal a second current result. The builder must derive the repair
 architecture; this routing WP does not preselect a particular implementation,
 control record, ordering expression or PR disposition.
+
+This objective remains an unresolved candidate work path, not a current instruction to implement. WP-021 may conclude through an accepted lifecycle/work-selection process that a broader reframing or another authorised path supersedes this bounded repair. Such a conclusion must preserve F-AR-008 as an unresolved obligation rather than erase it.
 
 ## Exact finding preserved
 
@@ -63,6 +66,8 @@ limitations remain authoritative in the immutable WP-019 review artefact. This
 WP must not rewrite, soften or reinterpret them.
 
 ## Scope
+
+If this WP is reactivated:
 
 - analyse both the immediate decision-order/type defect and the system cause
   that collapsed directly proven invalid residue and epistemically unknown
@@ -97,7 +102,8 @@ WP must not rewrite, soften or reinterpret them.
 
 ## Non-scope
 
-- prescribing the substantive repair design from this transition-only route;
+- executing this repair while WP-021 remains the active blocker;
+- prescribing the substantive repair design from this routing package;
 - changing or weakening WP-000 acceptance criteria;
 - rewriting, deleting or reinterpreting F-AR-001 through F-AR-008 or any
   immutable verifier/reviewer evidence;
@@ -115,7 +121,7 @@ WP must not rewrite, soften or reinterpret them.
 
 ## Required reading
 
-Enter through `development/03_plan/COLD_START.md` and complete Steps 1–2 first.
+If this WP is reactivated, enter through `development/03_plan/COLD_START.md` and complete Steps 1–2 first.
 Within Step 3, read:
 
 1. `development/04_work/WP-000-DEVELOPMENT-OS.md`;
@@ -134,7 +140,8 @@ Within Step 3, read:
     `CHANGE_POLICY.md` and `VERIFICATION_POLICY.md`;
 11. `development/03_plan/COLD_START.md`, `PR_GATE.md` and `PHASE_GATE.md`;
 12. proposed ADR-0002, all three producer evidence records, exact executable
-    model and result-control template on PR #22.
+    model and result-control template on PR #22;
+13. the accepted WP-021 lifecycle/work-selection artefacts that determine why this bounded repair is being reactivated rather than superseded.
 
 ## Inputs and dependencies
 
@@ -144,9 +151,12 @@ Within Step 3, read:
   `5bd0db27...` and its activation/binding;
 - PR #22 remaining draft, unaccepted and unmerged until a new-target relation
   and all later gates are established;
-- unchanged WP-000 criteria and foundation/governance authority boundaries.
+- accepted output of WP-021 establishing that this bounded repair is the correct next work, if reactivated;
+- then-current WP-000 criteria and foundation/governance authority boundaries.
 
 ## Outputs
+
+If reactivated:
 
 - a bounded material repair candidate on an explicit repair branch/PR;
 - one new exact material target SHA and base with complete changed-file scope;
@@ -160,6 +170,8 @@ Within Step 3, read:
   re-review, without performing either.
 
 ## Acceptance criteria
+
+If reactivated:
 
 1. **Finding fidelity:** F-AR-008 wording, medium/material severity, standing
    result and exact target/key/activation/binding remain unchanged.
@@ -183,7 +195,7 @@ Within Step 3, read:
    exact; controls remain canonical-before-use and Integrator-only.
 10. **Model and evidence correctness:** normative text, executable model,
     templates and evidence agree, and the unsafe mixed-state ordering fails red.
-11. **Unchanged parent criteria:** every current WP-000 criterion is preserved
+11. **Current parent criteria:** every then-current WP-000 criterion is preserved
     and freshly re-verified for the new exact target.
 12. **Exact target and fresh gates:** one new target/base/scope is frozen and
     receives fresh separate verification plus fresh separate adversarial
@@ -195,7 +207,9 @@ Within Step 3, read:
 
 ## Required verification and review
 
-- fresh separate verifier against the new exact target, including all current
+If reactivated:
+
+- fresh separate verifier against the new exact target, including all then-current
   WP-000 criteria and explicit regression of F-AR-001 through F-AR-008;
 - separate Integrator result transition after verifier close;
 - fresh separate adversarial re-review of the exact verified repair target;
@@ -212,6 +226,8 @@ and smaller than those alternatives.
 
 ## Risks
 
+- losing or softening F-AR-008 merely because its prior repair routing is blocked;
+- reactivating the old repair automatically after WP-021 without an explicit work-selection conclusion;
 - fixing the mixed state by suppressing legitimate current-valid-result
   precedence over directly proven invalid residue;
 - treating every inaccessible contained candidate as unknown forever and
@@ -226,14 +242,8 @@ and smaller than those alternatives.
 
 ## Completion state
 
-Active — fresh separate designer/builder required. No F-AR-008 repair, new
-exact material target, verification or re-review exists.
+**Blocked, unresolved.** No F-AR-008 repair, new exact material target, verification or re-review exists. The finding and all historical exact-target evidence remain unchanged. Execution may resume only after WP-021 establishes through the accepted Development OS lifecycle that this bounded repair is the correct next work, or WP-020 is explicitly superseded by a successor work package that carries F-AR-008 unchanged as an unresolved acceptance obligation.
 
 ## Handoff
 
-Exact next responsibility: **fresh separate designer/builder**. Preserve the
-reviewer result and unchanged parent criteria, derive and publish the smallest
-coherent repair with one new exact target and red-capable regression evidence,
-then stop for fresh separate verification. Do not self-certify, integrate an
-independent result, accept/reject ADR-0002, merge PR #22/#1, accept Phase 0 or
-begin Phase 1.
+No Builder should execute this WP while WP-021 is active. The current next responsibility is defined by `STATE.md` and WP-021. If a later accepted work-selection decision reactivates WP-020, use the then-current Development OS lifecycle and this preserved F-AR-008 obligation rather than assuming the old repair route is automatically valid.
