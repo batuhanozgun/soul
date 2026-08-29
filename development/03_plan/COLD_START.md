@@ -15,6 +15,88 @@ Read, in this order:
 
 This bootstrap order exists so a fresh session can first discover the current work and then load the rules that govern authority and execution. Reading order does not change the semantic authority hierarchy in `SOURCE_OF_TRUTH.md`.
 
+### Step 1A — Pending independent-result guard
+
+After Step 1 and before choosing/loading an independent verifier or adversarial-reviewer execution role, apply this guard when the active WP says that the completed result requires a separate Integrator transition.
+
+The active independent WP must declare one **result-control key** containing all four values below:
+
+- active WP identifier;
+- independent role;
+- exact material target SHA/version;
+- positive attempt number.
+
+The key is canonical only because it is part of the active WP named by `STATE.md`. PR metadata, result artefacts, handoffs, resolution records and branch names remain subordinate evidence. A result artefact and handoff must bind themselves to the complete key; WP/role/target equality without attempt equality is not a current match.
+
+Perform the guard in this order:
+
+1. **Resolve the expected key from canonical state.** Read it from the active WP. Do not infer or repair a missing/incomplete key from chat, PR metadata, a handoff or a result artefact. Missing or contradictory key material is a fail-closed blocker.
+2. **Discover same-WP candidates.** Inspect repository PRs targeting the active development branch, including open and merged/closed evidence PRs. PR title/body/labels are locators only.
+3. **Apply only canonical candidate controls.** An exact-head resolution may
+   exclude only the repository + PR + immutable head it directly inspected. A
+   moving-candidate containment record may apply only after a separate
+   Integrator recorded an earlier resolved invalid head plus a later directly
+   inspected invalid moved head for the same repository + PR and complete
+   active key. A candidate-set containment record may apply only after a
+   separate Integrator binds an earlier canonical invalid-candidate control plus
+   a later directly inspected invalid candidate at a distinct PR identity to
+   the same canonical repository and complete active key. Every record must
+   already exist on the canonical development branch and satisfy
+   `VERIFICATION_POLICY.md`; local, PR-only or candidate-authored records have
+   no effect.
+4. **Validate every observed head directly when inspectable, then classify the
+   full set before routing.** A current pending result has the complete expected key
+   in both the result artefact and handoff, a completed result, and
+   evidence/session-only changed-file scope with no repair, canonical-state/WP
+   transition, acceptance, ADR, target-merge or Phase change. Exact-head
+   resolution never applies after movement. Neither containment mode skips this
+   current-result validation. Keep directly inspected invalid, exactly
+   resolved/contained non-valid and uncontained uninspectable candidates
+   distinct. Locator metadata, prior invalidity at another head or a visible
+   result cannot convert the last class into invalid residue.
+5. **Classify before acting.** Distinguish:
+   - no unresolved same-WP candidate;
+   - exactly one current-match candidate;
+   - one or more directly inspected invalid, stale, target/attempt-mismatched,
+     incomplete or malformed candidates not covered by canonical resolution or
+     containment;
+   - one or more epistemically unknown uninspectable candidates not covered by
+     an exact applicable canonical resolution, moving-candidate containment or
+     candidate-set containment;
+   - one or more later invalid or inaccessible heads covered by canonical
+     moving-candidate or candidate-set containment under the exact active key;
+   - multiple current-match or otherwise conflicting candidates;
+   - unavailable repository/PR discovery or inspection.
+6. **Route deterministically.** Repository-wide discovery failure always blocks.
+   Any epistemically unknown uncontained uninspectable candidate then blocks in
+   every mixed state, including when one current match is visible, because it
+   may conceal an additional current result. With no such unknown, multiple
+   current matches remain a conflict and one current match routes to Integrator
+   before directly proven invalid or validly resolved/contained non-valid
+   residue. With no current match, a first directly inspected unresolved invalid
+   head routes to exact-head resolution; a later invalid moved head on the same
+   PR routes once to moving-candidate containment. A later directly inspected
+   invalid candidate at a fresh PR identity, after an earlier canonical
+   invalid-candidate control under the same repository/key, routes once to
+   candidate-set containment. After the applicable canonical containment,
+   later inspectable-invalid or candidate-specifically inaccessible heads or PR
+   identities are recorded as contained and do not block the canonical
+   responsibility. They are not accepted, selected or treated as absent.
+   Uncontained directly proven invalid/ambiguous candidates use their bounded
+   recovery routes; uncontained uninspectable candidates fail closed. Clearly
+   unrelated another-WP evidence and exact-head candidates covered by valid
+   canonical resolution records do not block.
+
+Integrator resolution and containment are bounded by `VERIFICATION_POLICY.md`
+and `PR_GATE.md`. None may suppress a valid current result, and no visible
+result may suppress an uncontained epistemically unknown candidate. Moving-candidate
+containment is bound to the complete active key and candidate PR identity;
+candidate-set containment is bound to the exact canonical repository and
+complete active key. Candidate head, state, branch or fresh PR identity
+mutation cannot reset the applicable control. Multiple valid current results
+are preserved as a conflict and routed to a fresh canonical attempt instead of
+choosing one.
+
 ## Step 2 — Load common reasoning governance, then role-relevant governance
 
 First, every role reads:
@@ -23,7 +105,7 @@ First, every role reads:
 
 This is a common reasoning discipline, not a second bootstrap authority. It does not redefine the active WP, role authority or source-of-truth hierarchy.
 
-Then load the role-relevant material:
+Then load the material relevant to the effective execution route after Step 1A (normally the active WP owner role; Integrator/blocker handling when the guard routes there):
 
 - Designer/builder: `ROLE_MODEL.md`, `DECISION_POLICY.md`, `CHANGE_POLICY.md`
 - Researcher: `ROLE_MODEL.md`, `SOURCE_OF_TRUTH.md`, active WP evidence obligations
@@ -35,16 +117,28 @@ Then load the role-relevant material:
 
 Read the foundation files and exact `Required reading` references named by the active WP. A WP may specify an order **within this Step 3 material** when independence or evidence handling requires it; that local order begins only after Steps 1–2 are complete and cannot retroactively reorder the bootstrap.
 
+When Step 1A routes to Integrator/blocker handling, the active WP and key remain canonical until an authorised transition. Read only the candidate/result/resolution evidence and Integrator governance needed to classify or recover; do not execute the blocked independent role's substantive procedure.
+
 Historical session records and launch briefs are evidence/continuity artefacts, not alternative cold-start authorities. Project Instructions and remembered chat context are entry conveniences only; do not substitute them for missing repository material.
 
 ## Step 4 — Declare session responsibility
 
-Before substantive work, state the session role and one primary responsibility. If the requested responsibility conflicts with the active WP or authority hierarchy, stop and record the conflict rather than silently widening scope.
+### Final independent-role commitment gate
+
+Immediately before declaring or beginning an independent verifier/adversarial-reviewer responsibility, re-run Step 1A against live repository/PR state and the still-current canonical result-control key. No other reading, planning, branch creation or substantive action may occur between this final re-check and role commitment.
+
+- If the key, canonical state, candidate set, candidate head, candidate inspection result or discovery capability changed, use the new Step 1A outcome.
+- If the re-check cannot complete, fail closed; do not treat inability to inspect as absence.
+- If it still yields no unresolved candidate, declare the independent role and begin the bounded responsibility.
+
+This second check closes the publication-during-Steps-2/3 path. The repository host does not provide an atomic transaction spanning evidence-PR publication and a model session's first substantive action, so a publication after the final check remains a residual boundary. The control bounds that interval to the immediate check-to-commit edge and requires later result conflict handling; it does not claim a platform-level lock that does not exist.
+
+Before substantive work, state the session role and one primary responsibility. If Step 1A routes a pending result or unresolved candidate, declare Integrator/blocker handling rather than the independent role while preserving canonical state until an authorised transition. If the requested responsibility conflicts with the active WP, guard outcome or authority hierarchy, stop and record the conflict rather than silently widening scope.
 
 ## Step 5 — Work and close through repository state
 
 Apply `REASONING_POLICY.md` proportionally to the work: baseline epistemic rules always apply; deeper framing/necessity/falsification/root-cause checks are invoked only when their documented triggers apply.
 
-When the responsibility is complete, follow the session-close requirements in `WORKING_PROTOCOL.md` and leave a session handoff. Verifier sessions additionally leave canonical-state transition to a separate integrator under `VERIFICATION_POLICY.md`.
+When the responsibility is complete, follow the session-close requirements in `WORKING_PROTOCOL.md` and leave a session handoff. Verifier/reviewer sessions bind result + handoff to the complete result-control key, publish through the evidence-PR contract, and leave canonical-state transition to a separate Integrator. Verifier sessions additionally follow `VERIFICATION_POLICY.md`.
 
-A cold-start is successful when the new session can determine what is true, what work is active, what it is authorised to do, what reasoning discipline applies, and what completion means without replaying the previous chat.
+A cold-start is successful when the new session can determine what is true, what work is active, whether a completed or unresolved independent-result candidate changes the execution route, what it is authorised to do, what reasoning discipline applies, and what completion means without replaying the previous chat.
