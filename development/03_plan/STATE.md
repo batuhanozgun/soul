@@ -1,14 +1,18 @@
 # SOUL PROJECT STATE
 
 **Current phase:** Phase 0 — Development Operating System  
-**Current work package:** WP-021 — Development OS Lifecycle and Work-Selection Improvement  
+**Current work package:** WP-022 — WP-021 Development Lifecycle Pre-Build Adversarial Review  
 **Current branch:** `phase0/development-os`  
-**Current work mode:** design-only; candidate governance implementation is gated behind fresh pre-build adversarial review and historical replay/evaluation  
+**Current work mode:** fresh independent pre-build adversarial review of frozen design target; governance implementation remains blocked behind review + replay/evaluation + synthesis  
 **Fallback checkpoint:** `checkpoint/phase0-pre-lifecycle-v2-c4ebef9` at `c4ebef9e58a4a94edce22ebbb94d94414dffd92c`  
+**Parent improvement:** WP-021 — Development OS Lifecycle and Work-Selection Improvement  
+**Current design PR:** #28 — draft, unaccepted, unmerged  
+**Current exact design target:** `acf6ddc621c644e5a0960e3382b25928d2518041`  
+**Current design base:** `6fca29474ab97d22e363108b8be6438456316e01`  
+**Current review result-control key:** `WP-022 / adversarial reviewer / acf6ddc621c644e5a0960e3382b25928d2518041 / attempt 1`  
 **Blocked unresolved work:** WP-020 — F-AR-008 remains medium/material, stands, unresolved; no repair target exists  
-**Current material PR:** #22 — draft, unaccepted and unmerged; remains the rejected WP-017 target and is not the WP-021 target  
-**Current exact material target:** `5bd0db27fc3df368c9e112f01b7eed49a64402ab` — historical/current rejected result-control target only; WP-021 has not yet frozen a lifecycle design target  
-**Material base:** `4524f21cced54c71fb2219b7f42119adbbb5b033` — for PR #22 historical target  
+**Rejected result-control material PR:** #22 — draft, unaccepted and unmerged at `5bd0db27fc3df368c9e112f01b7eed49a64402ab`; it is not the WP-021 design target  
+**Result-control material base:** `4524f21cced54c71fb2219b7f42119adbbb5b033`  
 **Superseded rejected material PR:** #19 — closed unmerged at `2f5508c1d6941e951d494bb2a700ef861860431d`
 **Current verification result:** WP-012 **PASS** for exact target `adf067e4289e4c0b51cf40c1940193e8252b22e0` and activation `7c625107c09788d6066249c67d66cbf7c0c4b576`
 **Verifier evidence integration:** PR #17 head `1caf39a3fcf62c18a8d017f71f26f9c834951e70`, merged evidence-only as `2d7329508fbecf7a05cf7f26cd16e2330985a076`
@@ -29,16 +33,18 @@
 **Completed WP-019 activation/binding:** `3b91acf02df2852c43404ec164725ac5748b9bad` / `fa6f208e6133f746a69a4a51faff3f2485798d24`
 **Current candidate-set adversarial re-review result:** WP-019 **Requires repair** for exact target `5bd0db27fc3df368c9e112f01b7eed49a64402ab`; F-AR-008 medium/material, stands
 **Current reviewer evidence integration:** PR #25 initial result commit `6b328cdeb127f56b163b999eaa8621fd6d5ead19`, final head `16b5aacb12d05157e183cb9257025f30636e0f71`, merged evidence-only as `8022ca6fb30fc32e6a95f22c5c1d58c5ab8c1745`
-**State:** WP-019 result is fully integrated; WP-020 repair execution is blocked without resolving or weakening F-AR-008; WP-021 is active to design and evaluate a stronger Development OS work-selection/lifecycle before any further result-control build; no new lifecycle architecture, F-AR-008 repair, new exact repair target, ADR acceptance, material merge, Phase acceptance or Phase 1 claim has occurred
+**State:** WP-021 design producer froze exact candidate `acf6ddc...` on draft PR #28 without operational governance changes; WP-022 fresh pre-build adversarial review is now the current responsibility; WP-020 remains blocked/unresolved; no design review result, replay result, lifecycle implementation, ADR acceptance, F-AR-008 repair, Phase acceptance or Phase 1 claim exists
 **Authoritative product branch:** `main`
 
 ## Current objective
 
-Execute the **design-only stage** of:
+Execute the fresh separate pre-build adversarial review defined by:
 
-`development/04_work/WP-021-DEVELOPMENT-LIFECYCLE-WORK-SELECTION-IMPROVEMENT.md`.
+`development/04_work/WP-022-WP021-DEVELOPMENT-LIFECYCLE-PREBUILD-ADVERSARIAL-REVIEW.md`.
 
-The current responsibility is to produce and freeze a proposed Development OS lifecycle/work-selection architecture, proposed ADR-0003, motivation/function map and historical replay protocol on a separate WP-021 candidate branch. The exact proposed design must then receive a fresh pre-build adversarial review and replay/evaluation evidence before any operational governance policy is modified to enact it.
+The reviewer must independently attack exact frozen design target `acf6ddc621c644e5a0960e3382b25928d2518041` / PR #28, derive its attack model before reading producer rationale, and publish only the review artefact + fresh reviewer handoff in a dedicated evidence PR. It must not repair or implement the candidate design.
+
+Historical replay/evaluation under the frozen WP-021 protocol remains separately required even if the design review is clean. Operational governance implementation remains blocked until review + replay/evaluation have been integrated and synthesised and no surviving material design finding makes implementation premature.
 
 WP-020 remains blocked, not completed or cancelled. F-AR-008 remains standing and unresolved exactly as issued by WP-019. PR #22 remains draft/unaccepted/unmerged at exact rejected target `5bd0db27fc3df368c9e112f01b7eed49a64402ab`; WP-018 PASS and WP-019 **Requires repair** remain permanently bound only to that target and their exact activation/result keys.
 
@@ -46,7 +52,7 @@ The owner-directed improvement may rewrite current Development OS mechanisms if 
 
 ## Canonical current-work rule
 
-This file is the authoritative home for current phase, active WP, current material target, and current next responsibility. The active WP named here supplies detailed responsibility, authority, required readings, acceptance criteria, exact-target rules, and handoff.
+This file is the authoritative home for current phase, active WP, current material/design target, and current next responsibility. The active WP named here supplies detailed responsibility, authority, required readings, acceptance criteria, exact-target rules, and handoff.
 
 `development/03_plan/NEXT_SESSION.md` and `development/03_plan/CHATGPT_PROJECT_ENTRY.md` are derived launch conveniences and intentionally store no copied mutable current WP/role/target values. `development/03_plan/WORKSPACE_INDEX.md` is navigational and subordinate to this state.
 
@@ -309,18 +315,27 @@ WP-018 PASS.
 ## Blocked bounded repair — WP-020
 
 `development/04_work/WP-020-PHASE0-UNCONTAINED-INSPECTION-FAIL-CLOSED-REPAIR.md`
-is blocked from execution while WP-021 evaluates and strengthens the Development OS work-selection/lifecycle.
+is blocked from execution while the Development OS work-selection/lifecycle improvement is evaluated.
 
 F-AR-008 remains unresolved and standing. No new exact repair target exists. The prior routing package is preserved so that, if a later accepted work-selection decision concludes the bounded repair is still the right next work, its finding-specific obligations remain available. WP-021 may instead establish that a broader successor work is justified; such a successor must carry F-AR-008 unchanged rather than erase it.
 
-## Active Development OS improvement — WP-021
+## WP-021 design candidate
 
 `development/04_work/WP-021-DEVELOPMENT-LIFECYCLE-WORK-SELECTION-IMPROVEMENT.md`
-is active in a design-only stage.
+remains the parent improvement.
 
-The current task is to freeze a proposed lifecycle/work-selection architecture and ADR on a separate candidate branch, then subject that exact design to fresh pre-build adversarial review and historical replay/evaluation before operational governance implementation begins.
+Its design producer froze proposed lifecycle/ADR/evaluation artefacts at exact target `acf6ddc621c644e5a0960e3382b25928d2518041` on draft PR #28 from base `6fca29474ab97d22e363108b8be6438456316e01`. The target adds exactly five design/evidence/session files and does not enact the lifecycle into current operational governance.
 
-The improvement investigates whether recent repair progression reflects, in part, a structural bias caused by automatic repair-shaped result routing and the combined Designer/Builder motivation. The hypothesis is supported by evidence but is not treated as proven or as the sole cause. Added process complexity has a burden of proof.
+The candidate investigates whether recent repair progression reflects, in part, a structural bias caused by automatic repair-shaped result routing and the combined Designer/Builder motivation. The hypothesis is supported by evidence but is not treated as proven or as the sole cause. Added process complexity has a burden of proof.
+
+## Active pre-build design review — WP-022
+
+`development/04_work/WP-022-WP021-DEVELOPMENT-LIFECYCLE-PREBUILD-ADVERSARIAL-REVIEW.md`
+is active for a **fresh separate adversarial reviewer**.
+
+The review must attack exact target `acf6ddc...`, with particular attention to Planner necessity/authority, route liveness and proportionality, Designer/Builder boundaries, Integrator leakage, technical ADR ownership, context selection, replay validity, preservation/rollback, complexity burden and generality. It cannot repair or implement the design.
+
+Historical replay/evaluation remains a parallel/sequential independent requirement after the design target is frozen; a clean review alone does not authorise governance implementation.
 
 ## Material architecture status
 
@@ -348,43 +363,45 @@ PD-002 remains preserved at `development/06_reviews/PROCESS-DEFECT-PD-002-WP-ACT
 
 WP-007 did not establish PD-002 recurrence as a separate material finding. WP-008 did not broaden its scope to repair PD-002. WP-009 PASS did not accept or close PD-002 through a new decision path.
 
-WP-021 activation is intentionally recorded in canonical state **before** candidate lifecycle design work begins, so the Development OS improvement does not repeat PD-002's state-before-work ordering defect.
+WP-021 was activated in canonical state before candidate design work began. WP-022 is likewise being activated before the fresh reviewer begins, preserving state-before-work ordering.
 
 ## Required next responsibility
 
-Continue the **design-only** WP-021 responsibility on a separate candidate branch created from this canonical activation state.
+**Fresh separate adversarial reviewer** under `development/04_work/WP-022-WP021-DEVELOPMENT-LIFECYCLE-PREBUILD-ADVERSARIAL-REVIEW.md`.
 
-Produce one frozen proposed Development OS lifecycle specification, proposed ADR-0003, function/motivation justification and replay protocol. Do not modify current operational governance policies to enact the proposed lifecycle yet. When the exact design target is frozen, stop implementation and route it to a fresh pre-build adversarial reviewer plus the historical replay/evaluation path required by WP-021.
+Review only exact frozen design target `acf6ddc621c644e5a0960e3382b25928d2518041` / PR #28. Publish exactly the review artefact and fresh reviewer handoff in a dedicated evidence PR, then stop for a separate Integrator.
 
-No current session may combine design production with its independent pre-build adversarial review, later implementation, independent verification, post-build adversarial review, Integrator, ADR acceptance, material merge, Phase acceptance or Phase 1 responsibility.
+Do not combine review with design revision, historical-replay synthesis, operational governance implementation, independent verification, ADR acceptance, WP-020/F-AR-008 execution, material merge, Phase acceptance or Phase 1 responsibility.
 
 ## Remaining Phase 0 gates
 
 Remaining gates now include:
 
-- WP-021 design stage, fresh pre-build adversarial challenge and replay/evaluation before governance implementation;
+- WP-022 fresh pre-build adversarial review of exact WP-021 design target;
+- WP-021 historical replay/evaluation and synthesis before governance implementation;
 - any resulting WP-021 lifecycle implementation, fresh exact-target verification, separate evidence integration and fresh post-build adversarial review;
 - a separately controlled context/state-surface improvement if the accepted WP-021 design requires it;
 - re-evaluation and completion/supersession of standing WP-020/F-AR-008 work under the accepted lifecycle;
 - prospective evaluation of at least one material trajectory under the strengthened Development OS before final Phase-0 acceptance if the final WP-000 criteria require it;
 - repair/resolution or authorised acceptance of any later surviving material findings;
 - ADR-0000, ADR-0001, ADR-0002 and any later required architecture decisions reaching the status required by their declared decision paths;
+- PR #28 is design-only and may not be treated as operational governance implementation; its final disposition follows WP-021 design/replay/synthesis gates;
 - PR #22 may be integrated only if a later accepted path and all gates permit it; PR #19, PR #16 and PR #13 remain closed unmerged and superseded;
 - human-owner/PR acceptance gates where required;
 - PR #1 merge into `main` only after `PR_GATE.md` and `PHASE_GATE.md` are satisfied.
 
 ## Authority boundaries remain explicit
 
-During the active WP-021 design-only stage no session may:
+During active WP-022 no session may:
 
 - execute or silently redesign WP-020/F-AR-008 repair work;
 - edit historical verifier/reviewer evidence or reinterpret WP-018 PASS, WP-019 **Requires repair**, or F-AR-001 through F-AR-008;
-- modify current operational governance policies to enact an unchallenged/unreplayed candidate lifecycle;
+- modify current operational governance policies to enact an unreviewed/unreplayed candidate lifecycle;
+- repair the WP-021 design while acting as its required independent reviewer;
 - treat predecessor research or external prior art as architecture truth without the decision process;
-- self-review the produced lifecycle as the required fresh adversarial reviewer;
 - self-verify a later implemented governance target;
 - accept ADR-0000, ADR-0001, ADR-0002 or proposed ADR-0003;
-- merge PR #22, PR #19, PR #16 or PR #1;
+- merge PR #28, PR #22, PR #19, PR #16 or PR #1;
 - accept Phase 0 or begin Phase 1.
 
 ## Phase 1 gate
