@@ -275,7 +275,7 @@ Verifier handoff:
 
 `development/07_sessions/SESSION-0032-PHASE0-CANDIDATE-SET-CONVERGENCE-VERIFIER.md`
 
-Dedicated evidence PR #24 contained exactly those two files at immutable head `1b1d5effa21e156d09b56db741fec0ae0966f2a7` and was merged evidence-only as `b2e54a1f7398328a17ba6aaf3a6a91ddbe3c4595`. PASS remains exact-target evidence, not target/ADR/Phase acceptance.
+Dedicated evidence PR #24 contained exactly those two files at immutable head `1b1d5effa21e156d09b56db741fec0ae0966f2a7` and was merged evidence-only by a separate Integrator as `b2e54a1f7398328a17ba6aaf3a6a91ddbe3c4595`. PASS remains exact-target evidence, not target/ADR/Phase acceptance.
 
 ## Completed exact-target adversarial re-review — WP-019
 
