@@ -1,12 +1,16 @@
 # WP-021 — Development OS Lifecycle and Work-Selection Improvement
 
-**Status:** active — design-only stage; governance implementation not yet authorised by this WP stage  
+**Status:** active — design-only revision/synthesis after WP-022 **Requires design revision**; governance implementation remains unauthorised  
 **Owner role:** designer/builder operating in a design-only responsibility under the current role model  
 **Decision authority:** owner-directed Phase-0 Development OS strengthening; cross-cutting architecture changes require proposed ADR-0003 and independent review under `DECISION_POLICY.md`; no foundation change, policy implementation before the declared pre-build gates, independent self-verification, ADR acceptance, PR #22/#1 merge, Phase acceptance or Phase 1 authority  
 **Development branch:** `phase0/development-os` for canonical work routing; candidate design/build must occur on a separate WP-021 branch  
 **Fallback checkpoint:** `checkpoint/phase0-pre-lifecycle-v2-c4ebef9` at `c4ebef9e58a4a94edce22ebbb94d94414dffd92c`  
 **Parent:** `WP-000-DEVELOPMENT-OS.md`  
-**Blocked unresolved work:** `WP-020-PHASE0-UNCONTAINED-INSPECTION-FAIL-CLOSED-REPAIR.md`; F-AR-008 remains standing and unresolved
+**Blocked unresolved work:** `WP-020-PHASE0-UNCONTAINED-INSPECTION-FAIL-CLOSED-REPAIR.md`; F-AR-008 remains standing and unresolved  
+**Reviewed design target:** draft/unmerged PR #28 exact commit `acf6ddc621c644e5a0960e3382b25928d2518041` from base `6fca29474ab97d22e363108b8be6438456316e01`  
+**Completed pre-build review:** WP-022 — **Requires design revision**; F-AR-009 through F-AR-012 medium/material, stand  
+**Completed review result-control key:** `WP-022 / adversarial reviewer / acf6ddc621c644e5a0960e3382b25928d2518041 / attempt 1`  
+**Reviewer evidence PR:** #29 — initial result commit `f351d54d2ef937141fec7e889c702e05c7468d22`, final head `9cfe11743ccd9ec53d592325acb72f9a464db5b3`, integrated evidence-only as `71e3c8b47643ef5887659586942fe59bcceaf3db`
 
 ## Objective
 
@@ -35,13 +39,22 @@ Changing, removing or rewriting current mechanisms is allowed when it is genuine
 
 The planning/research record is preserved outside SOUL authority in the scratch branch of `batuhanozgun/keel-research`. It is evidence/input only and is not architecture truth.
 
-## Current stage — design before implementation
+## Current stage — design revision and synthesis before implementation
 
 WP-021 begins under the **current** role/governance model. Proposed new responsibilities do not become authoritative merely because this WP discusses them.
 
 The initial responsibility is an existing `designer/builder` role constrained to **design-only** work. It may create proposed architecture/specification/evidence artefacts on the WP-021 candidate branch, but it must not modify the existing governance policies to make the new lifecycle operational until the pre-build challenge and replay gates below are satisfied.
 
 This avoids the bootstrap error of pretending unaccepted new roles already exist while still separating design from later implementation in practice.
+
+WP-022 completed its fresh pre-build adversarial review against exact target `acf6ddc...` and issued **Requires design revision**. F-AR-009 through F-AR-012 are medium/material and stand. The current fresh separate design-only responsibility must preserve those findings exactly and revise the lifecycle/ADR/replay design to close:
+
+- non-circular technical design acceptance and material-finding disposition authority;
+- a replay comparison capable of testing whether a permanent Planner is necessary rather than only whether the bundled lifecycle performs differently;
+- context-classification authority, completeness/omission detection and unknown-trigger recovery;
+- rollback, disable, partial-rollout recovery and forward-restoration semantics.
+
+The reviewed PR #28 target remains historical exact evidence and must not be amended in place and then treated as still reviewed. A material revision creates a new exact design target and returns through the required fresh independent challenge path before replay execution or implementation.
 
 ## Scope
 
@@ -240,8 +253,10 @@ Persist enough evidence to distinguish:
 
 ## Completion state
 
-Active — **design-only stage**. WP-020 is unresolved and blocked from execution while WP-021 determines and evaluates the correct Development OS lifecycle. No new lifecycle architecture is accepted and no operational governance implementation has begun.
+Active — **design-only revision/synthesis stage**. WP-022 is complete as a review activity with **Requires design revision** for exact target `acf6ddc...`; F-AR-009 through F-AR-012 stand. WP-020 is unresolved and blocked from execution while WP-021 determines and evaluates the correct Development OS lifecycle. No finding repair, changed exact design target, replay result, lifecycle architecture acceptance or operational governance implementation exists.
 
 ## Handoff
 
-Exact next responsibility after activation: continue the current design-only responsibility on a separate WP-021 candidate branch. Produce the frozen lifecycle specification, proposed ADR-0003, replay protocol and design handoff. Then stop implementation and route the exact design target to a fresh pre-build adversarial reviewer. Do not execute WP-020, modify PR #22, implement the proposed governance into current policies, self-verify, accept an ADR, accept Phase 0 or begin Phase 1.
+Exact next responsibility: **fresh separate design-only designer/builder**. Preserve WP-022 **Requires design revision** and F-AR-009 through F-AR-012 exactly; synthesise and revise the lifecycle, proposed ADR-0003 and replay protocol without operational implementation; freeze one new exact design target and route it through the required fresh independent challenge before replay execution.
+
+Do not execute the reviewed replay protocol while F-AR-010 stands, execute WP-020, modify PR #22, implement the proposed governance into current policies, self-review or self-verify, accept an ADR, merge PR #28/#22/#1, accept Phase 0 or begin Phase 1.

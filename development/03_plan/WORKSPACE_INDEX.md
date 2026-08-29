@@ -25,7 +25,9 @@
 - `CHATGPT_PROJECT_ENTRY.md` — derived minimal Project Instructions convenience; no governance copy
 
 ## Current work
-- Active: `../04_work/WP-020-PHASE0-UNCONTAINED-INSPECTION-FAIL-CLOSED-REPAIR.md` — fresh separate designer/builder for bounded F-AR-008 repair with unchanged WP-000 criteria, one new exact target and fresh verification/re-review required
+- Active design revision/synthesis: `../04_work/WP-021-DEVELOPMENT-LIFECYCLE-WORK-SELECTION-IMPROVEMENT.md` — fresh separate design-only designer/builder must preserve and resolve WP-022 F-AR-009 through F-AR-012, freeze a new exact design target and return it through fresh independent challenge before replay or implementation
+- Completed pre-build adversarial review: `../04_work/WP-022-WP021-DEVELOPMENT-LIFECYCLE-PREBUILD-ADVERSARIAL-REVIEW.md` — **Requires design revision** for PR #28 exact target `acf6ddc...`; F-AR-009 through F-AR-012 medium/material stand; evidence PR #29 integrated evidence-only as `71e3c8b4...`
+- Blocked unresolved repair: `../04_work/WP-020-PHASE0-UNCONTAINED-INSPECTION-FAIL-CLOSED-REPAIR.md` — F-AR-008 remains standing/unresolved; execution remains blocked while WP-021 determines and evaluates the Development OS lifecycle
 - Completed adversarial re-review: `../04_work/WP-019-PHASE0-CANDIDATE-SET-CONVERGENCE-ADVERSARIAL-REREVIEW.md` — **Requires repair** for PR #22 exact target `5bd0db2...`; F-AR-008 medium/material stands; evidence PR #25 integrated evidence-only as `8022ca6f...`
 - Completed verification activity: `../04_work/WP-018-PHASE0-CANDIDATE-SET-CONVERGENCE-VERIFICATION.md` — **PASS** for PR #22 exact target `5bd0db2...`, activation `fbe517b...` and binding `e620752...`; evidence PR #24 integrated evidence-only as `b2e54a1f...`
 - Rejected builder repair: `../04_work/WP-017-PHASE0-CANDIDATE-SET-CONVERGENCE-REPAIR.md` — PR #22 exact target `5bd0db2...` from canonical base `4524f21...`; WP-018 PASS, WP-019 **Requires repair**, F-AR-008 routed to WP-020
@@ -42,12 +44,13 @@
 - Completed verification activity: `../04_work/WP-006-PHASE0-REASONING-REVERIFICATION.md` — historical **PASS** against exact old material target `c690f858...`; not certification of `a45b463...`
 - Material reasoning-policy architecture: `../04_work/WP-005-DEVELOPMENT-REASONING-POLICY.md` — ADR-0001 remains proposed/not Phase-accepted
 - Completed bounded repair: `../04_work/WP-004-PHASE0-F2R1-REPAIR.md` — F2-R1 regression PASS at old target `c690f858...`
-- Parent package: `../04_work/WP-000-DEVELOPMENT-OS.md` — Phase 0 remains unaccepted pending WP-020 repair, fresh verification/re-review and decision/owner/PR gates
+- Parent package: `../04_work/WP-000-DEVELOPMENT-OS.md` — Phase 0 remains unaccepted pending WP-021 design finding resolution, corrected replay/synthesis, any resulting implementation assurance, standing F-AR-008 disposition and decision/owner/PR gates
 - Historical completed verification activity: `../04_work/WP-003-PHASE0-REVERIFICATION.md` — exact old target `a02e36e5...`, result FAIL
 - Historical completed verification activity: `../04_work/WP-001-PHASE0-VERIFICATION.md` — old target result FAIL
 - Historical repair package: `../04_work/WP-002-PHASE0-VERIFICATION-REPAIR.md`
 
 ## Verification, reviews, defects and evidence
+- `../06_reviews/PREBUILD-ADVERSARIAL-REVIEW-WP-021-acf6ddc6-2026-08-29.md` — WP-022 result: **Requires design revision** for exact PR #28 target `acf6ddc...`; F-AR-009 through F-AR-012 medium/material stand; PR #29 final head `9cfe117...` integrated evidence-only as `71e3c8b4...`
 - `../06_reviews/ADVERSARIAL-REREVIEW-WP-000-5bd0db27-2026-08-28.md` — WP-019 result: **Requires repair** for exact PR #22 target `5bd0db2...`; F-AR-008 medium/material stands; PR #25 final head `16b5aac...` integrated evidence-only as `8022ca6f...`
 - `../06_reviews/VERIFICATION-WP-000-5bd0db27-2026-08-28.md` — WP-018 issued **PASS** for exact PR #22 target `5bd0db2...`, activation `fbe517b...` and binding `e620752...`; PR #24 integrated evidence-only as `b2e54a1f...`
 - `../06_reviews/ADVERSARIAL-REREVIEW-WP-000-2f5508c1-2026-08-27.md` — WP-016 result: **Requires repair** for exact PR #19 target `2f5508c...`; F-AR-006 medium/material and F-AR-007 low/evidence-model correctness stand; PR #21 integrated evidence-only as `276132a8...`
@@ -70,9 +73,10 @@
 - `../05_evidence/REASONING-POLICY-SYNTHESIS-2026-08-26.md` — source-to-SOUL synthesis evidence for WP-005
 
 ## Decisions
+- `../02_architecture/decisions/ADR-0003-DEVELOPMENT-WORK-SELECTION-AND-RISK-PROPORTIONAL-PREBUILD-LIFECYCLE.md` — proposed on exact PR #28 target `acf6ddc...`; WP-022 **Requires design revision** and F-AR-009 through F-AR-012 stand; not accepted
 - `../02_architecture/decisions/ADR-0000-DEVELOPMENT-GOVERNANCE-BOOTSTRAP.md` — proposed; still requires its declared owner path
 - `../02_architecture/decisions/ADR-0001-DEVELOPMENT-REASONING-POLICY.md` — proposed; owner direction approved, acceptance path still pending
-- `../02_architecture/decisions/ADR-0002-PENDING-INDEPENDENT-RESULT-DISCOVERY.md` — revised/proposed on exact WP-017 repair target `5bd0db2...`; WP-018 verification PASS, fresh WP-019 adversarial re-review and acceptance path remain outstanding
+- `../02_architecture/decisions/ADR-0002-PENDING-INDEPENDENT-RESULT-DISCOVERY.md` — revised/proposed on exact WP-017 repair target `5bd0db2...`; WP-018 PASS and WP-019 **Requires repair** remain bound there, F-AR-008/WP-020 and acceptance path remain outstanding
 
 ## Templates
 - ADR: `../01_governance/ADR_TEMPLATE.md`

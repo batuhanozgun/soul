@@ -1,15 +1,18 @@
 # SOUL PROJECT STATE
 
 **Current phase:** Phase 0 — Development Operating System  
-**Current work package:** WP-022 — WP-021 Development Lifecycle Pre-Build Adversarial Review  
+**Current work package:** WP-021 — Development OS Lifecycle and Work-Selection Improvement  
 **Current branch:** `phase0/development-os`  
-**Current work mode:** fresh independent pre-build adversarial review of frozen design target; governance implementation remains blocked behind review + replay/evaluation + synthesis  
+**Current work mode:** design-only revision/synthesis after completed pre-build adversarial review; governance implementation remains blocked behind finding resolution + corrected replay/evaluation + synthesis  
 **Fallback checkpoint:** `checkpoint/phase0-pre-lifecycle-v2-c4ebef9` at `c4ebef9e58a4a94edce22ebbb94d94414dffd92c`  
 **Parent improvement:** WP-021 — Development OS Lifecycle and Work-Selection Improvement  
 **Current design PR:** #28 — draft, unaccepted, unmerged  
 **Current exact design target:** `acf6ddc621c644e5a0960e3382b25928d2518041`  
 **Current design base:** `6fca29474ab97d22e363108b8be6438456316e01`  
-**Current review result-control key:** `WP-022 / adversarial reviewer / acf6ddc621c644e5a0960e3382b25928d2518041 / attempt 1`  
+**Completed WP-022 result-control key:** `WP-022 / adversarial reviewer / acf6ddc621c644e5a0960e3382b25928d2518041 / attempt 1`  
+**Completed WP-022 canonical activation:** `68af9c9c350ee23254864bce3fa96051d91213d3`  
+**Current pre-build adversarial review result:** WP-022 **Requires design revision** for exact target `acf6ddc621c644e5a0960e3382b25928d2518041`; F-AR-009 through F-AR-012 medium/material, stand  
+**Current pre-build reviewer evidence integration:** PR #29 initial result commit `f351d54d2ef937141fec7e889c702e05c7468d22`, final head `9cfe11743ccd9ec53d592325acb72f9a464db5b3`, merged evidence-only as `71e3c8b47643ef5887659586942fe59bcceaf3db`  
 **Blocked unresolved work:** WP-020 — F-AR-008 remains medium/material, stands, unresolved; no repair target exists  
 **Rejected result-control material PR:** #22 — draft, unaccepted and unmerged at `5bd0db27fc3df368c9e112f01b7eed49a64402ab`; it is not the WP-021 design target  
 **Result-control material base:** `4524f21cced54c71fb2219b7f42119adbbb5b033`  
@@ -33,18 +36,18 @@
 **Completed WP-019 activation/binding:** `3b91acf02df2852c43404ec164725ac5748b9bad` / `fa6f208e6133f746a69a4a51faff3f2485798d24`
 **Current candidate-set adversarial re-review result:** WP-019 **Requires repair** for exact target `5bd0db27fc3df368c9e112f01b7eed49a64402ab`; F-AR-008 medium/material, stands
 **Current reviewer evidence integration:** PR #25 initial result commit `6b328cdeb127f56b163b999eaa8621fd6d5ead19`, final head `16b5aacb12d05157e183cb9257025f30636e0f71`, merged evidence-only as `8022ca6fb30fc32e6a95f22c5c1d58c5ab8c1745`
-**State:** WP-021 design producer froze exact candidate `acf6ddc...` on draft PR #28 without operational governance changes; WP-022 fresh pre-build adversarial review is now the current responsibility; WP-020 remains blocked/unresolved; no design review result, replay result, lifecycle implementation, ADR acceptance, F-AR-008 repair, Phase acceptance or Phase 1 claim exists
+**State:** WP-022 is complete as a review activity with **Requires design revision** and evidence-only integration; WP-021 design-only revision/synthesis is active; WP-020 remains blocked/unresolved; no finding repair, changed design target, replay result, lifecycle implementation, ADR acceptance, F-AR-008 repair, Phase acceptance or Phase 1 claim exists
 **Authoritative product branch:** `main`
 
 ## Current objective
 
-Execute the fresh separate pre-build adversarial review defined by:
+Revise and synthesise the design-only WP-021 candidate under:
 
-`development/04_work/WP-022-WP021-DEVELOPMENT-LIFECYCLE-PREBUILD-ADVERSARIAL-REVIEW.md`.
+`development/04_work/WP-021-DEVELOPMENT-LIFECYCLE-WORK-SELECTION-IMPROVEMENT.md`.
 
-The reviewer must independently attack exact frozen design target `acf6ddc621c644e5a0960e3382b25928d2518041` / PR #28, derive its attack model before reading producer rationale, and publish only the review artefact + fresh reviewer handoff in a dedicated evidence PR. It must not repair or implement the candidate design.
+The fresh separate design-only responsibility must preserve WP-022 **Requires design revision** and F-AR-009 through F-AR-012 exactly, resolve them without weakening WP-021 criteria, and freeze a changed design/replay target before any replay execution or operational governance implementation. Any material changed target requires the independent challenge path declared by WP-021.
 
-Historical replay/evaluation under the frozen WP-021 protocol remains separately required even if the design review is clean. Operational governance implementation remains blocked until review + replay/evaluation have been integrated and synthesised and no surviving material design finding makes implementation premature.
+Historical replay/evaluation remains separately required, but the reviewed protocol cannot establish permanent-Planner necessity while F-AR-010 stands. Operational governance implementation remains blocked until the material findings are resolved, corrected replay/evaluation is integrated and synthesised, and no surviving material design finding makes implementation premature.
 
 WP-020 remains blocked, not completed or cancelled. F-AR-008 remains standing and unresolved exactly as issued by WP-019. PR #22 remains draft/unaccepted/unmerged at exact rejected target `5bd0db27fc3df368c9e112f01b7eed49a64402ab`; WP-018 PASS and WP-019 **Requires repair** remain permanently bound only to that target and their exact activation/result keys.
 
@@ -328,14 +331,37 @@ Its design producer froze proposed lifecycle/ADR/evaluation artefacts at exact t
 
 The candidate investigates whether recent repair progression reflects, in part, a structural bias caused by automatic repair-shaped result routing and the combined Designer/Builder motivation. The hypothesis is supported by evidence but is not treated as proven or as the sole cause. Added process complexity has a burden of proof.
 
-## Active pre-build design review — WP-022
+## Completed pre-build design review — WP-022
 
 `development/04_work/WP-022-WP021-DEVELOPMENT-LIFECYCLE-PREBUILD-ADVERSARIAL-REVIEW.md`
-is active for a **fresh separate adversarial reviewer**.
+is complete as an adversarial-review activity.
 
-The review must attack exact target `acf6ddc...`, with particular attention to Planner necessity/authority, route liveness and proportionality, Designer/Builder boundaries, Integrator leakage, technical ADR ownership, context selection, replay validity, preservation/rollback, complexity burden and generality. It cannot repair or implement the design.
+Result-control key: `WP-022 / adversarial reviewer / acf6ddc621c644e5a0960e3382b25928d2518041 / attempt 1`.
 
-Historical replay/evaluation remains a parallel/sequential independent requirement after the design target is frozen; a clean review alone does not authorise governance implementation.
+The reviewer issued **Requires design revision** and preserved:
+
+- **F-AR-009 — Technical design acceptance and material finding disposition are circular or unowned** — medium/material, stands;
+- **F-AR-010 — The replay bundles multiple changes and cannot establish that a permanent Planner is necessary** — medium/material, stands;
+- **F-AR-011 — Context-selection metadata can hide required evidence without detection** — medium/material, stands;
+- **F-AR-012 — Rollback is claimed as mitigation but has no design contract** — medium/material, stands.
+
+Canonical review artefact:
+
+`development/06_reviews/PREBUILD-ADVERSARIAL-REVIEW-WP-021-acf6ddc6-2026-08-29.md`
+
+Reviewer handoff:
+
+`development/07_sessions/SESSION-0039-PHASE0-WP021-PREBUILD-ADVERSARIAL-REVIEWER.md`
+
+Dedicated evidence PR #29 contained exactly those two files at initial result commit `f351d54d2ef937141fec7e889c702e05c7468d22` and final locator head `9cfe11743ccd9ec53d592325acb72f9a464db5b3`. It was merged evidence-only by a separate Integrator as `71e3c8b47643ef5887659586942fe59bcceaf3db`.
+
+The result remains bound only to target `acf6ddc...`, base `6fca294...`, the complete WP-022 key and canonical activation `68af9c9...`. Evidence integration is not design, ADR, PR or Phase acceptance.
+
+## Active WP-021 design revision and synthesis
+
+`development/04_work/WP-021-DEVELOPMENT-LIFECYCLE-WORK-SELECTION-IMPROVEMENT.md` is active for a fresh separate design-only designer/builder responsibility.
+
+The designer must preserve and resolve F-AR-009 through F-AR-012, correct the replay design so its evidence can test the permanent-Planner necessity claim, provide a context-completeness control and rollback/forward-restoration contract, and close technical decision/finding-disposition authority without transferring technical judgement to the Integrator or Human Owner. A material revision creates a new exact design target and must return through the required independent challenge path before implementation.
 
 ## Material architecture status
 
@@ -363,22 +389,22 @@ PD-002 remains preserved at `development/06_reviews/PROCESS-DEFECT-PD-002-WP-ACT
 
 WP-007 did not establish PD-002 recurrence as a separate material finding. WP-008 did not broaden its scope to repair PD-002. WP-009 PASS did not accept or close PD-002 through a new decision path.
 
-WP-021 was activated in canonical state before candidate design work began. WP-022 is likewise being activated before the fresh reviewer begins, preserving state-before-work ordering.
+WP-021 was activated in canonical state before candidate design work began. WP-022 was likewise activated before the fresh reviewer began, preserving state-before-work ordering.
 
 ## Required next responsibility
 
-**Fresh separate adversarial reviewer** under `development/04_work/WP-022-WP021-DEVELOPMENT-LIFECYCLE-PREBUILD-ADVERSARIAL-REVIEW.md`.
+**Fresh separate design-only designer/builder** under `development/04_work/WP-021-DEVELOPMENT-LIFECYCLE-WORK-SELECTION-IMPROVEMENT.md`.
 
-Review only exact frozen design target `acf6ddc621c644e5a0960e3382b25928d2518041` / PR #28. Publish exactly the review artefact and fresh reviewer handoff in a dedicated evidence PR, then stop for a separate Integrator.
+Preserve WP-022 **Requires design revision** and F-AR-009 through F-AR-012 exactly; synthesise and revise the design/replay protocol without operational implementation; freeze one new exact design target and route it through the required fresh independent challenge before replay execution or implementation.
 
-Do not combine review with design revision, historical-replay synthesis, operational governance implementation, independent verification, ADR acceptance, WP-020/F-AR-008 execution, material merge, Phase acceptance or Phase 1 responsibility.
+Do not execute historical replay under the reviewed protocol while F-AR-010 stands, perform operational governance implementation, independent verification/review, ADR acceptance, WP-020/F-AR-008 execution, material merge, Phase acceptance or Phase 1 responsibility.
 
 ## Remaining Phase 0 gates
 
 Remaining gates now include:
 
-- WP-022 fresh pre-build adversarial review of exact WP-021 design target;
-- WP-021 historical replay/evaluation and synthesis before governance implementation;
+- resolution of WP-022 F-AR-009 through F-AR-012 in a changed exact WP-021 design target, followed by the required fresh independent challenge;
+- WP-021 historical replay/evaluation under a corrected protocol and synthesis before governance implementation;
 - any resulting WP-021 lifecycle implementation, fresh exact-target verification, separate evidence integration and fresh post-build adversarial review;
 - a separately controlled context/state-surface improvement if the accepted WP-021 design requires it;
 - re-evaluation and completion/supersession of standing WP-020/F-AR-008 work under the accepted lifecycle;
@@ -392,12 +418,13 @@ Remaining gates now include:
 
 ## Authority boundaries remain explicit
 
-During active WP-022 no session may:
+During active WP-021 design revision/synthesis no session may:
 
 - execute or silently redesign WP-020/F-AR-008 repair work;
 - edit historical verifier/reviewer evidence or reinterpret WP-018 PASS, WP-019 **Requires repair**, or F-AR-001 through F-AR-008;
 - modify current operational governance policies to enact an unreviewed/unreplayed candidate lifecycle;
-- repair the WP-021 design while acting as its required independent reviewer;
+- reinterpret, weaken or erase WP-022 **Requires design revision** or F-AR-009 through F-AR-012;
+- execute the reviewed replay protocol while F-AR-010 stands or treat a material design revision as already reviewed;
 - treat predecessor research or external prior art as architecture truth without the decision process;
 - self-verify a later implemented governance target;
 - accept ADR-0000, ADR-0001, ADR-0002 or proposed ADR-0003;

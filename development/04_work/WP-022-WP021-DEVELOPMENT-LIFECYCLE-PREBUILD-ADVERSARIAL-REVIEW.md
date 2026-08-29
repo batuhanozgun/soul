@@ -1,6 +1,6 @@
 # WP-022 — WP-021 Development Lifecycle Pre-Build Adversarial Review
 
-**Status:** active — fresh separate adversarial reviewer required  
+**Status:** complete as review activity — **Requires design revision**; F-AR-009 through F-AR-012 medium/material, stand  
 **Owner role:** adversarial reviewer  
 **Decision authority:** independently attack the frozen WP-021 design candidate and issue findings/judgement; no design repair, governance implementation, ADR acceptance, replay-result synthesis, PR #28 merge, WP-020 execution, Phase acceptance or Phase 1 authority  
 **Development branch:** `phase0/development-os` for canonical routing  
@@ -9,6 +9,10 @@
 **Exact design base:** `6fca29474ab97d22e363108b8be6438456316e01`  
 **Parent:** `WP-021-DEVELOPMENT-LIFECYCLE-WORK-SELECTION-IMPROVEMENT.md`  
 **Result-control key:** `WP-022 / adversarial reviewer / acf6ddc621c644e5a0960e3382b25928d2518041 / attempt 1`
+**Canonical activation:** `68af9c9c350ee23254864bce3fa96051d91213d3`  
+**Review result:** **Requires design revision**  
+**Surviving findings:** F-AR-009, F-AR-010, F-AR-011 and F-AR-012 — medium/material, stand  
+**Reviewer evidence PR:** #29 — initial result commit `f351d54d2ef937141fec7e889c702e05c7468d22`, final locator head `9cfe11743ccd9ec53d592325acb72f9a464db5b3`, integrated evidence-only as `71e3c8b47643ef5887659586942fe59bcceaf3db`
 
 ## Objective
 
@@ -207,6 +211,14 @@ The historical replay/evaluation remains separately required even if this review
 10. output PR contains only the authorised review + session files;
 11. no Phase/WP-020/PR #22/PR #28 acceptance or merge is performed.
 
+## Completion state
+
+Complete as an adversarial-review activity. The immutable review artefact is `development/06_reviews/PREBUILD-ADVERSARIAL-REVIEW-WP-021-acf6ddc6-2026-08-29.md` and the reviewer handoff is `development/07_sessions/SESSION-0039-PHASE0-WP021-PREBUILD-ADVERSARIAL-REVIEWER.md`.
+
+PR #29 was integrated evidence-only as `71e3c8b4...`. Evidence integration is not repair, replay synthesis, implementation, target/ADR acceptance or Phase acceptance. The result remains permanently bound only to exact target `acf6ddc...`, base `6fca294...`, the complete result-control key and activation `68af9c9...`.
+
 ## Handoff
 
-Exact next responsibility: **fresh separate adversarial reviewer**. After review publication, stop for a separate Integrator. Do not combine review with design revision, replay synthesis, governance implementation or architecture acceptance.
+Exact next responsibility: **fresh separate design-only designer/builder under WP-021**. Preserve **Requires design revision** and F-AR-009 through F-AR-012 exactly; revise and synthesise the lifecycle/ADR/replay design without operational implementation; freeze a new exact design target and route it through the required fresh independent challenge.
+
+Do not execute the reviewed replay protocol while F-AR-010 stands, implement governance, self-review or self-verify, accept ADR-0003, merge PR #28/#22/#1, execute WP-020, accept Phase 0 or begin Phase 1.
